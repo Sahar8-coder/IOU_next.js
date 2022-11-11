@@ -3,17 +3,17 @@ export default async function (req, res) {
 
     let nodemailer = require('nodemailer')
     let transporter = nodemailer.createTransport({
-      host: "smtp.ethereal.email",
-      port: 587,
-      secure: false, // true for 465, false for other ports
+      host: "smtp.yandex.ru",
+      port: 465,
+      secure: true, // true for 465, false for other ports
       auth: {
-        user: 'frieda.rice@ethereal.email', // generated ethereal user
-        pass: 'VPkxD45WjkzFjnzDc3', // generated ethereal password
+        user: 'k1rilovz@yandex.ru', // generated ethereal user
+        pass: 'qhfxkhjcdlvgdwhs', // generated ethereal password
       },
     });
     
     const mailData = {
-        from: 'Fred Foo" <foo@example.com>',
+        from: 'k1rilovz@yandex.ru',
         to: req.body.email,
         subject: `Message From ${req.body.name}`,
         text: req.body.message + " | Sent from: " + req.body.email,

@@ -1,4 +1,4 @@
-.container {
+/*.container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,7 +7,6 @@
 }
 
 .main {
-  padding: 5rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -29,4 +28,4 @@
 
 .inputField {
   height: 30px;
-}
+}*/
