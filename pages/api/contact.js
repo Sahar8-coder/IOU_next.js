@@ -8,7 +8,7 @@ export default async function (req, res) {
       secure: true, // true for 465, false for other ports
       auth: {
         user: 'k1rilovz@yandex.ru', // generated ethereal user
-        pass: 'qhfxkhjcdlvgdwhs', // generated ethereal password
+        pass: process.env.pass, // generated ethereal password
       },
     });
     
