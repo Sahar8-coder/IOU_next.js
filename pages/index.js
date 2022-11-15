@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { useState } from 'react'
 
-export default function Home() {
+export default async function Home() {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
