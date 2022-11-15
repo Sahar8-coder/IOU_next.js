@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Chastn() {
@@ -48,15 +50,15 @@ export default function Chastn() {
     <header className="header">
         <nav className="header-nav">
             <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><a href="/"><img src="/logo.svg" alt="#" className="logo"/></a></li>
-                <li className="header-menu-item"><a href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
-                <li className="header-menu-item"><a href="/site/practice" className="header-menu-link">Практика</a></li>
+                <li className="header-menu-item menu-logo"><Link href="/"><Image src="/logo.svg" alt="#" className="logo"/></Link></li>
+                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
+                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
             </ul>
         </nav>
     </header>
     <main className="main">
         <div className="content disc-content">
-            <img src="/chastn.PNG" alt="" className="chastn"/>
+            <Image src="/chastn.PNG" alt="" className="chastn"/>
         </div>
     </main>
     </div>

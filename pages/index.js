@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Link from 'next/link'
+import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { useState } from 'react'
 
@@ -49,9 +51,9 @@ export default function Home() {
     <header className="header">
         <nav className="header-nav">
             <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><a href="/"><img src='/logo.svg' alt="#" className="logo"/></a></li>
-                <li className="header-menu-item"><a href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
-                <li className="header-menu-item"><a href="/site/practice" className="header-menu-link">Практика</a></li>
+                <li className="header-menu-item menu-logo"><Link href="/"><Image src='/logo.svg' alt="#" className="logo"/></Link></li>
+                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
+                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
             </ul>
         </nav>
     </header>
@@ -61,46 +63,46 @@ export default function Home() {
                 <h2 className="types-header">Способы решений квадратных уравнений</h2>
             </section>
             <section className="types">
-                <a className="type" href='/site/mnos'>
+                <Link className="type" href='/site/mnos'>
                     <h4 className="type-name">Разложение левой части уравнения на множители</h4>
                     <p className="type-text">Довольно удобный способ, но помогает не всегда</p>
-                </a>
-                <a className="type" href='/site/videl'>
+                </Link>
+                <Link className="type" href='/site/videl'>
                     <h4 className="type-name">Метод выделения полного квадрата</h4>
                     <p className="type-text">Если изначально формулы не видно, использовать довольно непросто</p>
-                </a>
-                <a className="type" href='/site/formulas'>
+                </Link>
+                <Link className="type" href='/site/formulas'>
                     <h4 className="type-name">Решение квадратных уравнений по формулам</h4>
                     <p className="type-text">Старый добрый Дискриминант</p>
-                </a>
-                <a className="type" href='/site/viet'>
+                </Link>
+                <Link className="type" href='/site/viet'>
                     <h4 className="type-name">Решение уравнений с использованием теоремы Виета</h4>
                     <p className="type-text">Прекрасный способ, однако работает не всегда</p>
-                </a>
-                <a className="type" href='/site/perebros'>
+                </Link>
+                <Link className="type" href='/site/perebros'>
                     <h4 className="type-name">Решение уравнений способом «переброски»</h4>
                     <p className="type-text">В некоторых случаях может сильно помочь</p>
-                </a>
-                <a className="type" href='/site/chastn'>
+                </Link>
+                <Link className="type" href='/site/chastn'>
                     <h4 className="type-name">Свойства коэффициентов квадратного уравнения (частные случаи)</h4>
                     <p className="type-text">Частные случаи это частные случаи, попадаются нечасто, но решаются моментально</p>
-                </a>
-                <a className="type" href='/site/graph'>
+                </Link>
+                <Link className="type" href='/site/graph'>
                     <h4 className="type-name">Графическое решение квадратного уравнения</h4>
                     <p className="type-text">Алгебра превращается в геометрию</p>
-                </a>
-                <a className="type" href='/site/cirkul'>
+                </Link>
+                <Link className="type" href='/site/cirkul'>
                     <h4 className="type-name">Решение квадратных уравнений с помощью циркуля и линейки</h4>
                     <p className="type-text">Окружности помогают решать уравнения</p>
-                </a>
-                <a className="type" href='/site/nomo'>
+                </Link>
+                <Link className="type" href='/site/nomo'>
                     <h4 className="type-name">Решение квадратных уравнений с помощью номограммы</h4>
                     <p className="type-text">Старый и незаслуженно забытый способ</p>
-                </a>
-                <a className="type" href='/site/geom'>
+                </Link>
+                <Link className="type" href='/site/geom'>
                     <h4 className="type-name">Геометрический способ решения квадратных уравнений</h4>
                     <p className="type-text">Один из старейших способов решения</p>
-                </a>
+                </Link>
             </section>
         </div>
       < form className={styles.main} >
