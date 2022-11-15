@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import { useState } from 'react'
 
 export default function Circul() {
@@ -50,7 +50,7 @@ export default function Circul() {
     <header className="header">
         <nav className="header-nav">
             <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><Image src="/logo.svg" alt="#" className="logo"/></Link></li>
+                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
                 <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
                 <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
             </ul>
@@ -91,8 +91,8 @@ export default function Circul() {
                 окружность не имеет общих точек с осью абсцисс (рис. в), 
                 в этом случае уравнение не имеет решения. 
             </p>
-                <Image src="/circ1.png" alt=""/>
-                <div className="circ-Image">
+                <img src="/circ1.png" alt=""/>
+                <div className="circ-img">
                     <div className="circ-text">
                         {'\\(a) AS > SB,R > \\frac{a + C}{2a}.\\)'} <br/>
                         Два решения \(х_1\) и \(х_2\).</div>
@@ -112,7 +112,7 @@ export default function Circul() {
                 Проведем окружность радиуса SA, где А (0; 1). <br/>
                 {'\\(x_1 = -\\frac{7}{3}, x_2 = 1\\)'}
             </p>
-            <Image src="/circ2.png" alt=""/>
+            <img src="/circ2.png" alt=""/>
 
         </div>
     </main>

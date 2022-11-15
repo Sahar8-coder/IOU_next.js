@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import styles from '/styles/Home.module.css'
 import { useState } from 'react'
 
@@ -51,7 +51,7 @@ export default function Nomo() {
     <header className="header">
         <nav className="header-nav">
             <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><Image src="/logo.svg" alt="#" className="logo"/></Link></li>
+                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
                 <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">Теория</Link></li>
                 <li className="header-menu-item"><Link href="/site/example" className="header-menu-link">Примеры</Link></li>
                 <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
@@ -70,7 +70,7 @@ export default function Nomo() {
                 z2 + pz + q = 0. Эта номограмма позволяет, 
                 не решая квадратного уравнения, по его 
                 коэффициентам определить корни уравнения.
-                <Image src="/nomo1.png" className="nomo1" alt=""/>
+                <img src="/nomo1.png" className="nomo1" alt=""/>
                 Криволинейная шкала номограммы построена
                 по формулам: {'\\(OB = \\frac{a}{1 + z}, AB = \\frac{-z^2}{1 + z}\\)'}
                 Полагая ОС = р, ED = q, ОЕ = а (все в см), из
@@ -80,7 +80,7 @@ export default function Nomo() {
                 причем буква z означает метку любой точки криволинейной шкалы.
             </p>
             <p className="disc-text">
-                <Image src="/nomo2.png" className="nomo2" alt=""/>
+                <img src="/nomo2.png" className="nomo2" alt=""/>
                 Пример: \(3x^2+4x-7=0.\) <br/>
                 Разделим коэффициенты этого уравнения на 3. <br/>
                 {'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0,\\)'} <br/>

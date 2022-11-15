@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
 import { useState } from 'react'
 
@@ -51,7 +51,7 @@ export default function Home() {
     <header className="header">
         <nav className="header-nav">
             <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><Image src='/logo.svg' alt="#" className="logo"/></Link></li>
+                <li className="header-menu-item menu-logo"><Link href="/"><img src='/logo.svg' alt="#" className="logo"/></Link></li>
                 <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
                 <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
             </ul>

@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
+
 import styles from '/styles/Home.module.css'
 import { useState } from 'react'
 
@@ -51,7 +51,7 @@ export default function Graph() {
     <header className="header">
         <nav className="header-nav">
             <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><Image src="/logo.svg" alt="#" className="logo"/></Link></li>
+                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
                 <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
                 <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
             </ul>
@@ -76,7 +76,7 @@ export default function Graph() {
                 графиков являются корнями данного уравнения. <br/>
                 {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
             </p>
-                <Image src="/graph1.png" alt=""/>
+                <img src="/graph1.png" alt=""/>
             <p className="disc-text">
                 2 способ.  {'\\(3x^2+4x-7=0,\\)'} <br/>
                 {'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0; ⇔ x^2 - \\frac{7}{3} = -\\frac{4}{3}x\\)'} <br/>
@@ -86,7 +86,7 @@ export default function Graph() {
                 этих двух графиков являются корнями данного уравнения. <br/>
                 {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
             </p>
-                <Image src="/graph2.png" alt=""/>
+                <img src="/graph2.png" alt=""/>
             <p className="disc-text">
                 3 способ. {'\\(3x^2+4x-7=0, | :х\\)'} <br/>
                 {'\\(3x + 4 - \\frac{7}{x} = 0\\)'} <br/>
@@ -96,7 +96,7 @@ export default function Graph() {
                 этих двух графиков являются корнями данного уравнения. <br/>
                 {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
             </p>
-                <Image src="/graph3.png" alt=""/>
+                <img src="/graph3.png" alt=""/>
         </div>
     </main>
     </div>
