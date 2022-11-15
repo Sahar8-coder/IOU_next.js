@@ -7,8 +7,8 @@ export default async function (req, res) {
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: process.env.mail, // generated ethereal user
-        pass: process.env.pass, // generated ethereal password
+        user: process.env.MAIL, // generated ethereal user
+        pass: process.env.PASS, // generated ethereal password
       },
     });
     
