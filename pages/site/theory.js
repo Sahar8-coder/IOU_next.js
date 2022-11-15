@@ -1,28 +1,65 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+import Head from 'next/head'
+import styles from '/styles/Home.module.css'
+import { useState } from 'react'
+
+export default function Theory() {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Sending')
+
+    let data = {
+        name,
+        email,
+        message
+    }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+        console.log('Response received')
+        if (res.status === 200) {
+            console.log('Response succeeded!')
+            setSubmitted(true) 
+            setName('1')
+            setEmail('2')
+            setMessage('3')
+        }
+    })
+  }
+
+  return (
+    <div>
+<Head>
+    <meta charSet="UTF-8"/>
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/normalize.css">
-</head>
-<body>
-    <header class="header">
-        <nav class="header-nav">
-            <ul class="header-menu">
-                <li class="header-menu-item menu-logo"><a href="../index.html"><img src="../img/logo.svg" alt="#" class="logo"></a></li>
-                <li class="header-menu-item"><a href="../pages/theory.html" class="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
-                <li class="header-menu-item"><a href="../pages/practice.html" class="header-menu-link">Практика</a></li>
+</Head>
+    <header className="header">
+        <nav className="header-nav">
+            <ul className="header-menu">
+                <li className="header-menu-item menu-logo"><a href="/"><img src="/logo.svg" alt="#" className="logo"/></a></li>
+                <li className="header-menu-item"><a href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
+                <li className="header-menu-item"><a href="/site/practice" className="header-menu-link">Практика</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <div class="content">
-            <section class="theory">
-                <h2 class="theory-h">Квадратные уравнения</h2>
-                <p class="theory-p">
+    <main className="main">
+        <div className="content">
+            <section className="theory">
+                <h2 className="theory-h">Квадратные уравнения</h2>
+                <p className="theory-p">
                     Квадратные уравнения.
          Квадратным уравнением называют уравнение вида <strong><i>ах²+bх+с=0</i></strong>, где коэффициенты <strong><i>а, b, с</i></strong> - любые действительные числа, причём, <strong><i>а≠0</i></strong>. Коэффициенты <strong><i>а, b, с,</i></strong> различают по названиям: <strong><i>а</i></strong> - первый или старший коэффициент; <strong><i>b</i></strong> - второй или коэффициент при х; <strong><i>с</i></strong> - свободный член, свободен от переменной х.
 
@@ -45,5 +82,6 @@
             </section>
         </div>
     </main>
-</body>
-</html>
+    </div>
+  )
+}

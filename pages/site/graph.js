@@ -46,26 +46,26 @@ export default function Graph() {
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
 </Head>
-    <header class="header">
-        <nav class="header-nav">
-            <ul class="header-menu">
-                <li class="header-menu-item menu-logo"><a href="/"><img src="/logo.svg" alt="#" class="logo"/></a></li>
-                <li class="header-menu-item"><a href="/pages/theory" class="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
-                <li class="header-menu-item"><a href="/pages/practice" class="header-menu-link">Практика</a></li>
+    <header className="header">
+        <nav className="header-nav">
+            <ul className="header-menu">
+                <li className="header-menu-item menu-logo"><a href="/"><img src="/logo.svg" alt="#" className="logo"/></a></li>
+                <li className="header-menu-item"><a href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
+                <li className="header-menu-item"><a href="/site/practice" className="header-menu-link">Практика</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <div class="content disc-content">
+    <main className="main">
+        <div className="content disc-content">
             <h2>Графический метод</h2>
-            <p class="disc-text">
+            <p className="disc-text">
                 Используя знания о квадратичной и линейной функциях и их графиках, 
                 можно решить квадратное уравнение так называемым функционально-графическим 
                 методом. Причем, некоторые квадратные уравнения можно решить 
                 различными способами, рассмотрим эти способы на примере одного 
                 квадратного уравнения. 
             </p>
-            <p class="disc-text">
+            <p className="disc-text">
                 1 способ. {'\\(3x^2+4x-7=0,\\)'} <br/>
                 {'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0 ⇔ x^2 = \\frac{7}{3} - \\frac{4}{3}x\\)'} <br/>
                 Построим графики функции 
@@ -75,7 +75,7 @@ export default function Graph() {
                 {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
             </p>
                 <img src="/graph1.png" alt=""/>
-            <p class="disc-text">
+            <p className="disc-text">
                 2 способ.  {'\\(3x^2+4x-7=0,\\)'} <br/>
                 {'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0; ⇔ x^2 - \\frac{7}{3} = -\\frac{4}{3}x\\)'} <br/>
                 Построим графики функции 
@@ -85,7 +85,7 @@ export default function Graph() {
                 {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
             </p>
                 <img src="/graph2.png" alt=""/>
-            <p class="disc-text">
+            <p className="disc-text">
                 3 способ. {'\\(3x^2+4x-7=0, | :х\\)'} <br/>
                 {'\\(3x + 4 - \\frac{7}{x} = 0\\)'} <br/>
                 Построим графики функции 

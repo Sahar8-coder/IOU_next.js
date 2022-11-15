@@ -1,56 +1,90 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+import Head from 'next/head'
+import styles from '/styles/Home.module.css'
+import { useState } from 'react'
+
+export default function Videl() {
+
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  const [submitted, setSubmitted] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Sending')
+
+    let data = {
+        name,
+        email,
+        message
+    }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+        console.log('Response received')
+        if (res.status === 200) {
+            console.log('Response succeeded!')
+            setSubmitted(true) 
+            setName('1')
+            setEmail('2')
+            setMessage('3')
+        }
+    })
+  }
+
+  return (
+    <div>
+<Head>
+    <meta charSet="UTF-8"/>
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/normalize.css">
-    <script type="text/javascript" id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-    </script>
-</head>
-<body>
-    <header class="header">
-        <nav class="header-nav">
-            <ul class="header-menu">
-                <li class="header-menu-item menu-logo"><a href="../index.html"><img src="../img/logo.svg" alt="#" class="logo"></a></li>
-                <li class="header-menu-item"><a href="../pages/theory.html" class="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
-                <li class="header-menu-item"><a href="../pages/practice.html" class="header-menu-link">Практика</a></li>
+</Head>
+    <header className="header">
+        <nav className="header-nav">
+            <ul className="header-menu">
+                <li className="header-menu-item menu-logo"><a href="/"><img src="/logo.svg" alt="#" className="logo"/></a></li>
+                <li className="header-menu-item"><a href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</a></li>
+                <li className="header-menu-item"><a href="/site/practice" className="header-menu-link">Практика</a></li>
             </ul>
         </nav>
     </header>
-    <main class="main">
-        <div class="content disc-content">
+    <main className="main">
+        <div className="content disc-content">
             <h2>Метод выделения полного квадрата</h2>
-            <p class="disc-text">
+            <p className="disc-text">
                 Определение
                 Выделением полного квадрата из квадратного трёхчлена  \(ax^2 + bx + c\)
                 называется процедура, в результате которой трёхчлен 
-                приводится к виду \(a(x-x_0)^2 + y_0\), где \(x^0\) и \(y^0\)  некоторые 
+                приводится к виду \(a(x-x_0)^2 + y_0\), где \(x_0\) и \(y_0\)  некоторые 
                 вещественные числа.
             </p>
-            <p class="disc-text">
+            <p className="disc-text">
                 Таким образом, при выделении полного квадрата необходимо понять, 
-                чему равны \(x^0\) и \(y^0\), при которых выполняется равенство 
+                чему равны \(x_0\) и \(y_0\), при которых выполняется равенство 
                 $$ax^2 + bx + c = a(x-x_0)^2 + y_0$$
             </p>
-            <p class="disc-text">
+            <p className="disc-text">
                 Выделение полного квадрата основывается на формулах квадрата суммы и 
                 квадрата разности:
                 $$ a^2 + 2ab + b^2 = (a + b)^2 $$
                 $$ a^2 - 2ab + b^2 = (a - b)^2 $$
             </p>
-            <p class="disc-text">
+            <p className="disc-text">
                 Самым сложным при выделении полного квадрата из квадратного трёхчлена  
                 \(ax^2 + bx + c\)
                 бывает понять, какое число нужно прибавить и отнять, 
                 чтобы выделить квадрат суммы или квадрат разности. 
                 Рассмотрим эту процедуру на примере.
             </p>
-            <p class="disc-text">
-                Пример 1. Выделим полный квадрат из квадратного трёхчлена \(x^2 - 6x + 8\) <br>
+            <p className="disc-text">
+                Пример 1. Выделим полный квадрат из квадратного трёхчлена \(x^2 - 6x + 8\) <br/>
 
                 Решение. Заметим, что \(6x = 2 * 3 * x\) и в выражении \(x^2 - 6x\) не хватает 
                 слагаемого \(3^2\), 
@@ -66,6 +100,6 @@
             </p>
         </div>
     </main>
-    <script src="../js/main.js"></script>
-</body>
-</html>
+    </div>
+  )
+}
