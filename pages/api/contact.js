@@ -3,7 +3,7 @@ export default async function (req, res) {
 
     let nodemailer = require('nodemailer')
     let transporter = nodemailer.createTransport({
-      host: "	smtp.sendgrid.net",
+      host: "smtp.sendgrid.net",
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
