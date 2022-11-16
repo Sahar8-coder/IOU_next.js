@@ -3,12 +3,12 @@ export default async function (req, res) {
 
     let nodemailer = require('nodemailer')
     let transporter = nodemailer.createTransport({
-      host: "smtp.yandex.ru",
+      host: "	smtp.sendgrid.net",
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: process.env.MAIL, // generated ethereal user
-        pass: process.env.PASS, // generated ethereal password
+        user: apikey, // generated ethereal user
+        pass: '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', // generated ethereal password
       },
     });
     
