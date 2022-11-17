@@ -2,13 +2,13 @@ export default async function (req, res) {
     require('dotenv').config()
 
     let nodemailer = require('nodemailer')
-    let transporter = nodemailer.createTransport({
-      host: "smtp.sendgrid.net",
+    let transporter = await nodemailer.createTransport({
+      host: "smtp.yandex.ru",
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-        user: 'apikey', // generated ethereal user
-        pass: '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', // generated ethereal password
+        user: 'k1rilovz@yandex.ru', // generated ethereal user
+        pass: 'qhfxkhjcdlvgdwhs', // generated ethereal password
       },
     });
     
