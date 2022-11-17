@@ -11,7 +11,7 @@ export default async function (req, res) {
         pass: 'qhfxkhjcdlvgdwhs', // generated ethereal password
       },
     });
-    
+    console.log(transporter)
     const mailData = {
         from: 'k1rilovz@yandex.ru',
         to: req.body.email,
@@ -19,7 +19,6 @@ export default async function (req, res) {
         text: req.body.message + " | Sent from: " + req.body.email,
         html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
     }
-    console.log(mailData)
     
     await transporter.sendMail(mailData, function (err, info) {
         if(err)
