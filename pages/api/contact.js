@@ -2,7 +2,7 @@ export default async function (req, res) {
     require('dotenv').config()
 
     let nodemailer = require('nodemailer')
-    let transporter = await nodemailer.createTransport({
+    let transporter = nodemailer.createTransport({
       host: "smtp.yandex.ru",
       port: 465,
       secure: true, // true for 465, false for other ports
