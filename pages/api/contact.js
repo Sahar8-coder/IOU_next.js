@@ -19,6 +19,7 @@ export default async function (req, res) {
         text: req.body.message + " | Sent from: " + req.body.email,
         html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
     }
+    console.log(mailData)
     
     await transporter.sendMail(mailData, function (err, info) {
         if(err)
@@ -29,5 +30,5 @@ export default async function (req, res) {
   
     console.log(req.body)
     res.send('success')
-    console.log('erdx ththfrx')
+    console.log('fetched')
   }
