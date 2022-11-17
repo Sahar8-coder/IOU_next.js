@@ -29,4 +29,5 @@ export default async function (req, res) {
   
     console.log(req.body)
     res.send('success')
+    console.log('erdx ththfrx')
   }
