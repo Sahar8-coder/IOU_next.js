@@ -1,7 +1,7 @@
+import nodemailer from 'nodemailer'
 export default async function (req, res) {
     require('dotenv').config()
 
-    let nodemailer = require('nodemailer')
     let transporter = nodemailer.createTransport({
       host: "smtp.yandex.ru",
       port: 465,
