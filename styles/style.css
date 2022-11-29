@@ -12,53 +12,53 @@ body
     flex-wrap: wrap;
     border-radius: 20px;
 }
-.type_1 {
-    display: inline-block;
+.left_top{
+    border-radius: 20px 0 0 0;
+}
+    
+.right_top{
+    border-radius: 0 20px 0 0;
+}
+.left_down{
+    border-radius: 0 0 0 20px;
+}
+    
+.right_down{
+    border-radius: 0 0 20px 0;
+}
+.type {
+    width: 253px;
     padding-left: 23px;
-    padding-top: 139px;
     flex: 1 16%;
     border: none;
     outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    background-position: calc(100% - 18px) 18px;
+}
+.type_1 {
     background-color: #D7E4E3;
     color: #222A2A;
-    cursor: pointer;
-    text-decoration: none;
+    background-image: url(../public/Arrow_black.svg);
+    background-repeat: no-repeat;
 }
 .type_2 {
-    display: inline-block;
-    padding-left: 23px;
-    padding-top: 139px;
-    flex: 1 16%;
-    border: none;
-    outline: none;
     background-color: #859595;
     color: #FFFFFF;
-    cursor: pointer;
-    text-decoration: none;
+    background-image: url(../public/Arrow_white.svg);
+    background-repeat: no-repeat;
 }
 .type_3 {
-    display: inline-block;
-    padding-left: 23px;
-    padding-top: 139px;
-    flex: 1 16%;
-    border: none;
-    outline: none;
     background-color: #636363;
     color: #FFFFFF;
-    cursor: pointer;
-    text-decoration: none;
+    background-image: url(../public/Arrow_white.svg);
+    background-repeat: no-repeat;
 }
 .type_4 {
-    display: inline-block;
-    padding-left: 23px;
-    padding-top: 139px;
-    flex: 1 16%;
-    border: none;
-    outline: none;
     background-color: #F5FF80;
     color: #222A2A;
-    cursor: pointer;
-    text-decoration: none;
+    background-image: url(../public/Arrow_black.svg);
+    background-repeat: no-repeat;
 }
 .type-text{
     font-style: normal;
@@ -69,6 +69,16 @@ body
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
+}
+.type-text-div{
+    height: 54px;
+    width: 219px;
+    margin-top: 45px;
+    margin-bottom: 48px;
+}
+.type-name-div{
+    margin-top: 139px;
+    height: 72px;
 }
 
 .types-header-sect {
@@ -84,7 +94,7 @@ body
 }
 .header-menu {
     margin: 0;
-    padding-left: 30px;
+    padding-left: 0;
     padding-top: 20px;
 }
 .logo {
