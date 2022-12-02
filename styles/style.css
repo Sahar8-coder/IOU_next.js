@@ -110,6 +110,11 @@ body
     background-position: calc(100% - 18px) 18px;
 }
 
+.type-main-name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+}
 
 .small-btn {
     background-color: #222B2A;
@@ -140,6 +145,26 @@ body
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+}
+.main_bac_1 {
+    background-repeat: no-repeat;
+    background-image: url(../public/main_type_1.svg);
+    background-position: 0 0;
+}
+.main_bac_2 {
+    background-repeat: no-repeat;
+    background-image: url(../public/main_type_2.svg);
+    background-position: 25px 0%;    
+}
+.main_bac_3 {
+    background-repeat: no-repeat;
+    background-image: url(../public/main_type_3.svg);
+    background-position: 0 0%;    
+}
+.main_bac_4 {
+    background-repeat: no-repeat;
+    background-image: url(../public/main_type_4.svg);
+    background-position: 35px 24px;    
 }
 
 .types-header {

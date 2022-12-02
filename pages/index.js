@@ -68,7 +68,7 @@ export default function Home() {
             <section className="main-flex-2">
                 <Link className="left_top type_5 type-main main_bac_1" href='/site/mnos'>
                     <div className="type-main-name-div">
-                        <h4 className="type-name">Теория</h4>
+                        <h4 className="type-main-name">Теория</h4>
                     </div>
                     <div className="type-main-text-div">
                         <p className="type-text">Все, что необходимо знать перед решением квадратных уравнений</p>
@@ -76,7 +76,7 @@ export default function Home() {
                 </Link>
                 <Link className="right_top type_4 type-main main_bac_2" href='/site/videl'>
                     <div className="type-main-name-div">
-                        <h4 className="type-name">Практика</h4>
+                        <h4 className="type-main-name">Практика</h4>
                     </div>                    
                     <div className="type-main-text-div">
                         <p className="type-text">Тренировка полученых занний</p>
@@ -84,7 +84,7 @@ export default function Home() {
                 </Link>
                 <Link className="left_down type_1 type-main main_bac_3" href='/sposobi'>
                     <div className="type-main-name-div">
-                        <h4 className="type-name">Решения</h4>
+                        <h4 className="type-main-name">Решения</h4>
                     </div>
                     <div className="type-main-text-div">
                         <p className="type-text">Способы решения квадратных уровнений</p>
@@ -92,7 +92,7 @@ export default function Home() {
                 </Link>
                 <Link className="right_down type_3 type-main main_bac_4" href='/site/viet'>
                     <div className="type-main-name-div">
-                        <h4 className="type-name">Помощь</h4>
+                        <h4 className="type-main-name">Помощь</h4>
                     </div>
                     <div className="type-main-text-div">
                         <p className="type-text">При возникновении трудностей</p>
