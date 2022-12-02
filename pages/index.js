@@ -55,107 +55,52 @@ export default function Home() {
         </nav>
     </header>
     <main className="main">
-        <div className="content">
-            <section className="types-header-sect">
-                <h2 className="types-header">Способы решений квадратных уравнений</h2>
+        <div className="content-main">
+            <section className="main-flex-1">
+                <h2 className="types-header">Квадратные уравнения</h2>
+                <p className="main-text types-text">
+                    Решить квадратное уравнение - это значит найти
+                все его корни или установить, что их нет.</p>
+                <Link className="small-btn" href='/site/theory'>
+                    <p className="menu-text small-btn-text">Читать больше</p>
+                </Link>
             </section>
-            <section className="types">
-                <Link className="type type_2 left_top" href='/site/mnos'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Разложение левой части уравнения на множители</h4>
+            <section className="main-flex-2">
+                <Link className="left_top type_5 type-main main_bac_1" href='/site/mnos'>
+                    <div className="type-main-name-div">
+                        <h4 className="type-name">Теория</h4>
                     </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Довольно удобный способ, но помогает не всегда</p>
+                    <div className="type-main-text-div">
+                        <p className="type-text">Все, что необходимо знать перед решением квадратных уравнений</p>
                     </div>
                 </Link>
-                <Link className="type type_3" href='/site/videl'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Метод выделения полного квадрата</h4>
+                <Link className="right_top type_4 type-main main_bac_2" href='/site/videl'>
+                    <div className="type-main-name-div">
+                        <h4 className="type-name">Практика</h4>
                     </div>                    
-                    <div className="type-text-div">
-                        <p className="type-text">Если изначально формулы не видно, использовать довольно непросто</p>
+                    <div className="type-main-text-div">
+                        <p className="type-text">Тренировка полученых занний</p>
                     </div>
                 </Link>
-                <Link className="type type_4" href='/site/formulas'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Решение квадратных уравнений по формулам</h4>
+                <Link className="left_down type_1 type-main main_bac_3" href='/sposobi'>
+                    <div className="type-main-name-div">
+                        <h4 className="type-name">Решения</h4>
                     </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Старый добрый Дискриминант</p>
-                    </div>
-                </Link>
-                <Link className="type type_1" href='/site/viet'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Решение уравнений с использованием теоремы Виета</h4>
-                    </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Прекрасный способ, однако работает не всегда</p>
+                    <div className="type-main-text-div">
+                        <p className="type-text">Способы решения квадратных уровнений</p>
                     </div>
                 </Link>
-                <Link className="type type_2 right_top" href='/site/perebros'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Решение уравнений способом «переброски»</h4>
+                <Link className="right_down type_3 type-main main_bac_4" href='/site/viet'>
+                    <div className="type-main-name-div">
+                        <h4 className="type-name">Помощь</h4>
                     </div>
-                    <div className="type-text-div">
-                        <p className="type-text">В некоторых случаях может сильно помочь</p>
-                    </div>
-                </Link>
-                <Link className="type type_4 left_down" href='/site/chastn'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Частные случаи</h4>
-                    </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Частные случаи это частные случаи, попадаются нечасто, но решаются моментально</p>
-                    </div>
-                </Link>
-                <Link className="type type_1" href='/site/graph'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Графическое решение квадратного уравнения</h4>
-                    </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Алгебра превращается в геометрию</p>
-                    </div>
-                </Link>
-                <Link className="type type_2" href='/site/cirkul'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Решение квадратных уравнений с помощью циркуля и линейки</h4>
-                    </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Окружности помогают решать уравнения</p>
-                    </div>
-                </Link>
-                <Link className="type type_3" href='/site/nomo'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Решение квадратных уравнений с помощью номограммы</h4>
-                    </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Старый и незаслуженно забытый способ</p>
-                    </div>
-                </Link>
-                <Link className="type type_4 right_down" href='/site/geom'>
-                    <div className="type-name-div">
-                        <h4 className="type-name">Геометрический способ решения квадратных уравнений</h4>
-                    </div>
-                    <div className="type-text-div">
-                        <p className="type-text">Один из старейших способов решения</p>
+                    <div className="type-main-text-div">
+                        <p className="type-text">При возникновении трудностей</p>
                     </div>
                 </Link>
             </section>
         </div>
-      < form className={styles.main} >
-          < label jsfor='name'>Name</label>
-          < input type='text' onChange={(e)=>{setName(e.target.value)}} name='name' className={styles.inputField} />
-          <br />
-          < label jsfor='email'>Email</label>
-          < input type='email' onChange={(e)=>{setEmail(e.target.value)}} name='email' className={styles.inputField} />
-          <br />
-          < label jsfor='message'>Message</label>
-          < input type='text' onChange={(e)=>{setMessage(e.target.value)}} name='message' className={styles.inputField} />
-          <br />
-          < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
-      </form >
       </main>
       </div>
   )
 }
-

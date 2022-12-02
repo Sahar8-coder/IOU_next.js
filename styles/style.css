@@ -60,6 +60,12 @@ body
     background-image: url(../public/Arrow_black.svg);
     background-repeat: no-repeat;
 }
+.type_5 {
+    background-color: #222B2A;
+    color: #F2F2F2;
+    background-image: url(../public/Arrow_white.svg);
+    background-repeat: no-repeat;
+}
 .type-text{
     font-style: normal;
     font-weight: 400;
@@ -79,6 +85,80 @@ body
 .type-name-div{
     margin-top: 139px;
     height: 72px;
+    width: 230px;
+}
+.type-main-text-div{
+    height: 34px;
+    width: 288px;
+    margin-top: 30px;
+    margin-bottom: 27px;
+}
+.type-main-name-div{
+    margin-top: 347px;
+    height: 55px;
+    width: 200px;
+}
+.type-main {
+    width: 253px;
+    padding-left: 23px;
+    display: inline;
+    flex: 1 16%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    background-position: calc(100% - 18px) 18px;
+}
+
+
+.small-btn {
+    background-color: #222B2A;
+    color: #F2F2F2;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    border: none;
+    outline: none;
+}
+.small-btn-text {
+    margin: 12px 26px 12px 26px;
+}
+
+.content-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    background-image: url(../public/main_bac.svg);
+    background-position: 290px 100%;
+}
+.main-flex-1 {
+    text-align: left;
+    width: 620px;
+}
+.main-flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.types-header {
+    margin-bottom: 41px;
+}
+
+.menu-text {
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.main-text {
+    font-weight: 500;
+    font-size: 24px;
+    text-align: left;
+}
+
+.types-text {
+    margin-bottom: 41px;
 }
 
 .types-header-sect {
