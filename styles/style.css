@@ -12,19 +12,25 @@ body
     flex-wrap: wrap;
     border-radius: 20px;
 }
+
 .left_top{
     border-radius: 20px 0 0 0;
-}
-    
+} 
 .right_top{
     border-radius: 0 20px 0 0;
 }
 .left_down{
     border-radius: 0 0 0 20px;
-}
-    
+}   
 .right_down{
     border-radius: 0 0 20px 0;
+}
+
+.left {
+    border-radius: 20px 0 0 20px;
+}
+.right {
+    border-radius: 0 20px 20px 0;
 }
 .type {
     width: 253px;
@@ -218,14 +224,20 @@ body
     width: 100%;
 }
 
-.theory {
-    text-align: center;
-    padding-left: 5%;
-    padding-right: 5%;
+.theory-important {
+    background-image: url(../public/theory-imp.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -10px -1px;
+    padding-left: 190px;
+    padding-top: 60px;
+    padding-bottom: 29px;
+    max-width: 990px;
 }
 .theory-p, .disc-text {
-    font-size: large;
-    line-height: 2;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 33px;
 }
 
 .disc-content {
@@ -297,6 +309,14 @@ td {
     border: 1px solid black;
     padding-bottom: 20px;
     padding-left: 40px;
+}
+.help-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+}
+.help-name-div{
+    margin-top: 114px;
 }
 h1, h2, h3, h4, h5, h6 {
     text-align: left;

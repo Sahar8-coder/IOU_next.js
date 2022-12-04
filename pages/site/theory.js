@@ -51,19 +51,19 @@ export default function Theory() {
     <header className="header">
         <nav className="header-nav">
             <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
+                <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
             </ul>
         </nav>
     </header>
     <main className="main">
         <div className="content">
             <section className="theory">
-                <h2 className="theory-h">Квадратные уравнения</h2>
+                <h2 className="theory-h">Теория</h2>
+                <div className="theory-important">
+                    <p className="theory-p">Квадратным уравнением называют уравнение вида ах²+bх+с=0, где коэффициенты а, b, с - любые действительные числа, причём, а≠0.</p>
+                </div>
                 <p className="theory-p">
-                    Квадратные уравнения.
-         Квадратным уравнением называют уравнение вида <strong><i>ах²+bх+с=0</i></strong>, где коэффициенты <strong><i>а, b, с</i></strong> - любые действительные числа, причём, <strong><i>а≠0</i></strong>. Коэффициенты <strong><i>а, b, с,</i></strong> различают по названиям: <strong><i>а</i></strong> - первый или старший коэффициент; <strong><i>b</i></strong> - второй или коэффициент при х; <strong><i>с</i></strong> - свободный член, свободен от переменной х.
+                Коэффициенты а, b, с, различают по названиям: а - первый или старший коэффициент; b - второй или коэффициент при х; с - свободный член, свободен от переменной х.
 
          Квадратное уравнение также называют уравнением второй степени, так как его левая часть есть многочлен второй степени. Квадратное уравнение называют <strong><i>приведенным</i></strong>, если старший коэффициент равен 1; квадратное уравнение называют <strong><i>неприведенным</i></strong>, если старший коэффициент отличен от 1.  <strong><i>х²+рх+q=0</i></strong> - стандартный вид приведенного квадратного уравнения
 

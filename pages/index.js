@@ -68,7 +68,7 @@ export default function Home() {
                 </Link>
             </section>
             <section className="main-flex-2">
-                <Link className="left_top type_5 type-main main_bac_1" href='/site/mnos'>
+                <Link className="left_top type_5 type-main main_bac_1" href='/site/theory'>
                     <div className="type-main-name-div">
                         <h4 className="type-main-name">Теория</h4>
                     </div>
@@ -92,7 +92,7 @@ export default function Home() {
                         <p className="type-text">Способы решения квадратных уровнений</p>
                     </div>
                 </Link>
-                <Link className="right_down type_3 type-main main_bac_4" href='/site/viet'>
+                <Link className="right_down type_3 type-main main_bac_4" href='/help'>
                     <div className="type-main-name-div">
                         <h4 className="type-main-name">Помощь</h4>
                     </div>
