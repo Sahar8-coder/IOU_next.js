@@ -1,7 +1,8 @@
-import Head from 'next/head'
 import Link from 'next/link'
+import Head from 'next/head';
 import styles from '../styles/Home.module.css'
 import { useState } from 'react'
+import { useEffect } from 'react';
 
 export default function Home() {
 
@@ -9,6 +10,7 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
+  const size = useWindowSize();
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -55,9 +57,9 @@ export default function Home() {
         </nav>
     </header>
     <main className="main">
-        <div className="content-main">
+        <div className="content_main">
             <section className="main-flex-1">
-                <h2 className="types-header">Квадратные уравнения</h2>
+                <h2 className="main-header types-header">Квадратные уравнения</h2>
                 <p className="main-text types-text">
                     Решить квадратное уравнение - это значит найти
                 все его корни или установить, что их нет.</p>
@@ -104,3 +106,29 @@ export default function Home() {
       </div>
   )
 }
+// Hook
+function useWindowSize() {
+    // Initialize state with undefined width/height so server and client renders match
+    // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+    const [windowSize, setWindowSize] = useState({
+      width: undefined,
+      height: undefined,
+    });
+    useEffect(() => {
+      // Handler to call on window resize
+      function handleResize() {
+        // Set window width/height to state
+        setWindowSize({
+          width: window.innerWidth,
+          height: window.innerHeight,
+        });
+      }
+      // Add event listener
+      window.addEventListener("resize", handleResize);
+      // Call handler right away so state gets updated with initial window size
+      handleResize();
+      // Remove event listener on cleanup
+      return () => window.removeEventListener("resize", handleResize);
+    }, []); // Empty array ensures that effect is only run on mount
+    return windowSize;
+  }

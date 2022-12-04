@@ -129,22 +129,26 @@ body
     margin: 12px 26px 12px 26px;
 }
 
-.content-main {
+.content_main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-bottom: 20px;
     background-repeat: no-repeat;
-    background-image: url(../public/main_bac.svg);
-    background-position: 290px 100%;
 }
 .main-flex-1 {
     text-align: left;
-    width: 620px;
+    max-width: 620px;
+    padding-right: 120px;
+    background-repeat: no-repeat;
+    background-image: url(../public/main_bac.svg);
+    background-position: 100% 100%;
+    padding-bottom: 20px;
 }
 .main-flex-2 {
     display: flex;
     flex-wrap: wrap;
     text-align: left;
+    max-width: 682px;
+    padding-bottom: 20px;
 }
 .main_bac_1 {
     background-repeat: no-repeat;
