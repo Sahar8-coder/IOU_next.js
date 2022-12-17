@@ -224,16 +224,45 @@ body
     width: 100%;
 }
 
-.theory-important {
-    background-image: url(../public/theory-imp.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: -10px -1px;
-    padding-left: 190px;
-    padding-top: 60px;
-    padding-bottom: 29px;
-    max-width: 990px;
+.big-formula {
+    margin-top: 55px;
+    font-weight: 500;
+    font-size: 48px;
+    background: #D7E4E3;
+    border-radius: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 19px;
+    width: 290px;
 }
+
+.theory-name {
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 66px;
+    margin-bottom: 10px;
+}
+.blue-text {
+    color: #46948E;
+}
+
+.theory-important {
+    border: 2px solid #222A2A;
+    padding-left: 45px;
+    padding-top: 25px;
+    padding-bottom: 24px;
+    margin-left: -40px;
+    padding-right: 0;
+}
+.theory-important-div {
+    display: flex;
+    max-width: 1064px;
+    padding-right: 0;
+}
+.theory-important-img {
+    z-index: 2;
+}
+
 .theory-p, .disc-text {
     font-weight: 500;
     font-size: 24px;

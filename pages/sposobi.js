@@ -57,7 +57,7 @@ export default function Home() {
     <main className="main">
         <div className="content">
             <section className="types-header-sect">
-                <h2 className="types-header">Способы решений квадратных уравнений</h2>
+                <h2 className="types-header">Способы решения квадратных уравнений</h2>
             </section>
             <section className="types">
                 <Link className="type type_2 left_top" href='/site/mnos'>

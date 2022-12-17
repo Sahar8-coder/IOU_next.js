@@ -10,7 +10,69 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const size = useWindowSize();
+  const size = useWindowSize()
+  const document = (<div>
+    <Head>
+        <meta charSet="UTF-8"/>
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Квадратные Уравнения</title>
+    </Head>
+        <header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                </ul>
+            </nav>
+        </header>
+        <main className="main">
+            <div className="content_main">
+                <section className="main-flex-1">
+                    <h2 className="main-header types-header">Квадратные уравнения</h2>
+                    <p className="main-text types-text">
+                        Решить квадратное уравнение - это значит найти
+                    все его корни или установить, что их нет.</p>
+                    <Link className="small-btn" href='/site/theory'>
+                        <p className="menu-text small-btn-text">Читать больше</p>
+                    </Link>
+                </section>
+                <section className="main-flex-2">
+                    <Link className="left_top type_5 type-main main_bac_1" href='/site/theory'>
+                        <div className="type-main-name-div">
+                            <h4 className="type-main-name">Теория</h4>
+                        </div>
+                        <div className="type-main-text-div">
+                            <p className="type-text">Все, что необходимо знать перед решением квадратных уравнений</p>
+                        </div>
+                    </Link>
+                    <Link className="right_top type_4 type-main main_bac_2" href='/site/practice'>
+                        <div className="type-main-name-div">
+                            <h4 className="type-main-name">Практикум</h4>
+                        </div>                    
+                        <div className="type-main-text-div">
+                            <p className="type-text">Проверь себя!</p>
+                        </div>
+                    </Link>
+                    <Link className="left_down type_1 type-main main_bac_3" href='/sposobi'>
+                        <div className="type-main-name-div">
+                            <h4 className="type-main-name">Методы</h4>
+                        </div>
+                        <div className="type-main-text-div">
+                            <p className="type-text">Способы решения квадратных уровнений</p>
+                        </div>
+                    </Link>
+                    <Link className="right_down type_3 type-main main_bac_4" href='/help'>
+                        <div className="type-main-name-div">
+                            <h4 className="type-main-name">Помощь</h4>
+                        </div>
+                        <div className="type-main-text-div">
+                            <p className="type-text">При возникновении трудностей</p>
+                        </div>
+                    </Link>
+                </section>
+            </div>
+          </main>
+          </div>)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -41,70 +103,7 @@ export default function Home() {
     })
   }
 
-  return (
-    <div>
-<Head>
-    <meta charSet="UTF-8"/>
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Квадратные Уравнения</title>
-</Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
-            </ul>
-        </nav>
-    </header>
-    <main className="main">
-        <div className="content_main">
-            <section className="main-flex-1">
-                <h2 className="main-header types-header">Квадратные уравнения</h2>
-                <p className="main-text types-text">
-                    Решить квадратное уравнение - это значит найти
-                все его корни или установить, что их нет.</p>
-                <Link className="small-btn" href='/site/theory'>
-                    <p className="menu-text small-btn-text">Читать больше</p>
-                </Link>
-            </section>
-            <section className="main-flex-2">
-                <Link className="left_top type_5 type-main main_bac_1" href='/site/theory'>
-                    <div className="type-main-name-div">
-                        <h4 className="type-main-name">Теория</h4>
-                    </div>
-                    <div className="type-main-text-div">
-                        <p className="type-text">Все, что необходимо знать перед решением квадратных уравнений</p>
-                    </div>
-                </Link>
-                <Link className="right_top type_4 type-main main_bac_2" href='/site/videl'>
-                    <div className="type-main-name-div">
-                        <h4 className="type-main-name">Практика</h4>
-                    </div>                    
-                    <div className="type-main-text-div">
-                        <p className="type-text">Тренировка полученых занний</p>
-                    </div>
-                </Link>
-                <Link className="left_down type_1 type-main main_bac_3" href='/sposobi'>
-                    <div className="type-main-name-div">
-                        <h4 className="type-main-name">Решения</h4>
-                    </div>
-                    <div className="type-main-text-div">
-                        <p className="type-text">Способы решения квадратных уровнений</p>
-                    </div>
-                </Link>
-                <Link className="right_down type_3 type-main main_bac_4" href='/help'>
-                    <div className="type-main-name-div">
-                        <h4 className="type-main-name">Помощь</h4>
-                    </div>
-                    <div className="type-main-text-div">
-                        <p className="type-text">При возникновении трудностей</p>
-                    </div>
-                </Link>
-            </section>
-        </div>
-      </main>
-      </div>
-  )
+  return (document)
 }
 // Hook
 function useWindowSize() {
