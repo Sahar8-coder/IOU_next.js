@@ -12,16 +12,14 @@ export default function practice() {
   const questions = [
     {
         questionText: '2 + 2',
+        isText: true,
         answerOptions: [
-            {answerText: '4', isCorrect: true},
-            {answerText: '2', isCorrect: false},
-            {answerText: '5', isCorrect: false},
-            {answerText: '3', isCorrect: false}
-
+            {answerText: '4'},
         ]
     },
     {
         questionText: '2 + 3',
+        isText: false,
         answerOptions: [
             {answerText: '4', isCorrect: false},
             {answerText: '2', isCorrect: false},
@@ -32,6 +30,7 @@ export default function practice() {
     },
     {
         questionText: '2 + 4',
+        isText: false,
         answerOptions: [
             {answerText: '4', isCorrect: false},
             {answerText: '6', isCorrect: true},
@@ -42,6 +41,7 @@ export default function practice() {
     },
     {
         questionText: '2 + 5',
+        isText: false,
         answerOptions: [
             {answerText: '4', isCorrect: false},
             {answerText: '2', isCorrect: false},
@@ -53,6 +53,7 @@ export default function practice() {
   ]
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
+  const [input, setInput] = useState('')
   const [showScore, setShowScore] = useState(false)
   const handleAnswerOptionClick = (isCorrect) => {
     if (isCorrect) {
@@ -73,6 +74,15 @@ export default function practice() {
     setCurrentQuestion(0)
     setScore(0)
     setShowScore(false)
+  }
+
+  const textSubmit = (text, correct, e) => {
+    if (text == correct) {
+        handleAnswerOptionClick(true)
+    }
+    else {
+        handleAnswerOptionClick(false)
+    }
   }
 
   const document = (
@@ -100,7 +110,30 @@ export default function practice() {
                                     onClick={refresh}
                                 >Попробовать еще раз</button>
                             </div>
-                        :   <div className="quizz">
+                        :
+                        questions[currentQuestion].isText
+                        ?
+                        <div className="quizz">
+                        <div className="question_section">
+                            <div className="question_count">
+                                <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
+                            </div>
+                            <div className="question_text">{questions[currentQuestion].questionText}</div>
+                        </div>
+                        <div className="answer_section">
+                                < span jsfor='message'>Ответ</span>
+                                <br />
+                                < textarea type='text' 
+                                onChange={(event) => setInput(event.target.value)}
+                                ></textarea>
+                                <br />
+                                < button type='submit'
+                                onClick={(e)=>{textSubmit(input, questions[currentQuestion].answerOptions[0].answerText, e)}}
+                                ></button>
+                        </div>
+                            </div>
+                        :
+                        <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
@@ -116,7 +149,6 @@ export default function practice() {
                             )}
                         </div>
                             </div>
-
                 }
             </div>
           </main>
