@@ -18,7 +18,7 @@ export default function Practice() {
         ]
     },
     {
-        questionText: 'Решите уравнение \\((x − 9):2 = −36x\\).',
+        questionText: 'Решите уравнение \\((x − 9)^2 = −36x\\).',
         isText: true,
         answerOptions: [
             {answerText: '4'},
