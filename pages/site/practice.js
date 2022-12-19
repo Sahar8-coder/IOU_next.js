@@ -1415,7 +1415,7 @@ export default function practice() {
   const [score, setScore] = useState(0)
   const [input, setInput] = useState('')
   const [showScore, setShowScore] = useState(false)
-  const handleAnswerOptionClick = (isCorrect) => {
+  function handleAnswerOptionClick (isCorrect) {
     if (isCorrect) {
         setScore(score + 1)
     }
