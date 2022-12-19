@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react'
 import { useEffect } from 'react';
 
-export default function practice() {
+export default function Practice() {
 
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
