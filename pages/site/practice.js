@@ -1374,6 +1374,13 @@ export default function Practice() {
         answerOptions: [
             {answerText: '4'},
         ]
+    },
+    {
+        questionText: 'Решите уравнение \\(9x^2 − 9 = (3x − 6)^2\\).',
+        isText: true,
+        answerOptions: [
+            {answerText: '4'},
+        ]
     }
   ]
   const [currentQuestion, setCurrentQuestion] = useState(0)
