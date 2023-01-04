@@ -1461,8 +1461,37 @@ const config = {
     }
   }
 
-  const document = (
-  <div>
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log('Sending')
+
+    let data = {
+        name,
+        email,
+        message
+    }
+
+    fetch('/api/contact', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then((res) => {
+        console.log('Response received')
+        if (res.status === 200) {
+            console.log('Response succeeded!')
+            setSubmitted(true) 
+            setName('1')
+            setEmail('2')
+            setMessage('3')
+        }
+    })
+  }
+
+  return (
+    <div>
     <MathJaxContext
       version={2}
       config={config}
@@ -1541,36 +1570,5 @@ const config = {
           </main>
           </MathJaxContext>
           </div>
-          )
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log('Sending')
-
-    let data = {
-        name,
-        email,
-        message
-    }
-
-    fetch('/api/contact', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(data)
-    }).then((res) => {
-        console.log('Response received')
-        if (res.status === 200) {
-            console.log('Response succeeded!')
-            setSubmitted(true) 
-            setName('1')
-            setEmail('2')
-            setMessage('3')
-        }
-    })
-  }
-
-  return (document)
+  )
 }
