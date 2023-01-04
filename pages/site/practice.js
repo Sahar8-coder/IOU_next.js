@@ -2,10 +2,25 @@ import Link from 'next/link';
 import Head from 'next/head';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import MathJax from 'react-mathjax2'
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 export default function Practice() {
 
+const config = {
+        "fast-preview": {
+          disabled: true
+        },
+        tex2jax: {
+          inlineMath: [
+            ["\\(", "\\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        messageStyle: "none"
+  };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -1448,7 +1463,11 @@ export default function Practice() {
 
   const document = (
   <div>
-    <MathJax.Context input='tex'>
+    <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
     <Head>
         <meta charSet="UTF-8"/>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
@@ -1480,7 +1499,13 @@ export default function Practice() {
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <div className="question_text" jsfor="question_text"><MathJax.Node inline>{questions[currentQuestion].questionText}</MathJax.Node></div>
+                            <div className="question_text" jsfor="question_text">
+                                <MathJax
+                                    hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic
+                                >{questions[currentQuestion].questionText}</MathJax>
+                            </div>
                         </div>
                         <div className="answer_section">
                                 < span jsfor='message'>Ответ</span>
@@ -1514,7 +1539,7 @@ export default function Practice() {
                 }
             </div>
           </main>
-          </MathJax.Context>
+          </MathJaxContext>
           </div>
           )
 
