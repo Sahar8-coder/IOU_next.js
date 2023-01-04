@@ -1464,7 +1464,7 @@ const config = {
   const document = (
   <div>
     <MathJaxContext
-      version={3}
+      version={2}
       config={config}
       onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
     >
