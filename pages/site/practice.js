@@ -1506,6 +1506,7 @@ const config = {
                                     dynamic
                                 >{questions[currentQuestion].questionText}</MathJax>
                             </div>
+                            {}
                         </div>
                         <div className="answer_section">
                                 < span jsfor='message'>Ответ</span>
