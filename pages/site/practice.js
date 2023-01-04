@@ -1464,7 +1464,7 @@ const config = {
   const document = (
   <div>
     <MathJaxContext
-      version={2}
+      version={3}
       config={config}
       onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
     >
@@ -1506,7 +1506,6 @@ const config = {
                                     dynamic
                                 >{questions[currentQuestion].questionText}</MathJax>
                             </div>
-                            {}
                         </div>
                         <div className="answer_section">
                                 < span jsfor='message'>Ответ</span>
