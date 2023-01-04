@@ -7,7 +7,7 @@ import '../styles/normalize.css'
 function MyApp({ Component, pageProps }) {
   return (
     <>
-    <Script type="text/javascript" id="MathJax-script" async
+    <Script type="text/javascript" id="MathJax" async
     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"/>
   <Component {...pageProps} />
   </>)

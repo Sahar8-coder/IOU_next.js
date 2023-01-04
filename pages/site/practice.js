@@ -1,7 +1,8 @@
-import Link from 'next/link'
+import Link from 'next/link';
 import Head from 'next/head';
-import { useState } from 'react'
+import { useState } from 'react';
 import { useEffect } from 'react';
+import MathJax from 'react-mathjax2'
 
 export default function Practice() {
 
@@ -1447,6 +1448,7 @@ export default function Practice() {
 
   const document = (
   <div>
+    <MathJax.Context input='tex'>
     <Head>
         <meta charSet="UTF-8"/>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
@@ -1478,7 +1480,7 @@ export default function Practice() {
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <div className="question_text">{questions[currentQuestion].questionText}</div>
+                            <div className="question_text" jsfor="question_text"><MathJax.Node inline>{questions[currentQuestion].questionText}</MathJax.Node></div>
                         </div>
                         <div className="answer_section">
                                 < span jsfor='message'>Ответ</span>
@@ -1498,7 +1500,7 @@ export default function Practice() {
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <div className="question_text">{questions[currentQuestion].questionText}</div>
+                            <MathJax><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
                         </div>
                         <div className="answer_section">
                             {questions[currentQuestion].answerOptions.map((item,key) => (
@@ -1512,6 +1514,7 @@ export default function Practice() {
                 }
             </div>
           </main>
+          </MathJax.Context>
           </div>
           )
 
