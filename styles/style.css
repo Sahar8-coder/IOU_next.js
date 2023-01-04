@@ -131,6 +131,15 @@ body
     border: none;
     outline: none;
 }
+.test_next {
+    background-color: #222B2A;
+    color: #F2F2F2;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    border: none;
+    outline: none;
+}
 .small-btn-text {
     margin: 12px 26px 12px 26px;
 }
