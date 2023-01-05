@@ -131,6 +131,56 @@ const config = {
                         <h4 className="type-prac-name">Вариант 10</h4>
                     </div>
                 </Link>
+                <Link className="type-prac type_2 left_top" href='/site/practice/practice_ege11'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 11</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_3" href='/site/practice/practice_ege12'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 12</h4>
+                    </div>                    
+                </Link>
+                <Link className="type-prac type_4" href='/site/practice/practice_ege13'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 13</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_1" href='/site/practice/practice_ege41'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 14</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_2 right_top" href='/site/practice/practice_ege15'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 15</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_4 left_down" href='/site/practice/practice_ege16'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 16</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_1" href='/site/practice/practice_ege17'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 17</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_2" href='/site/practice/practice_ege18'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 18</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_3" href='/site/practice/practice_ege19'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 19</h4>
+                    </div>
+                </Link>
+                <Link className="type-prac type_4 right_down" href='/site/practice/practice_ege20'>
+                    <div className="type-prac-name-div">
+                        <h4 className="type-prac-name">Вариант 20</h4>
+                    </div>
+                </Link>
             </section>
             </div>
           </main>

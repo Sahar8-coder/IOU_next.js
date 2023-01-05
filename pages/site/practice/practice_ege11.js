@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
-export default function PracticeEge9() {
+export default function PracticeEge7() {
 
 const config = {
         "fast-preview": {
@@ -27,38 +27,38 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((8x + 6)^2 = (4x + 3)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\((7x − 3)^2 = (x + 6)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '-0.75'},
+            {answerText: '1.5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−6x − 3)^2 = 72x\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '0.5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(\\frac{2}{3}x^2 = 2\\frac{2}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-2'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(−2x^2 + 9x + 18 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\((−4x + 6)^2 = −96x\\).',
         isText: true,
         answerOptions: [
             {answerText: '-1.5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 + 1 = (2x + 1)^2\\).',
+        questionText: 'Решите уравнение \\(-\\frac{1}{7}x^2 = -11\\frac{4}{7}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '0'},
+            {answerText: '-9'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(16x^2 + 8x − 3 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        isText: true,
+        answerOptions: [
+            {answerText: '-0.75'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(16x^2 + 8 = (4x − 4)^2\\).',
+        isText: true,
+        answerOptions: [
+            {answerText: '0.25'},
         ]
     }
   ]

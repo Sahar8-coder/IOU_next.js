@@ -27,143 +27,38 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((2x + 5)^2 = (4x − 2)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\((7x + 2)^2 = (x − 4)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '-0.5'},
+            {answerText: '0.25'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((2x − 1)^2 = −8x\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '-0.5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(-\\frac{2}{3}x^2 = -2\\frac{2}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-2'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(45x^2 - 23x + 2 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '0.4'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(x^2 + 3 = (x − 5)^2\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '2.2'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\((5x − 9)^2 = (3x − 5)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '1.75'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\((x + 10)^2 = 40x\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '10'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(-\\frac{1}{3}x^2 = -8\\frac{1}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(20x^2 + 23x + 6 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-0.75'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(25x^2 − 6 = (5x + 2)^2\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '-0.5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\((9x + 5)^2 = (x − 5)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '0'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\((−4x + 6)^2 = −96x\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '-1.5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(\\frac{1}{3}x^2 = 16\\frac{1}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-7'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(−3x^2 − 32x − 45 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-9'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(16x^2 − 7 = (4x + 1)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\((−x + 1)^2 = −4x\\).',
         isText: true,
         answerOptions: [
             {answerText: '-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((6x + 3)2 = (4x − 8)2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(\\frac{1}{7}x^2 = \\frac{4}{7}\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '0.5'},
+            {answerText: '2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−3x − 3)^2 = 36x\\).',
+        questionText: 'Решите уравнение \\(−6x^2 − 17x − 10 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '1'},
+            {answerText: '-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{12}x^2 = 0.75\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(25x^2 − 3 = (5x − 5)^2\\).',
         isText: true,
         answerOptions: [
-            {answerText: '3'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(30x^2 + 29x + 4 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-0.8'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(4x^2 − 1 = (2x + 5)^2\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '-1.3'},
+            {answerText: '0.56'},
         ]
     }
   ]
