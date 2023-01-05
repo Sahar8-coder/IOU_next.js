@@ -33,7 +33,18 @@ body
     border-radius: 0 20px 20px 0;
 }
 .type {
-    width: 253px;
+    width: 276px;
+    padding-left: 23px;
+    flex: 1 16%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    background-position: calc(100% - 18px) 18px;
+}
+.type-prac {
+    width: 276px;
+    height: 360px;
     padding-left: 23px;
     flex: 1 16%;
     border: none;
@@ -82,6 +93,11 @@ body
     font-weight: 500;
     font-size: 24px;
 }
+.type-prac-name {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+}
 .type-text-div{
     height: 54px;
     width: 219px;
@@ -92,6 +108,10 @@ body
     margin-top: 139px;
     height: 72px;
     width: 230px;
+}
+.type-prac-name-div{
+    margin-top: 191px;
+    width: 200px;
 }
 .type-main-text-div{
     height: 34px;
