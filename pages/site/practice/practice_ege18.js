@@ -62,7 +62,7 @@ const config = {
         ]
     }
   ]
-  const [currentQuestion, setCurrentQuestion] = useState(0)
+ const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [input, setInput] = useState('')
   const [showScore, setShowScore] = useState(false)
@@ -78,6 +78,7 @@ const config = {
     }
     else {
         setShowScore(true)
+        setMessage(score + 1)
     }
   } 
 
@@ -86,13 +87,15 @@ const config = {
     setScore(0)
     setShowScore(false)
   }
-
+  var textfor = ''
   const textSubmit = (text, correct, e) => {
-    if (text == correct) {
+    textfor = text.replace(/\,/g, '.')
+    textfor = textfor.trim()
+    if (textfor == correct) {
         handleAnswerOptionClick(true)
     }
     else {
-        handleAnswerOptionClick(false)
+            handleAnswerOptionClick(false)
     }
   }
 
@@ -103,7 +106,8 @@ const config = {
     let data = {
         name,
         email,
-        message
+        message,
+        email_teach
     }
 
     fetch('/api/contact', {
@@ -121,6 +125,7 @@ const config = {
             setName('1')
             setEmail('2')
             setMessage('3')
+            setEmail_teach('4')
         }
     })
   }
@@ -151,6 +156,19 @@ const config = {
                     showScore
                         ?   <div className="section_score">
                                 <div>Правильных ответов {score} из {questions.length}</div>
+                                {}
+                                < form className="form" >
+                                    < label jsfor='name'>Фамилия, имя, класс</label>
+                                    < input type='text' onChange={(e)=>{setName(e.target.value)}} name='name' className="name label" />
+                                    <br />
+                                    < label jsfor='email'>Email</label>
+                                    < input type='email' onChange={(e)=>{setEmail(e.target.value)}} name='email' className="email label" />
+                                    <br />
+                                    < label jsfor='email_teach'>Email учителя</label>
+                                    < input type='email' onChange={(e)=>{setEmail_teach(e.target.value)}} name='email_teach' className="email_teach label" />
+                                    <br />
+                                    < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
+                                </form >
                                 <button className='refresh_ btn'
                                     onClick={refresh}
                                 >Попробовать еще раз</button>
@@ -173,10 +191,8 @@ const config = {
                         </div>
                         <div className="answer_section">
                                 < span jsfor='message'>Ответ</span>
-                                <br />
-                                < textarea type='text' 
-                                onChange={(event) => setInput(event.target.value)}
-                                ></textarea>
+                                <br />             	
+                                <input type="text" name="text" onChange={(event) => setInput(event.target.value)}/>
                                 <br />
                                 < button type='submit' className='test_next'
                                 onClick={(e)=>{textSubmit(input, questions[currentQuestion].answerOptions[0].answerText, e)}}

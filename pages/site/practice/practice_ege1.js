@@ -88,13 +88,15 @@ const config = {
     setScore(0)
     setShowScore(false)
   }
-
+  var textfor = ''
   const textSubmit = (text, correct, e) => {
-    if (text == correct) {
+    textfor = text.replace(/\,/g, '.')
+    textfor = textfor.trim()
+    if (textfor == correct) {
         handleAnswerOptionClick(true)
     }
     else {
-        handleAnswerOptionClick(false)
+            handleAnswerOptionClick(false)
     }
   }
 
@@ -190,10 +192,8 @@ const config = {
                         </div>
                         <div className="answer_section">
                                 < span jsfor='message'>Ответ</span>
-                                <br />
-                                < textarea type='text' 
-                                onChange={(event) => setInput(event.target.value)}
-                                ></textarea>
+                                <br />             	
+                                <input type="text" name="text" onChange={(event) => setInput(event.target.value)}/>
                                 <br />
                                 < button type='submit' className='test_next'
                                 onClick={(e)=>{textSubmit(input, questions[currentQuestion].answerOptions[0].answerText, e)}}
