@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
 export default function PracticeEge1() {
-
+    
 const config = {
         "fast-preview": {
           disabled: true
@@ -23,6 +23,7 @@ const config = {
   };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [email_teach, setEmail_teach] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const questions = [
@@ -78,6 +79,7 @@ const config = {
     }
     else {
         setShowScore(true)
+        setMessage(score + 1)
     }
   } 
 
@@ -103,7 +105,8 @@ const config = {
     let data = {
         name,
         email,
-        message
+        message,
+        email_teach
     }
 
     fetch('/api/contact', {
@@ -121,6 +124,7 @@ const config = {
             setName('1')
             setEmail('2')
             setMessage('3')
+            setEmail_teach('4')
         }
     })
   }
@@ -151,6 +155,19 @@ const config = {
                     showScore
                         ?   <div className="section_score">
                                 <div>Правильных ответов {score} из {questions.length}</div>
+                                {}
+                                < form className="form" >
+                                    < label jsfor='name'>Фамилия, имя, класс</label>
+                                    < input type='text' onChange={(e)=>{setName(e.target.value)}} name='name' className="name label" />
+                                    <br />
+                                    < label jsfor='email'>Email</label>
+                                    < input type='email' onChange={(e)=>{setEmail(e.target.value)}} name='email' className="email label" />
+                                    <br />
+                                    < label jsfor='email_teach'>Email учителя</label>
+                                    < input type='email' onChange={(e)=>{setEmail_teach(e.target.value)}} name='email_teach' className="email_teach label" />
+                                    <br />
+                                    < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
+                                </form >
                                 <button className='refresh_ btn'
                                     onClick={refresh}
                                 >Попробовать еще раз</button>

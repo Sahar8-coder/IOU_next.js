@@ -18,10 +18,10 @@ export default async function (req, res) {
     //console.log(transporter)
     const mailData = {
         from: 'quadratic.eq@mail.ru',
-        to: req.body.email,
-        subject: `Message From ${req.body.name}`,
-        text: req.body.message + " | Sent from: " + req.body.email,
-        html: `<div>${req.body.message}</div><p>Sent from: ${req.body.email}</p>`
+        to: `${req.body.email}, ${req.body.email_teach}`,
+        subject: `Message From quadratic.eq`,
+        text: "Оценка ученика " + req.body.name + " — " + req.body.message,
+        html: `<div>Оценка ученика ${req.body.name}  —  ${req.body.message}</div>`
     }
     
     await transporter.sendMail(mailData, function (err, info) {

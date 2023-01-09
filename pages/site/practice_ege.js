@@ -106,7 +106,7 @@ const config = {
                         <h4 className="type-prac-name">Вариант 5</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_4 left_down" href='/site/practice/practice_ege6'>
+                <Link className="type-prac type_4" href='/site/practice/practice_ege6'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Вариант 6</h4>
                     </div>
@@ -126,12 +126,12 @@ const config = {
                         <h4 className="type-prac-name">Вариант 9</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_4 right_down" href='/site/practice/practice_ege10'>
+                <Link className="type-prac type_4" href='/site/practice/practice_ege10'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Вариант 10</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_2 left_top" href='/site/practice/practice_ege11'>
+                <Link className="type-prac type_2" href='/site/practice/practice_ege11'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Вариант 11</h4>
                     </div>
@@ -151,7 +151,7 @@ const config = {
                         <h4 className="type-prac-name">Вариант 14</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_2 right_top" href='/site/practice/practice_ege15'>
+                <Link className="type-prac type_2" href='/site/practice/practice_ege15'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Вариант 15</h4>
                     </div>

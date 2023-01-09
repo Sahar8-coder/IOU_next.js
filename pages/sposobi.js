@@ -142,18 +142,6 @@ export default function Sposobi() {
                 </Link>
             </section>
         </div>
-      < form className={styles.main} >
-          < label jsfor='name'>Name</label>
-          < input type='text' onChange={(e)=>{setName(e.target.value)}} name='name' className={styles.inputField} />
-          <br />
-          < label jsfor='email'>Email</label>
-          < input type='email' onChange={(e)=>{setEmail(e.target.value)}} name='email' className={styles.inputField} />
-          <br />
-          < label jsfor='message'>Message</label>
-          < input type='text' onChange={(e)=>{setMessage(e.target.value)}} name='message' className={styles.inputField} />
-          <br />
-          < input type='submit' onClick={(e)=>{handleSubmit(e)}}/>
-      </form >
       </main>
       </div>
   )
