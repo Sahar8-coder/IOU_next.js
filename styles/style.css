@@ -159,6 +159,10 @@ body
     display: inline-block;
     border: none;
     outline: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 .small-btn-text {
     margin: 12px 26px 12px 26px;
@@ -380,4 +384,47 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
     font-weight: 600;
     font-size: 94px;
+}
+.test {
+    background-color: #859595;
+    width: 500px;
+    min-height: 200px;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    box-shadow: 10px 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
+}
+.quizz {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.content_main_test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+.question_section {
+    flex: 0 0 50%;
+}
+.question_count {
+    margin-bottom: 20px;
+}
+.question_count_span {
+    font-size: 28px;
+}
+.question_text {
+    margin-bottom: 15px;
+}
+.answer_input {
+    background-color: #859595;
+    border: 1px solid #636363;
+    color: #222A2A;
+    outline: none;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }

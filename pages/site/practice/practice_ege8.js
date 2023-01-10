@@ -130,6 +130,20 @@ const config = {
     })
   }
 
+  () => {
+    var test_input = document.querySelector('#answer_input')
+    var test_btn = document.querySelector('#test_next')
+    test_input.addEventListener("keyup", function(event) {
+        // Число 13 в "Enter" и клавиши на клавиатуре
+        if (event.keyCode === 13) {
+        // При необходимости отмените действие по умолчанию
+        event.preventDefault();
+        // Вызов элемента button одним щелчком мыши
+        test_btn.click();
+        }
+        });
+  }
+
   return (
     <div>
     <MathJaxContext
@@ -151,7 +165,8 @@ const config = {
             </nav>
         </header>
         <main className="main">
-            <div className="content_main">
+            <div className="content_main_test">
+                <div className="test">
                 {
                     showScore
                         ?   <div className="section_score">
@@ -190,9 +205,9 @@ const config = {
                             </div>
                         </div>
                         <div className="answer_section">
-                                < span jsfor='message'>Ответ</span>
+                                < span jsfor='message' className='answer_span'>Ответ</span>
                                 <br />             	
-                                <input type="text" name="text" onChange={(event) => setInput(event.target.value)}/>
+                                <input className='answer_input' type="text" name="text" onChange={(event) => setInput(event.target.value)}/>
                                 <br />
                                 < button type='submit' className='test_next'
                                 onClick={(e)=>{textSubmit(input, questions[currentQuestion].answerOptions[0].answerText, e)}}
@@ -217,6 +232,7 @@ const config = {
                         </div>
                             </div>
                 }
+                </div>
             </div>
           </main>
           </MathJaxContext>
