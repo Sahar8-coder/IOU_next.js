@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((2x − 9)^2 = (3x − 2)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(9x^2 + 6x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-7'},
+            {answerText: '-1/3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((5x − 6)^2 = −120x\\).',
+        questionText: 'Решите уравнение \\(49x^2 + 14x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-1.2'},
+            {answerText: '-1/7'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(-\\frac{1}{7}x^2 = -5\\frac{1}{7}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 20x + 100 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-6'},
+            {answerText: '-10'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−3x^2 − 19x − 20 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 16x + 64 = 0\\). При наличии дроби, ответ запишите через /',
+        isText: true,
+        answerOptions: [
+            {answerText: '-8'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(x^2 + 10x + 25 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
             {answerText: '-5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(x^2 − 8 = (x − 2)^2\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '3'},
         ]
     }
   ]

@@ -27,42 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((3x − 1)^2 = (7x − 2)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x4 − 5x2 + 4 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '0.25'},
+            {answerText: '2;-2;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−x + 5)^2 = −20x\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x4 − 82x2 + 81 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '-5'},
+            {answerText: '9;-9;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{3}x^2 = 12\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x4 + 5x2 − 36 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '6'},
+            {answerText: '2;-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(2x^2 − 9x + 7 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x4 − 5x2 − 36 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '3.5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(x^2 + 8 = (x + 2)^2\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '1'},
+            {answerText: '3;-3'},
         ]
     }
   ]
- const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [input, setInput] = useState('')
   const [showScore, setShowScore] = useState(false)
@@ -78,7 +71,7 @@ const config = {
     }
     else {
         setShowScore(true)
-        setMessage(score + 1)
+        setMessage((score + 1) * 5 / 6)
     }
   } 
 
@@ -89,13 +82,13 @@ const config = {
   }
   var textfor = ''
   const textSubmit = (text, correct, e) => {
-    textfor = text.replace(/\,/g, '.')
+    textfor = text.replace(/\s/g,'')
     textfor = textfor.trim()
     if (textfor == correct) {
         handleAnswerOptionClick(true)
     }
     else {
-            handleAnswerOptionClick(false)
+        handleAnswerOptionClick(false)
     }
   }
 
@@ -128,8 +121,7 @@ const config = {
             setEmail_teach('4')
         }
     })
-  }
-
+  } 
   () => {
     var test_input = document.querySelector('#answer_input')
     var test_btn = document.querySelector('#test_next')
@@ -171,6 +163,7 @@ const config = {
                     showScore
                         ?   <div className="section_score">
                                 <div>Правильных ответов {score} из {questions.length}</div>
+                                <div>Оценка {score * 5 / 6}</div>
                                 {}
                                 < form className="form" >
                                     < label jsfor='name'>Фамилия, имя, класс</label>

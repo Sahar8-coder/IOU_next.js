@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((x + 3)^2 = (9x + 4)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(25x^2 − 10x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-0.7'},
+            {answerText: '1/5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((5x + 1)^2 = 20x\\).',
+        questionText: 'Решите уравнение \\(49x^2 + 14x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.2'},
+            {answerText: '-1/7'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(-\\frac{2}{3}x^2 = -16\\frac{2}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(121x^2 + 22x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-5'},
+            {answerText: '-1/11'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(6x^2 − 11x − 10 = 0\\). Если уравнение имеет более одного корня, в ответ запишите 6x2 − 11x − 10 = 0 из них.',
+        questionText: 'Решите уравнение \\(25x^2 − 20x + 4 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '2.5'},
+            {answerText: '2/5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(64x^2 − 3 = (8x − 5)2\\).',
+        questionText: 'Решите уравнение \\(x^2 − 6x + 9 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.35'},
+            {answerText: '3'},
         ]
     }
   ]

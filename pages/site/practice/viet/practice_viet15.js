@@ -27,38 +27,38 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((7x + 2)^2 = (3x + 2)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 3x − 88 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '0'},
+            {answerText: '8;-11'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((x − 3)^2 = −12x\\).',
+        questionText: 'Решите уравнение \\(x^2 − 7x − 98 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '-3'},
+            {answerText: '14;-7'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{7}{15}x^2 = 1\\frac{13}{15}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 21x + 38 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '-2'},
+            {answerText: '-2;-19'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(5x^2 − 31x + 30 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 − 7x − 18 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '1.2'},
+            {answerText: '9;-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 + 5 = (2x + 1)^2\\).',
+        questionText: 'Решите уравнение \\(x^2 + 2x − 15 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '1'},
+            {answerText: '3;-5'},
         ]
     }
   ]

@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((7x − 3)^2 = (x + 6)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 20x + 100 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '1.5'},
+            {answerText: '-10'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−4x + 6)^2 = −96x\\).',
+        questionText: 'Решите уравнение \\(121x^2 − 22x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-1.5'},
+            {answerText: '1/11'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(-\\frac{1}{7}x^2 = -11\\frac{4}{7}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(25x^2 − 20x + 4 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-9'},
+            {answerText: '2/5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x^2 + 8x − 3 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(64x^2 − 16x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-0.75'},
+            {answerText: '1/8'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x^2 + 8 = (4x − 4)^2\\).',
+        questionText: 'Решите уравнение \\(9x^2 − 6x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.25'},
+            {answerText: '1/3'},
         ]
     }
   ]

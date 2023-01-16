@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((7x + 2)^2 = (x − 4)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(36x^2 − 12x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.25'},
+            {answerText: '1/6'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−x + 1)^2 = −4x\\).',
+        questionText: 'Решите уравнение \\(81x^2 − 18x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-1'},
+            {answerText: '1/9'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{7}x^2 = \\frac{4}{7}\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 12x + 36 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '2'},
+            {answerText: '-6'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−6x^2 − 17x − 10 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 8x + 16 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-2'},
+            {answerText: '-4'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(25x^2 − 3 = (5x − 5)^2\\).',
+        questionText: 'Решите уравнение \\(121x^2 − 22x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.56'},
+            {answerText: '1/11'},
         ]
     }
   ]

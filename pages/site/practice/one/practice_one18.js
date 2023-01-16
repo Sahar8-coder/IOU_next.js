@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((7x + 7)^2 = (3x − 1)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(49x^2 − 14x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-0.6'},
+            {answerText: '1/7'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((x − 4)^2 = −16x\\).',
+        questionText: 'Решите уравнение \\(4x^2 + 12x + 9 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-4'},
+            {answerText: '-3/2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{13}x^2 = 2\\frac{10}{13}\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(36x^2 + 12x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '6'},
+            {answerText: '-1/6'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−x^2 − 2x + 35 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(81x^2 − 18x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-7'},
+            {answerText: '1/9'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(25x^2 + 2 = (5x − 4)^2\\).',
+        questionText: 'Решите уравнение \\(x^2 + 4x + 4 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.35'},
+            {answerText: '-2'},
         ]
     }
   ]

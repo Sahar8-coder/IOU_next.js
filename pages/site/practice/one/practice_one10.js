@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((7x − 4)^2 = (x − 1)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(25x^2 − 20x + 4 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.625'},
+            {answerText: '2/5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((x − 7)^2 = −28x\\).',
+        questionText: 'Решите уравнение \\(x^2 − 20x + 100 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-7'},
+            {answerText: '10'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(-\\frac{1}{3}x^2 = -1\\frac{1}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 18x + 81 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-2'},
+            {answerText: '-9'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 − 3x − 18 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(4x^2 − 20x + 25 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-3'},
+            {answerText: '5/2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(25x^2 + 6 = (5x + 2)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(100x^2 − 20x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.1'},
+            {answerText: '1/10'},
         ]
     }
   ]

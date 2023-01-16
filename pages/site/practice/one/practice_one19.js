@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((4x − 5)^2 = (x − 2)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x^2 − 4x + 4 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '1.4'},
+            {answerText: '2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−x − 13)^2 = 52x\\).',
+        questionText: 'Решите уравнение \\(x^2 − 22x + 121 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '13'},
+            {answerText: '11'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{3}x^2 = 21\\frac{1}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(4x^2 − 20x + 25 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-8'},
+            {answerText: '5/2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−36x^2 − 13x − 1 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 2x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-0.25'},
+            {answerText: '-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 + 8 = (2x − 2)^2\\).',
+        questionText: 'Решите уравнение \\(81x^2 + 18x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-0.5'},
+            {answerText: '-1/9'},
         ]
     }
   ]

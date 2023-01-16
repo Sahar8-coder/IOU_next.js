@@ -27,42 +27,41 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((5x + 7)^2 = (3x − 9)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\(81x4 − 45x2 + 4 = 0\\). Корни укажите через точку с запятой',
+        isText: false,
         answerOptions: [
-            {answerText: '0.25'},
+            {answerText: '\\(\\frac{2}{3}\\); -\\(\\frac{2}{3}\\); \\(\\frac{1}{3}\\); -\\(\\frac{1}{3}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{1}{3}\\); -\\(\\frac{1}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{2}{3}\\); -\\(\\frac{2}{3}\\); \\(\\frac{5}{3}\\); -\\(\\frac{5}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{1}{3}\\); -\\(\\frac{1}{3}\\);', isCorrect: false},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((5x − 4)^2 = −80x\\).',
+        questionText: 'Решите уравнение \\(x4 − 13x2 + 36 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '-0.8'},
+            {answerText: '3;-3;2;-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{7}{11}x^2 = 5\\frac{8}{11}\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x4 − 8x2 − 9 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '3'},
+            {answerText: '3;-3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−24x^2 + 58x − 35 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\(81x4 − 27x2 − 4 = 0\\). Корни укажите через точку с запятой',
+        isText: false,
         answerOptions: [
-            {answerText: '1.25'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(81x^2 + 9 = (9x − 3)^2\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '0'},
+            {answerText: '\\(\\frac{3}{3}\\); -\\(\\frac{3}{3}\\)', isCorrect: false},
+            {answerText: '\\(2\\); -\\(2\\)', isCorrect: false},
+            {answerText: '\\(\\frac{2}{3}\\); -\\(\\frac{2}{3}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{1}{3}\\); -\\(\\frac{1}{3}\\)', isCorrect: false},
         ]
     }
   ]
- const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [input, setInput] = useState('')
   const [showScore, setShowScore] = useState(false)
@@ -78,7 +77,7 @@ const config = {
     }
     else {
         setShowScore(true)
-        setMessage(score + 1)
+        setMessage((score + 1) * 5 / 6)
     }
   } 
 
@@ -89,13 +88,13 @@ const config = {
   }
   var textfor = ''
   const textSubmit = (text, correct, e) => {
-    textfor = text.replace(/\,/g, '.')
+    textfor = text.replace(/\s/g,'')
     textfor = textfor.trim()
     if (textfor == correct) {
         handleAnswerOptionClick(true)
     }
     else {
-            handleAnswerOptionClick(false)
+        handleAnswerOptionClick(false)
     }
   }
 
@@ -128,8 +127,7 @@ const config = {
             setEmail_teach('4')
         }
     })
-  }
-
+  } 
   () => {
     var test_input = document.querySelector('#answer_input')
     var test_btn = document.querySelector('#test_next')
@@ -171,6 +169,7 @@ const config = {
                     showScore
                         ?   <div className="section_score">
                                 <div>Правильных ответов {score} из {questions.length}</div>
+                                <div>Оценка {score * 5 / 6}</div>
                                 {}
                                 < form className="form" >
                                     < label jsfor='name'>Фамилия, имя, класс</label>

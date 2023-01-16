@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((9x − 7)^2 = (x − 7)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(4x^2 − 12x + 9 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '1.4'},
+            {answerText: '3/2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−5x − 1)^2 = 20x\\).',
+        questionText: 'Решите уравнение \\(x^2 + 16x + 64 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.2'},
+            {answerText: '-8'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{2}{3}x^2 = 10\\frac{2}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-4'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(−20x^2 + 19x − 3 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '0.2'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(4x^2 + 5 = (2x + 5)^2\\).',
+        questionText: 'Решите уравнение \\(x^2 + 2x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
             {answerText: '-1'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(x^2 − 4x + 4 = 0\\). При наличии дроби, ответ запишите через /',
+        isText: true,
+        answerOptions: [
+            {answerText: '2'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(16x^2 − 8x + 1 = 0\\). При наличии дроби, ответ запишите через /',
+        isText: true,
+        answerOptions: [
+            {answerText: '1/4'},
         ]
     }
   ]

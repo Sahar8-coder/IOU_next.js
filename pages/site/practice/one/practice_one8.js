@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((3x − 7)^2 = (5x + 1)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(36x^2 − 12x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.75'},
+            {answerText: '1/6'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−2x − 12)^2 = 96x\\).',
+        questionText: 'Решите уравнение \\(x^2 + 22x + 121 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '6'},
+            {answerText: '-11'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{14}x^2 = 5\\frac{11}{14}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(4x^2 − 12x + 9 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-9'},
+            {answerText: '3/2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 + 14x + 48 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(4x^2 − 4x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-6'},
+            {answerText: '1/2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(36x^2 + 7 = (6x + 5)^2\\).',
+        questionText: 'Решите уравнение \\(x^2 − 10x + 25 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-0.3'},
+            {answerText: '5'},
         ]
     }
   ]

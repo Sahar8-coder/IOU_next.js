@@ -27,40 +27,40 @@ const config = {
   const [email_teach, setEmail_teach] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((9x − 3)^2 = (6x + 3)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 − 8x + 16 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0'},
+            {answerText: '4'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((x − 9)^2 = −36x\\).',
+        questionText: 'Решите уравнение \\(x^2 − 20x + 100 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-9'},
+            {answerText: '10'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{9}{13}x^2 = 6 \\frac{3}{13}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(81x^2 − 18x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-3'},
+            {answerText: '1/9'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x^2 − 58x + 45 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(4x^2 − 12x + 9 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '2.5'},
+            {answerText: '3/2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 − 6 = (x + 6)^2\\).',
+        questionText: 'Решите уравнение \\(x^2 + 20x + 100 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-3.5'},
+            {answerText: '-10'},
         ]
     }
   ]

@@ -29,38 +29,51 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((9x − 3)^2 = (6x + 3)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x4 − 40x2 + 144 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '0'},
+            {answerText: '6;-6;2;-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((x − 9)^2 = −36x\\).',
+        questionText: 'Решите уравнение \\(x4 − 17x2 + 16 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '-9'},
+            {answerText: '4;-4;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{9}{13}x^2 = 6 \\frac{3}{13}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x4 − 63x2 − 64 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '-3'},
+            {answerText: '8;-8'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x^2 − 58x + 45 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(16x4 + 96x2 − 25 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
-            {answerText: '2.5'},
+            {answerText: '0.5;-0.5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 − 6 = (x + 6)^2\\).',
-        isText: true,
+        questionText: 'Решите уравнение \\(x4 − 27x2 + 50 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '-3.5'},
+            {answerText: '5; -5; \\(\\sqrt{2}\\); \\(-\\sqrt{2}\\)', isCorrect: true},
+            {answerText: '3; -3; \\(\\sqrt{5}\\); \\(-\\sqrt{5}\\)', isCorrect: false},
+            {answerText: '2; -2; \\(\\sqrt{5}\\); \\(-\\sqrt{5}\\)', isCorrect: false},
+            {answerText: '4; -4; \\(\\sqrt{4}\\); \\(-\\sqrt{4}\\)', isCorrect: false}
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(x4 − 83x2 + 162 = 0\\).',
+        isText: false,
+        answerOptions: [
+            {answerText: '9; -9; \\(\\sqrt{2}\\); \\(-\\sqrt{2}\\)', isCorrect: true},
+            {answerText: '7; -7; \\(\\sqrt{5}\\); \\(-\\sqrt{5}\\)', isCorrect: false},
+            {answerText: '2; -2; \\(\\sqrt{5}\\); \\(-\\sqrt{5}\\)', isCorrect: false},
+            {answerText: '6; -6; \\(\\sqrt{4}\\); \\(-\\sqrt{4}\\)', isCorrect: false}
         ]
     }
   ]
@@ -80,7 +93,7 @@ const config = {
     }
     else {
         setShowScore(true)
-        setMessage(score + 1)
+        setMessage((score + 1) * 5 / 6)
     }
   } 
 
@@ -91,13 +104,13 @@ const config = {
   }
   var textfor = ''
   const textSubmit = (text, correct, e) => {
-    textfor = text.replace(/\,/g, '.')
+    textfor = text.replace(/\s/g,'')
     textfor = textfor.trim()
     if (textfor == correct) {
         handleAnswerOptionClick(true)
     }
     else {
-            handleAnswerOptionClick(false)
+        handleAnswerOptionClick(false)
     }
   }
 
@@ -172,6 +185,7 @@ const config = {
                     showScore
                         ?   <div className="section_score">
                                 <div>Правильных ответов {score} из {questions.length}</div>
+                                <div>Оценка {score * 5 / 6}</div>
                                 {}
                                 < form className="form" >
                                     < label jsfor='name'>Фамилия, имя, класс</label>

@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((9x + 5)^2 = (7x + 9)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x^2 − 6x + 9 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '2'},
+            {answerText: '3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((5x + 5)^2 = 100x\\).',
+        questionText: 'Решите уравнение \\(x^2 + 12x + 36 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '1'},
+            {answerText: '-6'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(-\\frac{1}{13} = -1\\frac{12}{13}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(81x^2 − 18x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-5'},
+            {answerText: '1/9'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−3x^2 − 31x − 56 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(81x^2 + 18x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-8'},
+            {answerText: '-1/9'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(64x^2 + 9 = (8x + 1)^2\\).',
+        questionText: 'Решите уравнение \\(x^2 − 20x + 100 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.5'},
+            {answerText: '10'},
         ]
     }
   ]

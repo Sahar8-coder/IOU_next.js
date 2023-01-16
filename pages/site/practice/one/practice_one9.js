@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((8x + 6)^2 = (4x + 3)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(x^2 + 12x + 36 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-0.75'},
+            {answerText: '-6'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−6x − 3)^2 = 72x\\).',
+        questionText: 'Решите уравнение \\(x^2 − 6x + 9 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.5'},
+            {answerText: '3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{2}{3}x^2 = 2\\frac{2}{3}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(100x^2 + 20x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-2'},
+            {answerText: '-1/10'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−2x^2 + 9x + 18 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 − 20x + 100 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '-1.5'},
+            {answerText: '10'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 + 1 = (2x + 1)^2\\).',
+        questionText: 'Решите уравнение \\(x^2 − 12x + 36 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0'},
+            {answerText: '6'},
         ]
     }
   ]

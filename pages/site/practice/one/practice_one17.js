@@ -25,40 +25,40 @@ const config = {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
-  const questions = [
+   const questions = [
     {
-        questionText: 'Решите уравнение \\((3x + 3)^2 = (2x − 2)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(9x^2 − 12x + 4 = 0\\). При наличии дроби, ответ запишите через /',
+        isText: true,
+        answerOptions: [
+            {answerText: '2/3'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(x^2 + 12x + 36 = 0\\). При наличии дроби, ответ запишите через /',
+        isText: true,
+        answerOptions: [
+            {answerText: '-6'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(49x^2 + 14x + 1 = 0\\). При наличии дроби, ответ запишите через /',
+        isText: true,
+        answerOptions: [
+            {answerText: '-1/7'},
+        ]
+    },
+    {
+        questionText: 'Решите уравнение \\(x^2 + 10x + 25 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
             {answerText: '-5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−5x − 1)^2 = 20x\\).',
+        questionText: 'Решите уравнение \\(4x^2 − 4x + 1 = 0\\). При наличии дроби, ответ запишите через /',
         isText: true,
         answerOptions: [
-            {answerText: '0.2'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(-\\frac{3}{7}x^2 = -10\\frac{5}{7}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-5'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(−28x^2 − 23x − 4 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
-        answerOptions: [
-            {answerText: '-0.25'},
-        ]
-    },
-    {
-        questionText: 'Решите уравнение \\(25x^2 + 9 = (5x + 2)^2\\).',
-        isText: true,
-        answerOptions: [
-            {answerText: '0.25'},
+            {answerText: '1/2'},
         ]
     }
   ]
