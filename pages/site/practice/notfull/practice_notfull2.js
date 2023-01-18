@@ -27,35 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((2x + 7)^2 = (8x + 7)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(9x^2 − 18 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
             {answerText: '-1.4'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−4x + 4)^2 = −64x\\).',
+        questionText: 'Решите уравнение \\(19x^2 + 8 = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{7}x^2 = 1\\frac{2}{7}\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(32x^2 = 128\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
         isText: true,
         answerOptions: [
             {answerText: '3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−32x^2 − 36x − 7 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Решите уравнение \\(−9x^2 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
         isText: true,
         answerOptions: [
             {answerText: '-0.25'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x^2 − 9 = (4x − 5)^2\\).',
+        questionText: 'Решите уравнение \\(0.5x^2 + \\frac{2}{7}x = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '0.85'},

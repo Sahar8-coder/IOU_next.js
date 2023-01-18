@@ -27,38 +27,38 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((8x − 2)^2 = (2x − 5)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(4x^2 + 5x − 6 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '-0.5'},
+            {answerText: '3/4;-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((4x + 2)^2 = 32x\\).',
+        questionText: 'Решите уравнение \\(−20x^2 + 11x + 3 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '0.5'},
+            {answerText: '-1/5;3/4'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{5}{13}x^2 = 5\\frac{2}{13}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(−12x^2 + 11x − 2 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '-4'},
+            {answerText: '1/4;2/3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−15x^2 + 23x − 4 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(−3x^2 − 20x − 25 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '0.2'},
+            {answerText: '-5;-5/3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 − 4 = (2x + 4)^2\\).',
+        questionText: 'Решите уравнение \\(−20x^2 − x + 1 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '-1.25'},
+            {answerText: '-1/4;1/5'},
         ]
     }
   ]

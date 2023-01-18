@@ -27,35 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((7x − 7)^2 = (4x − 4)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(−10x^2 − 6x = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
             {answerText: '1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\((2x + 10)^2 = 80x\\).',
+        questionText: 'Решите уравнение \\(19x^2 = −5\\).',
         isText: true,
         answerOptions: [
             {answerText: '5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(-\\frac{1}{6}x^2 = -4\\frac{1}{6}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(9x^2 − 11 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
             {answerText: '-5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−2x^2 + 11x − 5 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Решите уравнение \\(x^2 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
             {answerText: '0.5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x^2 + 3 = (4x − 3)^2\\).',
+        questionText: 'Решите уравнение \\(-\\frac{5}{6}x^2 - \\frac{3}{13}x = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '0.25'},
