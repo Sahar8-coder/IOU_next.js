@@ -1,10 +1,26 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { useState } from 'react'
 
 export default function Formulas() {
 
+    const config = {
+        "fast-preview": {
+          disabled: true
+        },
+        tex2jax: {
+          inlineMath: [
+            ["\\(", "\\)"],
+            ["\(", "\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        messageStyle: "none"
+  };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -41,21 +57,24 @@ export default function Formulas() {
 
   return (
  <div>
+    <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
 <Head>
     <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
 </Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
-            </ul>
-        </nav>
-    </header>
+<header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                </ul>
+            </nav>
+</header>
     <main className="main">
         <div className="content disc-content">
             <p className="disc-text">
@@ -127,7 +146,7 @@ export default function Formulas() {
                 Теперь перейдем, собственно, к решению. 
                 Если дискриминант <strong><i>{'D > 0'},</i></strong> корни можно найти по формулам:
             </p>
-            {'$$x_1 = \\frac{-b + \\sqrt{D}}{2a}; \\qquad x_2 = \\frac{-b - \\sqrt{D}}{2a};$$'}
+            <MathJax>{'$$x_1 = \\frac{-b + \\sqrt{D}}{2a}; \\qquad x_2 = \\frac{-b - \\sqrt{D}}{2a};$$'}</MathJax>
             <p className="disc-text center"><i>Основная формула корней квадратного уравнения</i></p>
         <p className="disc-text">
             Когда <strong><i>{'D = 0'},</i></strong> можно использовать любую из этих формул — 
@@ -152,7 +171,7 @@ export default function Formulas() {
                     <p className="disc-text">{'D > 0'} ⇒ уравнение имеет два корня. Найдем их: </p>
                 </td>
                 <td className="formula2b">
-                    {'$$ x_1 = \\frac{2 + \\sqrt{16}}{2 * 1} = 3;$$ $$x_2 = \\frac{2 - \\sqrt{16}}{2 * 1} = -1;$$'}
+                    <MathJax>{'$$ x_1 = \\frac{2 + \\sqrt{16}}{2 * 1} = 3;$$ $$x_2 = \\frac{2 - \\sqrt{16}}{2 * 1} = -1;$$'}</MathJax>
                 </td>
             </tr>
             </tbody> 
@@ -169,7 +188,7 @@ export default function Formulas() {
                         <p className="disc-text">{'D > 0'} ⇒ уравнение имеет два корня. Найдем их: </p>
                     </td>
                     <td className="formula2b">
-                        {'$$ x_1 = \\frac{2 + \\sqrt{64}}{2 * (-1)} = -5;$$ $$x_2 = \\frac{2 - \\sqrt{64}}{2 * (-1)} = 3;$$'}
+                        <MathJax>{'$$ x_1 = \\frac{2 + \\sqrt{64}}{2 * (-1)} = -5;$$ $$x_2 = \\frac{2 - \\sqrt{64}}{2 * (-1)} = 3;$$'}</MathJax>
                     </td>
                 </tr>
                 </tbody> 
@@ -187,7 +206,7 @@ export default function Formulas() {
                         Можно использовать любую формулу. Например, первую: </p>
                 </td>
                 <td className="formula2b">
-                    {'$$ x = \\frac{-12 + \\sqrt{0}}{2 * 1} = -6;$$'}
+                    <MathJax>{'$$ x = \\frac{-12 + \\sqrt{0}}{2 * 1} = -6;$$'}</MathJax>
                 </td>
             </tr>
             </tbody> 
@@ -199,7 +218,7 @@ export default function Formulas() {
                     <p className="disc-text">Или запомнить, когда <strong><i>D = 0</i></strong> ⇒ уравнение имеет корень: </p>
                 </td>
                 <td className="formula2b">
-                    {'$$ x = \\frac{-b}{2a};$$'}
+                    <MathJax>{'$$ x = \\frac{-b}{2a};$$'}</MathJax>
                 </td>
             </tr>
             </tbody> 
@@ -213,5 +232,6 @@ export default function Formulas() {
         </p>
         </div>
     </main>
+    </MathJaxContext>
         </div>
 )}

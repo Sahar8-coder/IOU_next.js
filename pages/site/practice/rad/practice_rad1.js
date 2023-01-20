@@ -29,38 +29,53 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((9x − 3)^2 = (6x + 3)^2\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\(x^2 − 18x − 30 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '0'},
+            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false},
+            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false},
+            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false},
+            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\((x − 9)^2 = −36x\\).',
-        isText: true,
+        questionText: 'Решите уравнение \\(9x^2 − 6x − 11 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '-9'},
+            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\(\\frac{9}{13}x^2 = 6 \\frac{3}{13}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\(−\\frac{1}{4}x − \\frac{15}{52} − \\frac{1}{26}x^2 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '-3'},
+            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false},
+            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false},
+            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false},
+            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x^2 − 58x + 45 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\(x^2 - 10x\\sqrt{2} + 42 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '2.5'},
+            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false},
+            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false},
+            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false},
+            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 − 6 = (x + 6)^2\\).',
-        isText: true,
+        questionText: 'Решите уравнение \\((−7x + 3)(−14x − 8) = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '-3.5'},
+            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false}
         ]
     }
   ]
@@ -158,10 +173,10 @@ const config = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Квадратные Уравнения</title>
     </Head>
-        <header className="header">
+<header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
         </header>
@@ -221,15 +236,21 @@ const config = {
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <MathJax><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
+                            <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
                         </div>
                         <div className="answer_section">
+                        <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic>
                             {questions[currentQuestion].answerOptions.map((item,key) => (
-                            <button key={key}
+                            <button key={key} className='test_next'
                                 onClick={() => handleAnswerOptionClick(item.isCorrect)}
                             >{item.answerText}</button>
                             )
                             )}
+                            </MathJax>
                         </div>
                             </div>
                 }

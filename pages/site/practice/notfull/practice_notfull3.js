@@ -30,35 +30,38 @@ const config = {
         questionText: 'Решите уравнение \\(4x^2 − 36 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '1.4'},
+            {answerText: '3;-3'},
         ]
     },
     {
         questionText: 'Решите уравнение \\(8x^2 = 4\\).',
-        isText: true,
+        isText: false,
         answerOptions: [
-            {answerText: '0.2'},
+            {answerText: '\\(\\sqrt{2}; -\\sqrt{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{1}{\\sqrt{2}}; -\\frac{1}{\\sqrt{2}}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{1}{2}; -\\frac{1}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{2}{\\sqrt{1}}; -\\frac{2}{\\sqrt{1}}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение \\(\\frac{5}{8}x^2 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '-4'},
+            {answerText: '0'},
         ]
     },
     {
         questionText: 'Решите уравнение \\(−13x^2 + 5x = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '0.2'},
+            {answerText: '0;5/13'},
         ]
     },
     {
         questionText: 'Решите уравнение \\(-0.5x^2 - \\frac{1}{14}x = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '-1'},
+            {answerText: '0;-1/7'},
         ]
     }
   ]
@@ -157,10 +160,10 @@ const config = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Квадратные Уравнения</title>
     </Head>
-        <header className="header">
+<header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
         </header>
@@ -215,20 +218,26 @@ const config = {
                         </div>
                             </div>
                         :
-                        <div className="quizz">
+                                                <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <MathJax><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
+                            <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
                         </div>
                         <div className="answer_section">
+                        <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic>
                             {questions[currentQuestion].answerOptions.map((item,key) => (
-                            <button key={key}
+                            <button key={key} className='test_next'
                                 onClick={() => handleAnswerOptionClick(item.isCorrect)}
                             >{item.answerText}</button>
                             )
                             )}
+                            </MathJax>
                         </div>
                             </div>
                 }

@@ -28,37 +28,40 @@ const config = {
   const questions = [
     {
         questionText: 'Решите уравнение \\(12x^2 − 5 = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
+        isText: false,
         answerOptions: [
-            {answerText: '0.75'},
+            {answerText: '\\(\\frac{\\sqrt{2}}{2\\sqrt{3}}; -\\frac{\\sqrt{2}}{2\\sqrt{3}}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{5}{2\\sqrt{3}}; -\\frac{5}{2\\sqrt{3}}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{\\sqrt{5}}{2\\sqrt{3}}; -\\frac{\\sqrt{5}}{2\\sqrt{3}}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{\\sqrt{5}}{2*3}; -\\frac{\\sqrt{5}}{2*3}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение \\(-\\frac{6}{11}x^2 + \\frac{1}{9}x = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '6'},
+            {answerText: '0;11/54'},
         ]
     },
     {
         questionText: 'Решите уравнение \\(19x^2 + 10 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '-9'},
+            {answerText: 'Решенийнет'},
         ]
     },
     {
         questionText: 'Решите уравнение \\(−8x^2 − 7x = 0\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
         isText: true,
         answerOptions: [
-            {answerText: '-6'},
+            {answerText: '0;-7/8'},
         ]
     },
     {
         questionText: 'Решите уравнение \\(\\frac{1}{6}x^2 = 0\\).',
         isText: true,
         answerOptions: [
-            {answerText: '-0.3'},
+            {answerText: '0'},
         ]
     }
   ]
@@ -157,10 +160,10 @@ const config = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Квадратные Уравнения</title>
     </Head>
-        <header className="header">
+<header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
         </header>
@@ -215,20 +218,26 @@ const config = {
                         </div>
                             </div>
                         :
-                        <div className="quizz">
+                                                <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <MathJax><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
+                            <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
                         </div>
                         <div className="answer_section">
+                        <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic>
                             {questions[currentQuestion].answerOptions.map((item,key) => (
-                            <button key={key}
+                            <button key={key} className='test_next'
                                 onClick={() => handleAnswerOptionClick(item.isCorrect)}
                             >{item.answerText}</button>
                             )
                             )}
+                            </MathJax>
                         </div>
                             </div>
                 }

@@ -1,11 +1,27 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import styles from '/styles/Home.module.css'
 import { useState } from 'react'
 
 export default function Videl() {
 
+    const config = {
+        "fast-preview": {
+          disabled: true
+        },
+        tex2jax: {
+          inlineMath: [
+            ["\\(", "\\)"],
+            ["\(", "\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        messageStyle: "none"
+  };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -42,66 +58,70 @@ export default function Videl() {
 
   return (
     <div>
+        <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
 <Head>
     <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
 </Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
-            </ul>
-        </nav>
-    </header>
+<header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                </ul>
+            </nav>
+</header>
     <main className="main">
         <div className="content disc-content">
             <h2>Метод выделения полного квадрата</h2>
             <p className="disc-text">
                 Определение
-                Выделением полного квадрата из квадратного трёхчлена  \(ax^2 + bx + c\)
+                Выделением полного квадрата из квадратного трёхчлена  <MathJax inline>\(ax^2 + bx + c\)</MathJax>
                 называется процедура, в результате которой трёхчлен 
-                приводится к виду \(a(x-x_0)^2 + y_0\), где \(x_0\) и \(y_0\)  некоторые 
+                приводится к виду <MathJax inline>\(a(x-x_0)^2 + y_0\)</MathJax>, где <MathJax inline>\(x_0\)</MathJax> и <MathJax inline>\(y_0\)</MathJax>  некоторые 
                 вещественные числа.
             </p>
             <p className="disc-text">
                 Таким образом, при выделении полного квадрата необходимо понять, 
-                чему равны \(x_0\) и \(y_0\), при которых выполняется равенство 
-                $$ax^2 + bx + c = a(x-x_0)^2 + y_0$$
+                чему равны <MathJax inline>\(x_0\)</MathJax> и <MathJax inline>\(y_0\)</MathJax>, при которых выполняется равенство 
+                <MathJax>$$ax^2 + bx + c = a(x-x_0)^2 + y_0$$</MathJax>
             </p>
             <p className="disc-text">
                 Выделение полного квадрата основывается на формулах квадрата суммы и 
                 квадрата разности:
-                $$ a^2 + 2ab + b^2 = (a + b)^2 $$
-                $$ a^2 - 2ab + b^2 = (a - b)^2 $$
+                <MathJax>$$ a^2 + 2ab + b^2 = (a + b)^2 $$</MathJax>
+                <MathJax>$$ a^2 - 2ab + b^2 = (a - b)^2 $$</MathJax>
             </p>
             <p className="disc-text">
                 Самым сложным при выделении полного квадрата из квадратного трёхчлена  
-                \(ax^2 + bx + c\)
+                <MathJax inline>\(ax^2 + bx + c\)</MathJax>
                 бывает понять, какое число нужно прибавить и отнять, 
                 чтобы выделить квадрат суммы или квадрат разности. 
                 Рассмотрим эту процедуру на примере.
             </p>
             <p className="disc-text">
-                Пример 1. Выделим полный квадрат из квадратного трёхчлена \(x^2 - 6x + 8\) <br/>
+                Пример 1. Выделим полный квадрат из квадратного трёхчлена <MathJax inline>\(x^2 - 6x + 8\)</MathJax> <br/>
 
-                Решение. Заметим, что \(6x = 2 * 3 * x\) и в выражении \(x^2 - 6x\) не хватает 
-                слагаемого \(3^2\), 
-                чтобы записать квадрат разности: \(x^2 - 6x + 3^2 = (x - 3)^2\). 
+                Решение. Заметим, что <MathJax inline>\(6x = 2 * 3 * x\)</MathJax> и в выражении <MathJax inline>\(x^2 - 6x\)</MathJax> не хватает 
+                слагаемого <MathJax inline>\(3^2\)</MathJax>, 
+                чтобы записать квадрат разности: <MathJax inline>\(x^2 - 6x + 3^2 = (x - 3)^2\)</MathJax>. 
                 Тогда к исходному квадратному 
-                трёхчлену добавим \(3^2 = 9\) и, чтобы получить равное выражение, отнимем 9, 
-                после чего выделим квадрат разности \((x - 3)^2\) и суммируем оставшиеся 
+                трёхчлену добавим <MathJax inline>\(3^2 = 9\)</MathJax> и, чтобы получить равное выражение, отнимем 9, 
+                после чего выделим квадрат разности <MathJax inline>\((x - 3)^2\)</MathJax> и суммируем оставшиеся 
                 подобные слагаемые (в данном случае  числа):
-                $$ x^2 - 6x + 8 = x^2 - 2 * x * 3 + 9 - 9 + 8 = (x - 3)^2 - 1 $$
-                Таким образом, привели квадратный трёхчлен \(x^2 - 6x + 8\) 
-                к виду \(a(x-x_0)^2 + y_0\), где \(a = 1\), \(x_0 = 3\) и \(y_0 = -1\).
+                <MathJax>$$ x^2 - 6x + 8 = x^2 - 2 * x * 3 + 9 - 9 + 8 = (x - 3)^2 - 1 $$</MathJax>
+                Таким образом, привели квадратный трёхчлен <MathJax inline>\(x^2 - 6x + 8\)</MathJax> 
+                к виду <MathJax inline>\(a(x-x_0)^2 + y_0\)</MathJax>, где <MathJax inline>\(a = 1\)</MathJax>, <MathJax inline>\(x_0 = 3\)</MathJax> и <MathJax inline>\(y_0 = -1\)</MathJax>.
                 Выделение полного квадрата бывает полезным при решении квадратных уравнений.
             </p>
         </div>
     </main>
+    </MathJaxContext>
     </div>
   )
 }

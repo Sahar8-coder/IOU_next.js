@@ -13,7 +13,8 @@ const config = {
         },
         tex2jax: {
           inlineMath: [
-            ["\\(", "\\)"]
+            ["\\(", "\\)"],
+            ["\(", "\)"]
           ],
           displayMath: [
             ["$$", "$$"],
@@ -174,10 +175,10 @@ const config = {
         <header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
-        </header>
+</header>
         <main className="main">
             <div className="content_main_test">
                 <div className="test">
@@ -230,20 +231,26 @@ const config = {
                         </div>
                             </div>
                         :
-                        <div className="quizz">
+                                                <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <MathJax><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
+                            <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
                         </div>
                         <div className="answer_section">
+                        <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic>
                             {questions[currentQuestion].answerOptions.map((item,key) => (
-                            <button key={key}
+                            <button key={key} className='test_next'
                                 onClick={() => handleAnswerOptionClick(item.isCorrect)}
                             >{item.answerText}</button>
                             )
                             )}
+                            </MathJax>
                         </div>
                             </div>
                 }

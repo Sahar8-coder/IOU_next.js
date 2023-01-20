@@ -1,11 +1,12 @@
 import Link from 'next/link';
 import Head from 'next/head';
+import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { MathJax, MathJaxContext } from "better-react-mathjax";
 
-export default function PracticeEge4() {
-
+export default function PracticeEge1() {
+    
 const config = {
         "fast-preview": {
           disabled: true
@@ -23,46 +24,62 @@ const config = {
   };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [email_teach, setEmail_teach] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\((9x + 5)^2 = (7x + 9)^2\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\(x^2 - 5x\\sqrt{7} + 42 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '2'},
+            {answerText: '\\(3\\sqrt7; 2\\sqrt7\\)', isCorrect: false},
+            {answerText: '\\(3\\sqrt7; 2\\sqrt7\\)', isCorrect: false},
+            {answerText: '\\(3\\sqrt7; 2\\sqrt7\\)', isCorrect: false},
+            {answerText: '\\(3\\sqrt7; 2\\sqrt7\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\((5x + 5)^2 = 100x\\).',
-        isText: true,
+        questionText: 'Решите уравнение \\(\\frac{1}{4} - \\frac{3}{37}x^2 - \\frac{3}{17} = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '1'},
+            {answerText: '\\(\\frac{4}{3}; \\frac{3}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{4}{3}; \\frac{3}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{4}{3}; \\frac{3}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{4}{3}; \\frac{3}{2}\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\(-\\frac{1}{13} = -1\\frac{12}{13}\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\(4x^2 − 12x − 3 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '-5'},
+            {answerText: '\\(\\frac{3 - 2\\sqrt3}{2}; \\frac{3 + 2\\sqrt3}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3 - 2\\sqrt3}{2}; \\frac{3 + 2\\sqrt3}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3 - 2\\sqrt3}{2}; \\frac{3 + 2\\sqrt3}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3 - 2\\sqrt3}{2}; \\frac{3 + 2\\sqrt3}{2}\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−3x^2 − 31x − 56 = 0\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
-        isText: true,
+        questionText: 'Решите уравнение \\((12x + 15)(10x − 3) = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '-8'},
+            {answerText: '\\(-\\frac{5}{4}; \\frac{3}{10}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{5}{4}; \\frac{3}{10}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{5}{4}; \\frac{3}{10}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{5}{4}; \\frac{3}{10}\\)', isCorrect: false}
         ]
     },
     {
-        questionText: 'Решите уравнение \\(64x^2 + 9 = (8x + 1)^2\\).',
-        isText: true,
+        questionText: 'Решите уравнение \\(x^2 − 16x + 24 = 0\\).',
+        isText: false,
         answerOptions: [
-            {answerText: '0.5'},
+            {answerText: '\\(8 - 2\\sqrt{10}; 8 + 2\\sqrt{10}\\)', isCorrect: false},
+            {answerText: '\\(8 - 2\\sqrt{10}; 8 + 2\\sqrt{10}\\)', isCorrect: false},
+            {answerText: '\\(8 - 2\\sqrt{10}; 8 + 2\\sqrt{10}\\)', isCorrect: false},
+            {answerText: '\\(8 - 2\\sqrt{10}; 8 + 2\\sqrt{10}\\)', isCorrect: false}
         ]
     }
   ]
- const [currentQuestion, setCurrentQuestion] = useState(0)
+  const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
   const [input, setInput] = useState('')
   const [showScore, setShowScore] = useState(false)
@@ -128,8 +145,7 @@ const config = {
             setEmail_teach('4')
         }
     })
-  }
-
+  } 
   () => {
     var test_input = document.querySelector('#answer_input')
     var test_btn = document.querySelector('#test_next')
@@ -157,10 +173,10 @@ const config = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Квадратные Уравнения</title>
     </Head>
-        <header className="header">
+<header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
         </header>
@@ -220,15 +236,21 @@ const config = {
                             <div className="question_count">
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
-                            <MathJax><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
+                            <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic><div className="question_text" id="question_text">{questions[currentQuestion].questionText}</div></MathJax>
                         </div>
                         <div className="answer_section">
+                        <MathJax hideUntilTypeset={"first"}
+                                    inline
+                                    dynamic>
                             {questions[currentQuestion].answerOptions.map((item,key) => (
-                            <button key={key}
+                            <button key={key} className='test_next'
                                 onClick={() => handleAnswerOptionClick(item.isCorrect)}
                             >{item.answerText}</button>
                             )
                             )}
+                            </MathJax>
                         </div>
                             </div>
                 }

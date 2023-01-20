@@ -1,11 +1,27 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import styles from '/styles/Home.module.css'
 import { useState } from 'react'
 
 export default function Mnos() {
 
+    const config = {
+        "fast-preview": {
+          disabled: true
+        },
+        tex2jax: {
+          inlineMath: [
+            ["\\(", "\\)"],
+            ["\(", "\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        messageStyle: "none"
+  };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -42,21 +58,24 @@ export default function Mnos() {
 
   return (
     <div>
+        <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
         <Head>
     <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
 </Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
-            </ul>
-        </nav>
-    </header>
+<header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                </ul>
+            </nav>
+</header>
     <main className="main">
         <div className="content disc-content">
             <h3 className="disc-text">Неполные квадратные уравнения</h3>
@@ -89,27 +108,27 @@ export default function Mnos() {
                 Рассмотрим остальные случаи. Пусть b = 0, тогда получим неполное 
                 квадратное уравнение вида ax² + c = 0. Немного преобразуем его:
             </p>
-            {'$$ax^2 + c = 0 \\implies x^2 = -\\frac{c}{a} \\implies x = \\pm \\sqrt{-\\frac{c}{a}}$$'}
+            <MathJax>{'$$ax^2 + c = 0 \\implies x^2 = -\\frac{c}{a} \\implies x = \\pm \\sqrt{-\\frac{c}{a}}$$'}</MathJax>
             <p className="disc-text center">Решение неполного квадратного уравнения</p>
             <p className="disc-text">
                 Поскольку арифметический квадратный корень существует только из неотрицательного числа, 
                 последнее равенство имеет смысл исключительно при
-                {' \\(-\\frac{c}{a} \\geq 0\\) '}.
+                <MathJax inline>{'\\(-\\frac{c}{a} \\geq 0\\)'}</MathJax>.
                 Вывод:
             </p>
             <p className="disc-text">
                 1.	Если в неполном квадратном уравнении вида ax² + c = 0 выполнено неравенство 
-                {' \\(-\\frac{c}{a} \\geq 0\\) '},
+                <MathJax inline>{'\\(-\\frac{c}{a} \\geq 0\\)'}</MathJax>,
                 корней будет два. Формула дана выше;<br/>
                 2.	Если же 
-                {' \\(-\\frac{c}{a} < 0\\) '},
+                <MathJax inline>{'\\(-\\frac{c}{a} < 0\\)'}</MathJax>,
                 корней нет.
             </p>
             <p className="disc-text">
                 Как видите, дискриминант не потребовался — в неполных квадратных уравнениях 
                 вообще нет сложных вычислений. На самом деле даже необязательно помнить 
                 неравенство 
-                {' \\(-\\frac{c}{a} \\geq 0\\) '}
+                <MathJax inline>{'\\(-\\frac{c}{a} \\geq 0\\)'}</MathJax>
                 . Достаточно выразить величину x² и посмотреть, что стоит с другой стороны
                 от знака равенства. Если там положительное число — корней будет два. 
                 Если отрицательное — корней не будет вообще.
@@ -119,7 +138,7 @@ export default function Mnos() {
                 равен нулю. Тут все просто: корней всегда будет два. 
                 Достаточно разложить многочлен на множители:
             </p>
-            {'$$ax^2 + bx = 0 \\implies x(ax + b) = 0 \\implies x_1 = 0; x_2 = -\\frac{b}{a}$$'}
+            <MathJax>{'$$ax^2 + bx = 0 \\implies x(ax + b) = 0 \\implies x_1 = 0; x_2 = -\\frac{b}{a}$$'}</MathJax>
             <p className="disc-text center">Вынесение общего множителя за скобку</p>
             <p className="disc-text">
                 Произведение равно нулю, когда хотя бы один из множителей равен нулю. 
@@ -133,6 +152,7 @@ export default function Mnos() {
             </p>
         </div>
     </main>
+    </MathJaxContext>
     </div>
   )
 }

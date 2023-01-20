@@ -1,11 +1,27 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import styles from '/styles/Home.module.css'
 import { useState } from 'react'
 
 export default function Perebros() {
 
+    const config = {
+        "fast-preview": {
+          disabled: true
+        },
+        tex2jax: {
+          inlineMath: [
+            ["\\(", "\\)"],
+            ["\(", "\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        messageStyle: "none"
+  };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -42,21 +58,24 @@ export default function Perebros() {
 
   return (
     <div>
+        <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
 <Head>
     <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
 </Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
-            </ul>
-        </nav>
-    </header>
+<header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                </ul>
+            </nav>
+</header>
     <main className="main">
         <div className="content disc-content">
             <h2>Метод переброски</h2>
@@ -83,43 +102,44 @@ export default function Perebros() {
             </p>
             <p className="disc-text">
                 1)умножаем обе части на старший коэффициент: <br/>
-                    \(ax^2+bx+c=0;|⋅a\) <br/>
-                    \((ax)^2+b(ax)+ac=0\) <br/>
+                    <MathJax inline>\(ax^2+bx+c=0;|⋅a\)</MathJax> <br/>
+                    <MathJax inline>\((ax)^2+b(ax)+ac=0\)</MathJax> <br/>
                     2)вводим новую переменную y=ax: <br/>
-                    \(y^2+by+ac=0\) <br/>
+                    <MathJax inline>\(y^2+by+ac=0\)</MathJax> <br/>
             </p>
             <p className="disc-text">
                 Далее уравнение решают устно описанным выше способом, 
                 затем возвращаются к исходной переменной и находят корни уравнений 
-                \(y_1=ax_1; y_2=ax_2\)
+                <MathJax inline>\(y_1=ax_1; y_2=ax_2\)</MathJax>
             </p>
             <p className="disc-text">
                 Применение метода «переброски» при решении квадратных уравнений 
                 или уравнений сводящихся к ним. 
             </p>
             <p className="disc-text">
-                Пример 1. Решить уравнение: \(3х^2 + 10x + 7 = 0\). 
+                Пример 1. Решить уравнение: <MathJax inline>\(3х^2 + 10x + 7 = 0\)</MathJax>. 
                 Решение. Выполним «переброску» старшего коэффициента и 
                 решим уравнение с помощью теоремы обратной теореме Виета: 
-                $$y^2 + 10y + 3 · 7 = 0;$$
-                $$y^2 + 10y + 21 = 0.$$
+                <MathJax>$$y^2 + 10y + 3 · 7 = 0;$$</MathJax>
+                <MathJax>$$y^2 + 10y + 21 = 0.$$</MathJax>
             </p>
             <p className="disc-text">
                 По теореме обратной теореме Виета:
-                {'\\( \\begin{cases} y_1+y_2=-10 \\\\ y_1 у_2=21 \\end{cases} \\)'} ⇒ 
-                {'\\( \\left[\\begin{gathered} y = -7\\\\ y = -3 \\end{gathered}\\right. \\)'}
+                <MathJax inline>{'\\( \\begin{cases} y_1+y_2=-10 \\\\ y_1 у_2=21 \\end{cases} \\)'}</MathJax> ⇒ 
+                <MathJax inline>{'\\( \\left[ \\begin{gathered} y = -7 \\\\ y = -3 \\end{gathered} \\right. \\)'}</MathJax>
             </p>
             <p className="disc-text">
                 Теперь вернемся к переменной x. 
-                Для этого разделим полученные результаты \(y_1,_2\)
+                Для этого разделим полученные результаты <MathJax inline>\(y_1,_2\)</MathJax>
                 на старший коэффициент исходного уравнения, т.е. на 3. 
             </p>
             <p className="disc-text">
-                Получим: {'\\( \\left[\\begin{gathered} x = -\\frac{7}{3} \\\\ x = -\\frac{3}{3} \\end{gathered}\\right. \\)'} ⇔
-                {'\\( \\left[\\begin{gathered} x = -2\\frac{1}{3} \\\\ x = -1 \\end{gathered}\\right. \\)'}
+                Получим: <MathJax inline>{'\\( \\left[ \\begin{gathered} x = -\\frac{7}{3} \\\\ x = -\\frac{3}{3} \\end{gathered} \\right. \\)'}</MathJax> ⇔
+                <MathJax inline>{'\\( \\left[ \\begin{gathered} x = -2\\frac{1}{3} \\\\ x = -1 \\end{gathered} \\right. \\)'}</MathJax>
             </p>
         </div>
     </main>
+    </MathJaxContext>
     </div>
   )
 }

@@ -68,10 +68,10 @@ const config = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Квадратные Уравнения</title>
     </Head>
-        <header className="header">
+<header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
         </header>
@@ -146,7 +146,7 @@ const config = {
                         <h4 className="type-prac-name">Вариант 13</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_1" href='/site/practice/mnos/practice_mnos41'>
+                <Link className="type-prac type_1" href='/site/practice/mnos/practice_mnos14'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Вариант 14</h4>
                     </div>

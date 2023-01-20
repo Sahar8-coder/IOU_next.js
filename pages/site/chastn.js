@@ -1,10 +1,26 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import { useState } from 'react'
 
 export default function Chastn() {
 
+  const config = {
+    "fast-preview": {
+      disabled: true
+    },
+    tex2jax: {
+      inlineMath: [
+        ["\\(", "\\)"],
+        ["\(", "\)"]
+      ],
+      displayMath: [
+        ["$$", "$$"],
+        ["\\[", "\\]"]
+      ]
+    },
+    messageStyle: "none"
+};
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -41,26 +57,30 @@ export default function Chastn() {
 
   return ( 
   <div>
+    <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
     <Head>
         <meta charSet="UTF-8"/>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Квадратные Уравнения</title>
     </Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
-            </ul>
-        </nav>
-    </header>
+<header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                </ul>
+            </nav>
+</header>
     <main className="main">
         <div className="content disc-content">
             <img src="/chastn.PNG" alt="" className="chastn"/>
         </div>
     </main>
+    </MathJaxContext>
     </div>
   )
 }

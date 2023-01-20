@@ -1,11 +1,27 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import styles from '/styles/Home.module.css'
 import { useState } from 'react'
 
 export default function Graph() {
 
+    const config = {
+        "fast-preview": {
+          disabled: true
+        },
+        tex2jax: {
+          inlineMath: [
+            ["\\(", "\\)"],
+            ["\(", "\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        messageStyle: "none"
+  };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -42,21 +58,24 @@ export default function Graph() {
 
   return (
     <div>
+        <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
 <Head>
 <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
 </Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
-            </ul>
-        </nav>
-    </header>
+<header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                </ul>
+            </nav>
+</header>
     <main className="main">
         <div className="content disc-content">
             <h2>Графический метод</h2>
@@ -68,37 +87,38 @@ export default function Graph() {
                 квадратного уравнения. 
             </p>
             <p className="disc-text">
-                1 способ. {'\\(3x^2+4x-7=0,\\)'} <br/>
-                {'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0 ⇔ x^2 = \\frac{7}{3} - \\frac{4}{3}x\\)'} <br/>
+                1 способ. <MathJax inline>{'\\(3x^2+4x-7=0,\\)'}</MathJax> <br/>
+                <MathJax inline>{'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0 ⇔ x^2 = \\frac{7}{3} - \\frac{4}{3}x\\)'}</MathJax> <br/>
                 Построим графики функции 
-                {' \\(y = x^2\\)'} и  {'\\(y = \\frac{7}{3} - \\frac{4}{3}x\\) '}
+                <MathJax inline>{'\\(y = x^2\\)'}</MathJax> и  <MathJax inline>{'\\(y = \\frac{7}{3} - \\frac{4}{3}x\\)'}</MathJax>
                 в одной системе координат. Абсциссы точек пересечения этих двух 
                 графиков являются корнями данного уравнения. <br/>
-                {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
+                <MathJax inline>{'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}</MathJax>
             </p>
                 <img src="/graph1.png" alt=""/>
             <p className="disc-text">
-                2 способ.  {'\\(3x^2+4x-7=0,\\)'} <br/>
-                {'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0; ⇔ x^2 - \\frac{7}{3} = -\\frac{4}{3}x\\)'} <br/>
+                2 способ.  <MathJax inline>{'\\(3x^2+4x-7=0,\\)'}</MathJax> <br/>
+                <MathJax inline>{'\\(x^2 + \\frac{4}{3}x - \\frac{7}{3} = 0; ⇔ x^2 - \\frac{7}{3} = -\\frac{4}{3}x\\)'}</MathJax> <br/>
                 Построим графики функции 
-                {' \\(y = x^2 - \\frac{7}{3}\\)'} и {'\\(y = -\\frac{4}{3}x \\) '} 
+                <MathJax inline>{'\\(y = x^2 - \\frac{7}{3}\\)'}</MathJax> и <MathJax inline>{'\\(y = -\\frac{4}{3}x \\)'}</MathJax>
                 в одной системе координат. 	Абсциссы точек пересечения 
                 этих двух графиков являются корнями данного уравнения. <br/>
-                {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
+                <MathJax inline>{'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}</MathJax>
             </p>
                 <img src="/graph2.png" alt=""/>
             <p className="disc-text">
-                3 способ. {'\\(3x^2+4x-7=0, | :х\\)'} <br/>
-                {'\\(3x + 4 - \\frac{7}{x} = 0\\)'} <br/>
+                3 способ. <MathJax inline>{'\\(3x^2+4x-7=0, | :х\\)'}</MathJax> <br/>
+                <MathJax inline>{'\\(3x + 4 - \\frac{7}{x} = 0\\)'}</MathJax> <br/>
                 Построим графики функции 
-                {' \\(y = 3x + 4\\)'} и {'\\(y = \\frac{7}{x}\\) '}
+                <MathJax inline>{'\\(y = 3x + 4\\)'}</MathJax> и <MathJax inline>{'\\(y = \\frac{7}{x}\\)'}</MathJax>
                 в одной системе координат. 	Абсциссы точек пересечения 
                 этих двух графиков являются корнями данного уравнения. <br/>
-                {'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}
+                <MathJax inline>{'\\(x_1 = -2\\frac{1}{3}, x_2 = 1\\)'}</MathJax>
             </p>
                 <img src="/graph3.png" alt=""/>
         </div>
     </main>
+    </MathJaxContext>
     </div>
   )
 }

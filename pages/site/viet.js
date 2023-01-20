@@ -1,11 +1,27 @@
 import Head from 'next/head'
 import Link from 'next/link'
-
+import { MathJax, MathJaxContext } from "better-react-mathjax";
 import styles from '/styles/Home.module.css'
 import { useState } from 'react'
 
 export default function Graph() {
 
+    const config = {
+        "fast-preview": {
+          disabled: true
+        },
+        tex2jax: {
+          inlineMath: [
+            ["\\(", "\\)"],
+            ["\(", "\)"]
+          ],
+          displayMath: [
+            ["$$", "$$"],
+            ["\\[", "\\]"]
+          ]
+        },
+        messageStyle: "none"
+  };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -42,21 +58,24 @@ export default function Graph() {
 
   return (
     <div>
+        <MathJaxContext
+      version={2}
+      config={config}
+      onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
+    >
 <Head>
     <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Квадратные Уравнения</title>
 </Head>
-    <header className="header">
-        <nav className="header-nav">
-            <ul className="header-menu">
-                <li className="header-menu-item menu-logo"><Link href="/"><img src="/logo.svg" alt="#" className="logo"/></Link></li>
-                <li className="header-menu-item"><Link href="/site/theory" className="header-menu-link">\(ax^2 + bx + c = 0\)</Link></li>
-                <li className="header-menu-item"><Link href="/site/practice" className="header-menu-link">Практика</Link></li>
-            </ul>
-        </nav>
-    </header>
+<header className="header">
+            <nav className="header-nav">
+                <ul className="header-menu">
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                </ul>
+            </nav>
+</header>
     <main className="main">
         <div className="content disc-content">
             <h2>Теорема Виета</h2>
@@ -73,18 +92,18 @@ export default function Graph() {
                 Для начала введем новое определение.
             </p>
             <p className="disc-text">
-                Квадратное уравнение вида \(x^2 + bx + c = 0\) называется приведенным. 
-                Обратите внимание: коэффициент при \(x^2\) равен 1. 
+                Квадратное уравнение вида <MathJax inline>\(x^2 + bx + c = 0\)</MathJax> называется приведенным. 
+                Обратите внимание: коэффициент при <MathJax inline>\(x^2\)</MathJax> равен 1. 
                 Никаких других ограничений на коэффициенты не накладывается.
             </p>
             <p className="disc-text">
                 Примеры: <br/>
-                    1.	\(x^2 + 7x + 12 = 0\) — приведенное квадратное уравнение; <br/>
-                    2.	\(x^2 − 5x + 6 = 0\) — приведенное; <br/>
-                    3.	\(2x^2 − 6x + 8 = 0\) — неприведенное, поскольку коэффициент при \(x^2\) равен 2.
+                    1.	<MathJax inline>\(x^2 + 7x + 12 = 0\)</MathJax> — приведенное квадратное уравнение; <br/>
+                    2.	<MathJax inline>\(x^2 − 5x + 6 = 0\)</MathJax> — приведенное; <br/>
+                    3.	<MathJax inline>\(2x^2 − 6x + 8 = 0\)</MathJax> — неприведенное, поскольку коэффициент при <MathJax inline>\(x^2\)</MathJax> равен 2.
             </p>
             <p className="disc-text">
-                Разумеется, любое квадратное уравнение вида \(ax^2 + bx + c = 0\) 
+                Разумеется, любое квадратное уравнение вида <MathJax inline>\(ax^2 + bx + c = 0\) </MathJax>
                 можно сделать приведенным — достаточно разделить все коэффициенты на число a. 
                 Мы всегда можем так поступить, поскольку из определения квадратного уравнения 
                 следует, что a ≠ 0.
@@ -95,17 +114,17 @@ export default function Graph() {
             </p>
             <p className="disc-text">
                 Задача. Преобразовать квадратное уравнение в приведенное: <br/>
-                    1.	\(3x^2 − 12x + 18 = 0;\)<br/>
-                    2.	\(−4x^2 + 32x + 16 = 0;\)<br/>
-                    3.	\(1,5x^2 + 7,5x + 3 = 0;\)<br/>
-                    4.	\(2x^2 + 7x − 11 = 0.\)<br/>
+                    1.	<MathJax inline>\(3x^2 − 12x + 18 = 0;\)</MathJax><br/>
+                    2.	<MathJax inline>\(−4x^2 + 32x + 16 = 0;\)</MathJax><br/>
+                    3.	<MathJax inline>\(1,5x^2 + 7,5x + 3 = 0;\)</MathJax><br/>
+                    4.	<MathJax inline>\(2x^2 + 7x − 11 = 0.\)</MathJax><br/>
             </p>
             <p className="disc-text">
-                Разделим каждое уравнение на коэффициент при переменной \(x^2.\) Получим: <br/>
-                    1.	\(3x^2 − 12x + 18 = 0  ⇒ x^2 − 4x + 6 = 0\) — разделили все на 3;<br/>
-                    2.	\(−4x^2 + 32x + 16 = 0  ⇒ x^2 − 8x − 4 = 0\) — разделили на −4;<br/>
-                    3.	\(1,5x^2 + 7,5x + 3 = 0 ⇒ x^2 + 5x + 2 = 0\) — разделили на 1,5, все коэффициенты стали целочисленными;<br/>
-                    4.	\(2x^2 + 7x − 11 = 0  ⇒ x^2 + 3,5x − 5,5 = 0\) — разделили на 2. При этом возникли дробные коэффициенты.<br/>
+                Разделим каждое уравнение на коэффициент при переменной <MathJax inline>\(x^2.\)</MathJax> Получим: <br/>
+                    1.	<MathJax inline>\(3x^2 − 12x + 18 = 0  ⇒ x^2 − 4x + 6 = 0\)</MathJax> — разделили все на 3;<br/>
+                    2.	<MathJax inline>\(−4x^2 + 32x + 16 = 0  ⇒ x^2 − 8x − 4 = 0\)</MathJax> — разделили на −4;<br/>
+                    3.	<MathJax inline>\(1,5x^2 + 7,5x + 3 = 0 ⇒ x^2 + 5x + 2 = 0\)</MathJax> — разделили на 1,5, все коэффициенты стали целочисленными;<br/>
+                    4.	<MathJax inline>\(2x^2 + 7x − 11 = 0  ⇒ x^2 + 3,5x − 5,5 = 0\)</MathJax> — разделили на 2. При этом возникли дробные коэффициенты.<br/>
             </p>
             <p className="disc-text">
                 Как видите, приведенные квадратные уравнения могут 
@@ -115,41 +134,42 @@ export default function Graph() {
                 собственно, и вводилось понятие приведенного квадратного уравнения:
             </p>
             <p className="disc-text">
-                Теорема Виета. Рассмотрим приведенное квадратное уравнение вида \(x^2 + bx + c = 0.\) Предположим, что это уравнение имеет действительные корни x1 и x2. В этом случае верны следующие утверждения: <br/>
-                    1.	\(x_1 + x_2 = −b.\) <br/>
+                Теорема Виета. Рассмотрим приведенное квадратное уравнение вида <MathJax inline>\(x^2 + bx + c = 0.\)</MathJax> Предположим, что это уравнение имеет действительные корни x1 и x2. В этом случае верны следующие утверждения: <br/>
+                    1.	<MathJax inline>\(x_1 + x_2 = −b.\)</MathJax> <br/>
                     Другими словами, сумма корней приведенного квадратного уравнения равна коэффициенту при переменной x, взятому с противоположным знаком; <br/>
-                    2.	\(x_1 · x_2 = c.\) <br/>
+                    2.	<MathJax inline>\(x_1 · x_2 = c.\)</MathJax> <br/>
                     Произведение корней квадратного уравнения равно свободному коэффициенту.
             </p>
             <p className="disc-text">
                 Примеры. Для простоты будем рассматривать только приведенные 
                 квадратные уравнения, не требующие дополнительных преобразований: <br/>
-                    1.	\(x^2 − 9x + 20 = 0   ⇒ x_1 + x_2 = − (−9) = 9; x_1 · x2 = 20;   корни: x_1 = 4; x_2 = 5;\) <br/>
-                    2.	\(x^2 + 2x − 15 = 0   ⇒ x_1 + x_2 = −2; x_1 · x_2 = −15;   корни: x_1 = 3; x_2 = −5;\) <br/>
-                    3.	\(x^2 + 5x + 4 = 0   ⇒ x_1 + x_2 = −5; x_1 · x_2 = 4;   корни: x_1 = −1; x_2 = −4.\) <br/>
+                    1.	<MathJax inline>\(x^2 − 9x + 20 = 0   ⇒ x_1 + x_2 = − (−9) = 9; x_1 · x2 = 20;   корни: x_1 = 4; x_2 = 5;\)</MathJax> <br/>
+                    2.	<MathJax inline>\(x^2 + 2x − 15 = 0   ⇒ x_1 + x_2 = −2; x_1 · x_2 = −15;   корни: x_1 = 3; x_2 = −5;\)</MathJax> <br/>
+                    3.	<MathJax inline>\(x^2 + 5x + 4 = 0   ⇒ x_1 + x_2 = −5; x_1 · x_2 = 4;   корни: x_1 = −1; x_2 = −4.\)</MathJax> <br/>
                     Теорема Виета дает нам дополнительную информацию о 
                     корнях квадратного уравнения. На первый взгляд это может 
                     показаться сложным, но даже при минимальной тренировке вы научитесь 
                     «видеть» корни и буквально угадывать их за считанные секунды.
             </p>
             <p className="disc-text">
-                Следствие 1. Если в приведенном квадратном уравнении вида \(x^2 + bx + c = 0 \)
+                Следствие 1. Если в приведенном квадратном уравнении вида <MathJax inline>\(x^2 + bx + c = 0 \)</MathJax>
                 коэффициент 
-                c {'>'} 0, то корни \(x_1 и x_2\) имеют одинаковый знак. И наоборот, 
-                если коэффициент c {'<'} 0, корни \(x_1 и x_2 \)
+                c {'>'} 0, то корни <MathJax inline>\(x_1 и x_2\)</MathJax> имеют одинаковый знак. И наоборот, 
+                если коэффициент c {'<'} 0, корни <MathJax inline>\(x_1 и x_2 \)</MathJax>
                 будут разных знаков. <br/>
-                Следствие 2. Если в том же уравнении \(x_1 + x_2 = −b {'>'} 0 \)
+                Следствие 2. Если в том же уравнении <MathJax inline>\(x_1 + x_2 = −b {'>'} 0 \)</MathJax>
                 (т.е. сумма корней положительна), 
                 то возможны 2 варианта: либо оба корня положительны, либо модуль 
                 положительного корня 
                 больше модуля отрицательного.
-                И наоборот, если \(x_1 + x_2 = −b {'<'} 0\) (т.е. сумма корней отрицательна), 
+                И наоборот, если <MathJax inline>\(x_1 + x_2 = −b {'<'} 0\)</MathJax> (т.е. сумма корней отрицательна), 
                 то опять же есть 2 варианта: либо все корни отрицательны, либо модуль 
                 положительного корня меньше модуля отрицательного.
 
             </p>
         </div>
     </main>
+    </MathJaxContext>
     </div>
   )
 }

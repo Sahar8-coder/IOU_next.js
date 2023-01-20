@@ -68,20 +68,20 @@ const config = {
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Квадратные Уравнения</title>
     </Head>
-        <header className="header">
+<header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
-        </header>
+</header>
         <main className="main">
             <div className="content">
             <section className="types-header-sect">
                 <h2 className="types-header">Практика квадратных уравнений</h2>
             </section>
             <section className="types">
-                <Link className="type-prac type_2 left_top" href='/site/mnos'>
+                <Link className="type-prac type_2 left_top" href='/site/practice_bi'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Биквадратные уравнения</h4>
                     </div>
@@ -91,42 +91,42 @@ const config = {
                         <h4 className="type-prac-name">Простейшие задания из ЕГЭ</h4>
                     </div>                    
                 </Link>
-                <Link className="type-prac type_4" href='/site/formulas'>
+                <Link className="type-prac type_4" href='/site/practice_rad'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Квадратные уравнения имеющие корни с радикалами</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_1" href='/site/viet'>
+                <Link className="type-prac type_1" href='/site/practice_one'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Квадратные уравнения с одним корнем</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_2 right_top" href='/site/perebros'>
+                <Link className="type-prac type_2 right_top" href='/site/practice_perebros'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Метод переброски</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_4 left_down" href='/site/chastn'>
+                <Link className="type-prac type_4 left_down" href='/site/practice_notfull'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Неполные квадратные уравнения</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_1" href='/site/graph'>
+                <Link className="type-prac type_1" href='/site/practice_full'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Полные квадратные уравнения</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_2" href='/site/cirkul'>
+                <Link className="type-prac type_2" href='/site/practice_mnos'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Разложение на множители</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_3" href='/site/nomo'>
+                <Link className="type-prac type_3" href='/site/practice_viet'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Теорема Виета</h4>
                     </div>
                 </Link>
-                <Link className="type-prac type_4 right_down" href='/site/geom'>
+                <Link className="type-prac type_4 right_down" href='/site/practice_chastn'>
                     <div className="type-prac-name-div">
                         <h4 className="type-prac-name">Частные случаи</h4>
                     </div>
