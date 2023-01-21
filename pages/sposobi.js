@@ -87,7 +87,7 @@ export default function Sposobi() {
                         <h4 className="type-name">Разложение левой части уравнения на множители</h4>
                     </div>
                     <div className="type-text-div">
-                        <p className="type-text">Довольно удобный способ, но помогает не всегда</p>
+                        <p className="type-text">Вынесение множителя за скобки</p>
                     </div>
                 </Link>
                 <Link className="type type_3" href='/site/videl'>
@@ -95,7 +95,7 @@ export default function Sposobi() {
                         <h4 className="type-name">Метод выделения полного квадрата</h4>
                     </div>                    
                     <div className="type-text-div">
-                        <p className="type-text">Если изначально формулы не видно, использовать довольно непросто</p>
+                        <p className="type-text">Помогут формулы сокращенного умножения, и не только...</p>
                     </div>
                 </Link>
                 <Link className="type type_4" href='/site/formulas'>
@@ -108,10 +108,10 @@ export default function Sposobi() {
                 </Link>
                 <Link className="type type_1" href='/site/viet'>
                     <div className="type-name-div">
-                        <h4 className="type-name">Решение уравнений с использованием теоремы Виета</h4>
+                        <h4 className="type-name">Теорема Виета</h4>
                     </div>
                     <div className="type-text-div">
-                        <p className="type-text">Прекрасный способ, однако работает не всегда</p>
+                        <p className="type-text">Легкий и понятный способ, при наличии целых корней</p>
                     </div>
                 </Link>
                 <Link className="type type_2 right_top" href='/site/perebros'>
@@ -119,7 +119,7 @@ export default function Sposobi() {
                         <h4 className="type-name">Решение уравнений способом «переброски»</h4>
                     </div>
                     <div className="type-text-div">
-                        <p className="type-text">В некоторых случаях может сильно помочь</p>
+                        <p className="type-text">Скрытая теорема Виета</p>
                     </div>
                 </Link>
                 <Link className="type type_4 left_down" href='/site/chastn'>
@@ -127,7 +127,7 @@ export default function Sposobi() {
                         <h4 className="type-name">Частные случаи</h4>
                     </div>
                     <div className="type-text-div">
-                        <p className="type-text">Частные случаи это частные случаи, попадаются нечасто, но решаются моментально</p>
+                        <p className="type-text">Закономерность коэффициентов</p>
                     </div>
                 </Link>
                 <Link className="type type_1" href='/site/graph'>
@@ -135,7 +135,7 @@ export default function Sposobi() {
                         <h4 className="type-name">Графическое решение уравнения</h4>
                     </div>
                     <div className="type-text-div">
-                        <p className="type-text">Алгебра превращается в геометрию</p>
+                        <p className="type-text">Визуальное представление уравнения</p>
                     </div>
                 </Link>
                 <Link className="type type_2" href='/site/cirkul'>
@@ -151,7 +151,7 @@ export default function Sposobi() {
                         <h4 className="type-name">Решение уравнений с помощью номограммы</h4>
                     </div>
                     <div className="type-text-div">
-                        <p className="type-text">Старый и незаслуженно забытый способ</p>
+                        <p className="type-text">Наглядный и незаслуженно забытый способ</p>
                     </div>
                 </Link>
                 <Link className="type type_4 right_down" href='/site/geom'>
