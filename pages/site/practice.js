@@ -78,7 +78,7 @@ const config = {
         <main className="main">
             <div className="content">
             <section className="types-header-sect">
-                <h2 className="types-header">Практика квадратных уравнений</h2>
+                <h2 className="types-header">Практикум квадратных уравнений</h2>
             </section>
             <section className="types">
                 <Link className="type-prac type_2 left_top" href='/site/practice_bi'>
@@ -88,12 +88,12 @@ const config = {
                 </Link>
                 <Link className="type-prac type_3" href='/site/practice_ege'>
                     <div className="type-prac-name-div">
-                        <h4 className="type-prac-name">Простейшие задания из ЕГЭ</h4>
+                        <h4 className="type-prac-name">Квадратные уравнения из банка ЕГЭ</h4>
                     </div>                    
                 </Link>
                 <Link className="type-prac type_4" href='/site/practice_rad'>
                     <div className="type-prac-name-div">
-                        <h4 className="type-prac-name">Квадратные уравнения имеющие корни с радикалами</h4>
+                        <h4 className="type-prac-name">Квадратные уравнения, имеющие корни — радикалы</h4>
                     </div>
                 </Link>
                 <Link className="type-prac type_1" href='/site/practice_one'>
