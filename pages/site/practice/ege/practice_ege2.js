@@ -24,6 +24,7 @@ const config = {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const [email_teach, setEmail_teach] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
