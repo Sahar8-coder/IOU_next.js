@@ -78,7 +78,7 @@ const config = {
         <main className="main">
             <div className="content">
             <section className="types-header-sect">
-                <h2 className="types-header">Практикум биквадратных уравнений</h2>
+                <h2 className="types-header">Биквадратные уравнения</h2>
             </section>
             <section className="types">
                 <Link className="type-prac type_2 left_top" href='/site/practice/bi/practice_bi1'>
