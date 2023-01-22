@@ -161,12 +161,12 @@ const config = {
         <header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link">{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><img src="/logo.svg" alt="" className="logo"/><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test">
+            <div className="content_main_test"><h2 className="types-header">Метод переброски</h2>
                 <div className="test">
                 {
                     showScore

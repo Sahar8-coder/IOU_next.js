@@ -239,6 +239,7 @@ body
 }
 .header-menu-item {
     list-style-type: none;
+    display: flex;
 }
 .header-menu {
     margin: 0;

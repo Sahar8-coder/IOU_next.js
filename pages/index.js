@@ -44,7 +44,7 @@ export default function Home() {
 <header className="header">
             <nav className="header-nav">
                 <ul className="header-menu">
-                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
+                    <li className="header-menu-item"><Link href="/" className="header-menu-link"><img src="/logo.svg" alt="" className="logo"/><MathJax inline>{'\\(\\sf{ax^2 + bx + c = 0}\\)'}</MathJax></Link></li>
                 </ul>
             </nav>
 </header>
@@ -95,6 +95,7 @@ export default function Home() {
                 </section>
             </div>
           </main>
+          <footer className='footer'>©МОУ "Дубоссарская гимназия №1"</footer>
           </MathJaxContext>
           </div>)
 
