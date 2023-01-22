@@ -258,6 +258,7 @@ const config = {
             </div>
           </main>
           </MathJaxContext>
+          <footer className='footer'>©МОУ "Дубоссарская гимназия №1"</footer>
           </div>
   )
 }

@@ -126,6 +126,7 @@ export default function Theory() {
         </div>
     </main>
     </MathJaxContext>
-    </div>
+          <footer className='footer'>©МОУ "Дубоссарская гимназия №1"</footer>
+          </div>
   )
 }

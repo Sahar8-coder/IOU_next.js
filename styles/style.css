@@ -152,7 +152,7 @@ body
     outline: none;
 }
 .test_next {
-    background-color: #222B2A;
+    background-color: #414d4b;
     color: #F2F2F2;
     text-decoration: none;
     border-radius: 30px;
@@ -163,6 +163,7 @@ body
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin: 5px 5px 5px 5px;
 }
 .small-btn-text {
     margin: 12px 26px 12px 26px;
@@ -402,10 +403,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 .content_main_test {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     width: 100%;
+    padding-bottom: 100px;
 }
 .question_section {
     flex: 0 0 50%;
@@ -428,4 +431,8 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 5px;
     margin-top: 25px;
     margin-bottom: 30px;
+}
+.footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }

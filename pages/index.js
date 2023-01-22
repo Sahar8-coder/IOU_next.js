@@ -94,9 +94,9 @@ export default function Home() {
                     </Link>
                 </section>
             </div>
-          </main>
-          <footer className='footer'>©МОУ "Дубоссарская гимназия №1"</footer>
+          </main>    
           </MathJaxContext>
+          <footer className='footer'>©МОУ "Дубоссарская гимназия №1"</footer>
           </div>)
 
   const handleSubmit = (e) => {
