@@ -12,7 +12,7 @@ export default async function (req, res) {
       },*/
       auth: {
         user: 'quadratic.eq@mail.ru',
-        pass: 'kEm4eZ7HRbFVAyupfcH5',
+        pass: 'RvAbja5FBLcin58phgAs',
       },
     });
     //console.log(transporter)

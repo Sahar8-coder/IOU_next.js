@@ -166,7 +166,7 @@ export default function Sposobi() {
         </div>
       </main>
       </MathJaxContext>
-          <footer className='footer'>©МОУ "Дубоссарская гимназия №1"</footer>
+          <footer className='footer'>{'©МОУ "Дубоссарская гимназия №1"'}</footer>
           </div>
   )
 }
