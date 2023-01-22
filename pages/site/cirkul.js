@@ -125,11 +125,46 @@ export default function Circul() {
             <p className="disc-text">
                 Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
-                <MathJax inline>{'\\( x = -\\frac{b}{2a} =  -\\frac{-2}{2} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = -1\\)'}</MathJax> <br />
+                <MathJax inline>{'\\( x = -\\frac{b}{2a} =  -\\frac{-2}{2} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{1-3}{2} = -1\\)'}</MathJax> <br />
                 проведем окружность с центром S(1;–1) и радиусом SA, где A(0;1);
                 х1= -1; х2=3 <br />
                 Ответ: -1; 3
                 <img src="/image001.png" alt="" />
+            </p>
+            <p className="disc-text">
+                Решим уравнение <MathJax inline>{'\\(х^2 – 5х + 4 =  \\)'}</MathJax> <br />
+                построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
+                <MathJax inline>{'\\( x = -\\frac{b}{2a} =  -\\frac{5}{2} = 2,5 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = 2,5\\)'}</MathJax> <br />
+                проведем окружность с центром S(2,5;2,5) и радиусом SA, где A(0;1);
+                х1= 1; х2=4 <br />
+                Ответ: 1; 4
+                <img src="/image002.png" alt="" />
+            </p>
+            <p className="disc-text">
+                Решим уравнение <MathJax inline>{'\\(х^2 + 4х + 4 =  \\)'}</MathJax> <br />
+                построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
+                <MathJax inline>{'\\( x = -\\frac{b}{2a} =  \\frac{-4}{2} = -2 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = 2,5\\)'}</MathJax> <br />
+                проведем окружность с центром S(-2;2,5) и радиусом SA, где A(0;1);
+                х= -2 <br />
+                Ответ: -2
+                <img src="/image003.png" alt="" />
+            </p>
+            <p className="disc-text">
+                Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
+                построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
+                <MathJax inline>{'\\( x = -\\frac{b}{2a} =  \\frac{2}{2} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{1+3}{2} = 2\\)'}</MathJax> <br />
+                проведем окружность с центром S(1;2) и радиусом SA, где A(0;1); <br />
+                Ответ: уравнение не имеет решения.
+                <img src="/image004.png" alt="" />
+            </p>
+            <p className="disc-text">
+                Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
+                построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
+                <MathJax inline>{'\\( x = -\\frac{b}{2a} =  \\frac{3}{4} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{2+1}{4} = \\frac{3}{4}\\)'}</MathJax> <br />
+                проведем окружность с центром <MathJax inline>{'\\(S(\\frac{3}{4};\\frac{3}{4})\\)'}</MathJax> и радиусом SA, где A(0;1);
+                х1 = 0,5; х2=1 <br />
+                Ответ: 0,5; 1
+                <img src="/image005.png" alt="" />
             </p>
         </div>
     </main>
