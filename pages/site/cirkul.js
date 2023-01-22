@@ -129,6 +129,7 @@ export default function Circul() {
                 проведем окружность с центром S(1;–1) и радиусом SA, где A(0;1);
                 х1= -1; х2=3 <br />
                 Ответ: -1; 3
+                <img src="/image001.png" alt="" />
             </p>
         </div>
     </main>
