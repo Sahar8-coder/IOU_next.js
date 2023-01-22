@@ -81,6 +81,7 @@ export default function Circul() {
             <h2>Решение квадратных уравнений с помощью циркуля и линейки</h2>
             <p className="disc-text">
                 Предлагаем следующий способ нахождения корней квадратного уравнения <MathJax inline>{'\\(ах^2 + bх + с = 0\\)'}</MathJax> с помощью циркуля и линейки.
+                <img src="/circ3.png" alt="" />
                 Допустим, что искомая окружность пересекает ось
                 абсцисс в точках <MathJax inline>{'\\(В(х_1; 0 )\\)'}</MathJax> и <MathJax inline>{'\\(D (х_2; 0)\\)'}</MathJax>, где <MathJax inline>{'\\(х_1\\)'}</MathJax> и <MathJax inline>{'\\(х_2\\)'}</MathJax> – 
                 корни уравнения   <MathJax inline>{'\\(ах^2  + bх + с = 0\\)'}</MathJax>,  и  проходит  через  точки

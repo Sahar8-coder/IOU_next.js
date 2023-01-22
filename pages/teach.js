@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import { useState } from 'react'
 import { MathJax, MathJaxContext } from "better-react-mathjax";
+import { useState } from 'react'
 
-export default function Help() {
+export default function Circul() {
 
     const config = {
         "fast-preview": {
@@ -57,13 +56,13 @@ export default function Help() {
   }
 
   return (
-    <div>
-        <MathJaxContext
+ <div>
+    <MathJaxContext
       version={2}
       config={config}
       onStartup={(mathJax) => (mathJax.Hub.processSectionDelay = 0)}
     >
-<Head>
+<Head>  
     <meta charSet="UTF-8"/>
     <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -77,27 +76,15 @@ export default function Help() {
             </nav>
 </header>
     <main className="main">
-        <div className="content">
-            <section className="types-header-sect">
-                <h2 className="types-header">Помощь</h2>
-            </section>
-            <section className="types">
-                <Link className="type type_4 left" href='/answers'>
-                    <div className="help-name-div">
-                        <h4 className="help-name">Ответы на задачи</h4>
-                    </div>
-                </Link>
-                <Link className="type type_1 right" href='/teach'>
-                    <div className="help-name-div">
-                        <h4 className="help-name">Контакты Учителя</h4>
-                    </div>                    
-                </Link>
-            </section>
+        <div className="content disc-content">
+            <h2>Контакты учителя</h2>
+            <p className="disc-text">
+                Сабуцкая Виктория Юрьевна <br />
+                viktoria.sabuchka@bk.ru
+            </p>
         </div>
-      </main>
-      </MathJaxContext>
+    </main>
+    </MathJaxContext>
           <footer className='footer'>{'©МОУ "Дубоссарская гимназия №1"'}</footer>
           </div>
-  )
-}
-
+  )}
