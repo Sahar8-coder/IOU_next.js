@@ -181,7 +181,7 @@ const config = {
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test"><h2 className="types-header">Квадратные уравнения, имеющие корни — радикалы</h2>
+            <div className="content_main_test"><h2 className="types-header">Квадратные уравнения, имеющие корни — радикалы 8</h2>
                 <div className="test">
                 {
                     showScore

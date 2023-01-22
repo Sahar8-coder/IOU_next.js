@@ -168,7 +168,7 @@ const config = {
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test"><h2 className="types-header">Неполные квадратные уравнения</h2>
+            <div className="content_main_test"><h2 className="types-header">Неполные квадратные уравнения 16</h2>
                 <div className="test">
                 {
                     showScore

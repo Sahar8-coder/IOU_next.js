@@ -165,7 +165,7 @@ const config = {
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test"><h2 className="types-header">Метод переброски</h2>
+            <div className="content_main_test"><h2 className="types-header">Метод переброски 4</h2>
                 <div className="test">
                 {
                     showScore
