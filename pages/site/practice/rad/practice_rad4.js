@@ -29,7 +29,7 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(-\\frac{11}{9}x^2 + \\frac{2}{3} − \\frac{1}{3}x = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(-\\frac{11}{9}x^2 + \\frac{2}{3} − \\frac{1}{3}x = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(\\frac{3}{2}; \\frac{1}{3}\\)', isCorrect: false},
@@ -39,7 +39,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−x − 8)(12x − 1) = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\((−x − 8)(12x − 1) = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(-8; \\frac{1}{12}\\)', isCorrect: false},
@@ -49,7 +49,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 − 4x − 93 = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(x^2 − 4x − 93 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(2 - \\sqrt{97}; 2 + \\sqrt{97}\\)', isCorrect: false},
@@ -59,7 +59,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 + 4x\\sqrt{14} + 42 = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(x^2 + 4x\\sqrt{14} + 42 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(-\\sqrt{14}; -3\\sqrt{14}\\)', isCorrect: false},
@@ -69,7 +69,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 − 12x − 19 = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(4x^2 − 12x − 19 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(\\frac{3 - 2\\sqrt7}{2}; \\frac{3 + 2\\sqrt7}{2}\\)', isCorrect: false},
@@ -181,7 +181,10 @@ const config = {
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test"><h2 className="types-header">Квадратные уравнения, имеющие корни — радикалы 4</h2>
+            <div className="content_main_test">   
+            <h2 className="types-header"><Link href='/site/practice'>
+                <img src="/pencil.png" alt="" width={50}/>
+            </Link>Квадратные уравнения, имеющие корни — радикалы 4</h2>
                 <div className="test">
                 {
                     showScore

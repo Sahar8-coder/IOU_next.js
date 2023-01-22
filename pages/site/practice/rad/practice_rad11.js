@@ -29,7 +29,7 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(\\frac{1}{4} - \\frac{5}{2}x^2 + \\frac{3}{8}x\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(\\frac{1}{4} - \\frac{5}{2}x^2 + \\frac{3}{8}x\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(-\\frac{1}{4}; \\frac{2}{5}\\)', isCorrect: false},
@@ -39,7 +39,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 − 20x + 43 = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(x^2 − 20x + 43 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(10 - \\sqrt{57}; 10 + \\sqrt{57}\\)', isCorrect: false},
@@ -49,7 +49,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 − 20x + 5 = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(4x^2 − 20x + 5 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(\\frac{5 - 2\\sqrt5}{2}; \\frac{5 + 2\\sqrt5}{2}\\)', isCorrect: false},
@@ -59,7 +59,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 + 8x\\frac{2} + 24 = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\(x^2 + 8x\\frac{2} + 24 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(-6\\sqrt2; -2\\sqrt2\\)', isCorrect: false},
@@ -69,7 +69,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\((−2x + 13)(−10x + 13) = 0\\).',
+        questionText: 'Решите уравнение и выберите верный ответ \\((−2x + 13)(−10x + 13) = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(\\frac{13}{2}; \\frac{13}{10}\\)', isCorrect: false},
@@ -181,7 +181,10 @@ const config = {
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test"><h2 className="types-header">Квадратные уравнения, имеющие корни — радикалы 11</h2>
+            <div className="content_main_test">   
+            <h2 className="types-header"><Link href='/site/practice'>
+                <img src="/pencil.png" alt="" width={50}/>
+            </Link>Квадратные уравнения, имеющие корни — радикалы 11</h2>
                 <div className="test">
                 {
                     showScore

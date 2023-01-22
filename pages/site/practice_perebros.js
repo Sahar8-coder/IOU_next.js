@@ -78,7 +78,9 @@ const config = {
         <main className="main">
             <div className="content">
             <section className="types-header-sect">
-                <h2 className="types-header">Метод переброски</h2>
+                <h2 className="types-header"><Link href='/site/practice'>
+                <img src="/pencil.png" alt="" width={50}/>
+            </Link>Метод переброски</h2>
             </section>
             <section className="types">
                 <Link className="type-prac type_2 left_top" href='/site/practice/perebros/practice_perebros1'>

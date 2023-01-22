@@ -157,8 +157,10 @@ const config = {
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test">
-            <h2 className="types-header">Биквадратные уравнения 17</h2>
+            <div className="content_main_test">   
+            <h2 className="types-header"><Link href='/site/practice'>
+                <img src="/pencil.png" alt="" width={50}/>
+            </Link>Биквадратные уравнения 17</h2>
                 <div className="test">
                 {
                     showScore

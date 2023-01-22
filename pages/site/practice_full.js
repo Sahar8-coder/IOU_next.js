@@ -78,7 +78,9 @@ const config = {
         <main className="main">
             <div className="content">
             <section className="types-header-sect">
-                <h2 className="types-header">Полные квадратные уравнения</h2>
+                <h2 className="types-header"><Link href='/site/practice'>
+                <img src="/pencil.png" alt="" width={50}/>
+            </Link>Полные квадратные уравнения</h2>
             </section>
             <section className="types">
                 <Link className="type-prac type_2 left_top" href='/site/practice/full/practice_full1'>
