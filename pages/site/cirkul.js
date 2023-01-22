@@ -81,7 +81,9 @@ export default function Circul() {
             <h2>Решение квадратных уравнений с помощью циркуля и линейки</h2>
             <p className="disc-text">
                 Предлагаем следующий способ нахождения корней квадратного уравнения <MathJax inline>{'\\(ах^2 + bх + с = 0\\)'}</MathJax> с помощью циркуля и линейки.
-                <img src="/circ3.png" alt="" />
+            </p>
+            <p className="disc-text">
+                <img src="/circ3.png" alt="" width={200}/>
                 Допустим, что искомая окружность пересекает ось
                 абсцисс в точках <MathJax inline>{'\\(В(х_1; 0 )\\)'}</MathJax> и <MathJax inline>{'\\(D (х_2; 0)\\)'}</MathJax>, где <MathJax inline>{'\\(х_1\\)'}</MathJax> и <MathJax inline>{'\\(х_2\\)'}</MathJax> – 
                 корни уравнения   <MathJax inline>{'\\(ах^2  + bх + с = 0\\)'}</MathJax>,  и  проходит  через  точки
@@ -124,7 +126,7 @@ export default function Circul() {
                         Нет решения.</div>    
                 </div> <br/>
             <p className="disc-text">
-                Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
+                1)Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
                 <MathJax inline>{'\\( x = -\\frac{b}{2a} =  -\\frac{-2}{2} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{1-3}{2} = -1\\)'}</MathJax> <br />
                 проведем окружность с центром S(1;–1) и радиусом SA, где A(0;1);
@@ -133,7 +135,7 @@ export default function Circul() {
                 <img src="/image001.png" alt="" />
             </p>
             <p className="disc-text">
-                Решим уравнение <MathJax inline>{'\\(х^2 – 5х + 4 =  \\)'}</MathJax> <br />
+                2)Решим уравнение <MathJax inline>{'\\(х^2 – 5х + 4 =  \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
                 <MathJax inline>{'\\( x = -\\frac{b}{2a} =  -\\frac{5}{2} = 2,5 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = 2,5\\)'}</MathJax> <br />
                 проведем окружность с центром S(2,5;2,5) и радиусом SA, где A(0;1);
@@ -142,7 +144,7 @@ export default function Circul() {
                 <img src="/image002.png" alt="" />
             </p>
             <p className="disc-text">
-                Решим уравнение <MathJax inline>{'\\(х^2 + 4х + 4 =  \\)'}</MathJax> <br />
+                3)Решим уравнение <MathJax inline>{'\\(х^2 + 4х + 4 =  \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
                 <MathJax inline>{'\\( x = -\\frac{b}{2a} =  \\frac{-4}{2} = -2 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = 2,5\\)'}</MathJax> <br />
                 проведем окружность с центром S(-2;2,5) и радиусом SA, где A(0;1);
@@ -151,7 +153,7 @@ export default function Circul() {
                 <img src="/image003.png" alt="" />
             </p>
             <p className="disc-text">
-                Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
+                4)Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
                 <MathJax inline>{'\\( x = -\\frac{b}{2a} =  \\frac{2}{2} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{1+3}{2} = 2\\)'}</MathJax> <br />
                 проведем окружность с центром S(1;2) и радиусом SA, где A(0;1); <br />
@@ -159,7 +161,7 @@ export default function Circul() {
                 <img src="/image004.png" alt="" />
             </p>
             <p className="disc-text">
-                Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
+                5)Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
                 <MathJax inline>{'\\( x = -\\frac{b}{2a} =  \\frac{3}{4} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{2+1}{4} = \\frac{3}{4}\\)'}</MathJax> <br />
                 проведем окружность с центром <MathJax inline>{'\\(S(\\frac{3}{4};\\frac{3}{4})\\)'}</MathJax> и радиусом SA, где A(0;1);

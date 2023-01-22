@@ -54,7 +54,7 @@ export default function Home() {
                     <h2 className="main-header types-header">Квадратные уравнения</h2>
                     <p className="main-text types-text">
                         Решить квадратное уравнение - это значит найти
-                    все его корни или установить, что их нет.</p>
+                    все его корни или доказать, что их нет.</p>
                     <Link className="small-btn" href='/site/theory'>
                         <p className="menu-text small-btn-text">Читать больше</p>
                     </Link>

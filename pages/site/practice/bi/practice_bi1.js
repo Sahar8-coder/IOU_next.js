@@ -30,35 +30,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(x4 − 40x2 + 144 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 40x^2 + 144 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '6;-6;2;-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 17x2 + 16 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 17x^2 + 16 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '4;-4;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 63x2 − 64 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 63x^2 − 64 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '8;-8'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x4 + 96x2 − 25 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(16x4 + 96x^2 − 25 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '0.5;-0.5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 27x2 + 50 = 0\\).',
+        questionText: 'Решите уравнение \\(x^4 − 27x^2 + 50 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '5; -5; \\(\\sqrt{2}\\); \\(-\\sqrt{2}\\)', isCorrect: true},
@@ -68,7 +68,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 83x2 + 162 = 0\\).',
+        questionText: 'Решите уравнение \\(x^4 − 83x^2 + 162 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '9; -9; \\(\\sqrt{2}\\); \\(-\\sqrt{2}\\)', isCorrect: true},

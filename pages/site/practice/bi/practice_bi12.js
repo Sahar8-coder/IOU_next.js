@@ -27,7 +27,7 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(81x4 − 45x2 + 4 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(81x4 − 45x^2 + 4 = 0\\). Корни укажите через точку с запятой',
         isText: false,
         answerOptions: [
             {answerText: '\\(\\frac{2}{3}\\); -\\(\\frac{2}{3}\\); \\(\\frac{1}{3}\\); -\\(\\frac{1}{3}\\)', isCorrect: true},
@@ -37,21 +37,21 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 13x2 + 36 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 13x^2 + 36 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '3;-3;2;-2'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 8x2 − 9 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 8x^2 − 9 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '3;-3'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(81x4 − 27x2 − 4 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(81x4 − 27x^2 − 4 = 0\\). Корни укажите через точку с запятой',
         isText: false,
         answerOptions: [
             {answerText: '\\(\\frac{3}{3}\\); -\\(\\frac{3}{3}\\)', isCorrect: false},

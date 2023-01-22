@@ -27,35 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(x4 − 26x2 + 25 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 26x^2 + 25 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '5;-5;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 20x2 + 64 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 20x^2 + 64 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '9;-9;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 + 24x2 − 25 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 + 24x^2 − 25 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 3x2 − 4 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 3x^2 − 4 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '5;-5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 14x2 + 40 = 0\\).',
+        questionText: 'Решите уравнение \\(x^4 − 14x^2 + 40 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '2; -2; \\(\\sqrt{10}\\); -\\(\\sqrt{10}\\)', isCorrect: true},
@@ -65,7 +65,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(16x4 − 24x2 + 5 = 0\\).',
+        questionText: 'Решите уравнение \\(16x4 − 24x^2 + 5 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '5; -5; \\(\\frac{2}{\\sqrt{10}\\)}; -\\(\\sqrt{10}}\\)', isCorrect: false},

@@ -27,35 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(x4 − 5x2 + 4 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 5x^2 + 4 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '2;-2;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 82x2 + 81 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 82x^2 + 81 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '9;-9;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 + 8x2 − 9 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 + 8x^2 − 9 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 21x2 − 100 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 21x^2 − 100 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '5;-5'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(81x4 − 99x2 + 10 = 0\\).',
+        questionText: 'Решите уравнение \\(81x4 − 99x^2 + 10 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(\\frac{1}{3}\\); -\\(\\frac{1}{3}\\); \\(\\frac{\\sqrt{100}}{3}\\); -\\(\\frac{\\sqrt{100}}{3}\\)', isCorrect: false},
@@ -65,7 +65,7 @@ const config = {
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 19x2 + 60 = 0\\).',
+        questionText: 'Решите уравнение \\(x^4 − 19x^2 + 60 = 0\\).',
         isText: false,
         answerOptions: [
             {answerText: '\\(1\\); -\\(1\\); \\(\\frac{\\sqrt{100}}{3}\\); -\\(\\frac{\\sqrt{100}}{3}\\)', isCorrect: false},

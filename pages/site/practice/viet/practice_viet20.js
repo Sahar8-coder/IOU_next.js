@@ -27,35 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(x2 − 18x + 77 = 0\\).',
+        questionText: 'Решите уравнение \\(x^2 − 18x + 77 = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '11;7'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x2 − 19x + 78 = 0\\).',
+        questionText: 'Решите уравнение \\(x^2 − 19x + 78 = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '13;6'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x2 + 18x + 32 = 0\\).',
+        questionText: 'Решите уравнение \\(x^2 + 18x + 32 = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '-2;-16'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x2 + x − 56 = 0\\).',
+        questionText: 'Решите уравнение \\(x^2 + x − 56 = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '7;-8'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x2 − 7x − 18 = 0\\).',
+        questionText: 'Решите уравнение \\(x^2 − 7x − 18 = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '9;-2'},

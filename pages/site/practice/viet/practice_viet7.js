@@ -27,7 +27,7 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(x2 + 13x + 40 = 0\\).',
+        questionText: 'Решите уравнение \\(x^2 + 13x + 40 = 0\\).',
         isText: true,
         answerOptions: [
             {answerText: '-5;-8'},

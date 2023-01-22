@@ -101,7 +101,7 @@ export default function Mnos() {
             <p className="disc-text">
                 Разумеется, возможен совсем тяжелый случай, когда оба этих коэффициента 
                 равны нулю: <strong><i>b = c = 0.</i></strong> В этом случае уравнение принимает вид 
-                <strong><i>ax2 = 0.</i></strong> 
+                <strong><i>ax^2 = 0.</i></strong> 
                 Очевидно, такое уравнение имеет единственный корень: <strong><i>x = 0.</i></strong>
             </p>
             <p className="disc-text">
@@ -146,9 +146,9 @@ export default function Mnos() {
             </p>
             <p className="disc-text">
                 Задача. Решить квадратные уравнения: <br/>
-                <strong>x² - 7x = 0; </strong>   ⇒ x · (x - 7) = 0    ⇒ x1 = 0; x2 = -(-7)/1 = 7.<br/>
-                <strong>5x² + 30 = 0;</strong>    ⇒ 5x² = -30    ⇒ x2 = -6. Корней нет, т.к. квадрат не может быть равен отрицательному числу.<br/>
-                <strong>4x² - 9 = 0.</strong>     ⇒ 4x² = 9    ⇒ x2 = 9/4    ⇒ x1 = 3/2 = 1,5;    x2 = -1,5.<br/>
+                <strong>x² - 7x = 0; </strong>   ⇒ x · (x - 7) = 0    ⇒ x1 = 0; x^2 = -(-7)/1 = 7.<br/>
+                <strong>5x² + 30 = 0;</strong>    ⇒ 5x² = -30    ⇒ x^2 = -6. Корней нет, т.к. квадрат не может быть равен отрицательному числу.<br/>
+                <strong>4x² - 9 = 0.</strong>     ⇒ 4x² = 9    ⇒ x^2 = 9/4    ⇒ x1 = 3/2 = 1,5;    x^2 = -1,5.<br/>
             </p>
         </div>
     </main>

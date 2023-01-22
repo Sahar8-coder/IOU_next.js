@@ -27,35 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(6x^2 + 67x + 182\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Разложите на множители \\(6x^2 + 67x + 182\\).',
         isText: true,
         answerOptions: [
             {answerText: '(2x+13)(3x+14)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(−7x^2 + 26x − 24\\).',
+        questionText: 'Разложите на множители \\(−7x^2 + 26x − 24\\).',
         isText: true,
         answerOptions: [
             {answerText: '-(x-2)(7x-12)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(11x^2 + 4x − 7\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Разложите на множители \\(11x^2 + 4x − 7\\).',
         isText: true,
         answerOptions: [
             {answerText: '-(x-2)(5x+7)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(11x^2 − 2x − 9\\). Если уравнение имеет более одного корня, в ответ запишите 6x2 − 11x − 10 = 0 из них.',
+        questionText: 'Разложите на множители \\(11x^2 − 2x − 9\\). Если уравнение имеет более одного корня, в ответ запишите 6x^2 − 11x − 10 = 0 из них.',
         isText: true,
         answerOptions: [
             {answerText: '-(x-5)(5x-13)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(9x^2 + 32x + 15\\).',
+        questionText: 'Разложите на множители \\(9x^2 + 32x + 15\\).',
         isText: true,
         answerOptions: [
             {answerText: '(8x+3)(3x+2)'},

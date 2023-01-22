@@ -27,28 +27,28 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(x4 − 10x2 + 9 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 10x^2 + 9 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '3;-3;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 37x2 + 36 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 37x^2 + 36 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '6;-6;1;-1'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x4 − 48x2 − 49 = 0)\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(x^4 − 48x^2 − 49 = 0)\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '7;-7'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(81x4 − 27x2 − 4 = 0\\). Корни укажите через точку с запятой',
+        questionText: 'Решите уравнение \\(81x4 − 27x^2 − 4 = 0\\). Корни укажите через точку с запятой',
         isText: true,
         answerOptions: [
             {answerText: '\\(\\frac{2}{3}\\); -\\(\\frac{2}{3}\\)', isCorrect: false},

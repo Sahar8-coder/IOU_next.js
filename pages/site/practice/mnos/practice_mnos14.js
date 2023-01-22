@@ -27,35 +27,35 @@ const config = {
   const [submitted, setSubmitted] = useState(false)
   const questions = [
     {
-        questionText: 'Решите уравнение \\(22x^2 + 53x + 30\\). Если уравнение имеет более одного корня, в ответ запишите больший из них.',
+        questionText: 'Разложите на множители \\(22x^2 + 53x + 30\\).',
         isText: true,
         answerOptions: [
             {answerText: '(11x+10)(2x+3)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 + 10x + 24\\).',
+        questionText: 'Разложите на множители \\(x^2 + 10x + 24\\).',
         isText: true,
         answerOptions: [
             {answerText: '(x+4)(x+6)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(5x^2 + 19x + 12\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Разложите на множители \\(5x^2 + 19x + 12\\).',
         isText: true,
         answerOptions: [
             {answerText: '(x+3)(5x+4)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(x^2 − 7x − 44\\). Если уравнение имеет более одного корня, в ответ запишите меньший из них.',
+        questionText: 'Разложите на множители \\(x^2 − 7x − 44\\).',
         isText: true,
         answerOptions: [
             {answerText: '(x+4)(x−11)'},
         ]
     },
     {
-        questionText: 'Решите уравнение \\(4x^2 + 40x + 99\\).',
+        questionText: 'Разложите на множители \\(4x^2 + 40x + 99\\).',
         isText: true,
         answerOptions: [
             {answerText: '(2x+9)(2x+11)'},
