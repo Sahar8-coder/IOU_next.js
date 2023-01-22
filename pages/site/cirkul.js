@@ -123,18 +123,13 @@ export default function Circul() {
                         Нет решения.</div>    
                 </div> <br/>
             <p className="disc-text">
-                Пример: <MathJax inline>\(3x^2+4x-7=0.\)</MathJax>
-                Определим координаты точки центра окружности по формулам: 
-                <MathJax>
-                $$
-                    {'\\begin{cases} x = -\\frac{b}{2a} = -\\frac{4}{2 * 3} = -\\frac{2}{3} \\\\ y = \\frac{a + c}{2a} = \\frac{3 - 7}{2 * 3} = -\\frac{2}{3} \\end{cases}'}
-                $$
-                </MathJax>
-                Проведем окружность радиуса SA, где А (0; 1). <br/>
-                <MathJax inline>{'\\(x_1 = -\\frac{7}{3}, x_2 = 1\\)'}</MathJax>
+                Решим уравнение <MathJax inline>{'\\(х^2 – 2х – 3 = 0 \\)'}</MathJax> <br />
+                построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
+                <MathJax inline>{'\\( x = -\\frac{b}{2a} =  -\\frac{-2}{2} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = -1\\)'}</MathJax> <br />
+                проведем окружность с центром S(1;–1) и радиусом SA, где A(0;1);
+                х1= -1; х2=3 <br />
+                Ответ: -1; 3
             </p>
-            <img src="/circ2.png" alt=""/>
-
         </div>
     </main>
     </MathJaxContext>
