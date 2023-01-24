@@ -102,25 +102,25 @@ export default function Circul() {
                 с осью Ох являются корнями исходного квадратного уравнения. <br/>
                 При этом возможны три случая. <br/>
                 1) Радиус окружности больше ординаты центра {'(AS>SK, или R>a + c/2a),  '}
-                окружность пересекает ось Ох в двух точках {'(рис. а)'} {'  \\( В(х_1; 0) и D(х_2; 0) \\) '}, 
+                окружность пересекает ось Ох в двух точках <MathJax inline>{' \\( ( рис. а ) \\) '}</MathJax> {'  \\( В(х_1; 0) и D(х_2; 0) \\) '}, 
                 где <MathJax inline>{' \\(х_1 \\)'}</MathJax> и <MathJax inline>{' \\(х_2 \\)'}</MathJax> – корни квадратного уравнения  <MathJax inline>{" \\( ах^2  + bх + с = 0 \\) "}</MathJax>. <br/>
                 2) Радиус окружности равен ординате центра {'(AS = SB, или R = a + c/2a)'}, 
-                окружность касается оси Ох {'(рис. б)'} в точке <MathJax inline>{'\(В(х_1; 0)\)'}</MathJax>, где <MathJax inline>{'\(х_1\)'}</MathJax> - 
+                окружность касается оси Ох <MathJax inline>{' \\( ( рис. б ) \\) '}</MathJax> в точке <MathJax inline>{'\(В(х_1; 0)\)'}</MathJax>, где <MathJax inline>{'\(х_1\)'}</MathJax> - 
                 корень квадратного уравнения. <br/>
                 3) Радиус окружности меньше ординаты центра {'AS<;SB;R<(a+C)/2a   '}                             
-                окружность не имеет общих точек с осью абсцисс {'(рис. в)'}, в 
+                окружность не имеет общих точек с осью абсцисс <MathJax inline>{' \\( ( рис. в ) \\) '}</MathJax>, в 
                 этом случае уравнение не имеет решения. <br/>
-                окружность не имеет общих точек с осью абсцисс {'(рис. в)'}, 
+                окружность не имеет общих точек с осью абсцисс <MathJax inline>{' \\( ( рис. в ) \\) '}</MathJax>, 
                 в этом случае уравнение не имеет решения. 
             </p>
                 <img src="/circ1.png" alt=""/>
                 <div className="circ-img">
                     <div className="circ-text">
                         <MathJax inline>{' \\(a) AS > SB,R > \\frac{a + C}{2a}. \\)'}</MathJax> <br/>
-                        Два решения <MathJax inline>{'\\(х_1\\)'} </MathJax>и <MathJax inline>{'\\(х_2\\)'}.</MathJax></div>
+                        Два решения <MathJax inline>{' \\( х_1 \\) '} </MathJax>и <MathJax inline>{'\\(х_2\\)'}.</MathJax></div>
                     <div className="circ-text">
                         <MathJax inline>{' \\(б) AS = SB,R = \\frac{a + C}{2a}. \\)'}</MathJax> <br/>
-                        Одно решение <MathJax inline>{'\\(х_1.\\)'}</MathJax></div>
+                        Одно решение <MathJax inline>{' \\( х_1. \\) '}</MathJax></div>
                     <div className="circ-text">
                         <MathJax inline>{' \\(в) AS < SB,R < \\frac{a + C}{2a}. \\)'}</MathJax> <br/>
                         Нет решения.</div>    
@@ -164,7 +164,7 @@ export default function Circul() {
                 5)Решим уравнение <MathJax inline>{' \\(х^2 – 2х – 3 = 0  \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{' \\(S (-\\frac{b}{2a}; \\frac{a+c}{2a})  \\)'}</MathJax> — центр окружности и <MathJax inline> {' \\( A(0;1) \\) '}</MathJax>; <br />
                 <MathJax inline>{' \\( x = -\\frac{b}{2a} =  \\frac{3}{4} = 1 \\\\ y = \\frac{a+c}{2a} = \\frac{2+1}{4} = \\frac{3}{4} \\)'}</MathJax> <br />
-                проведем окружность с центром <MathJax inline>{' \\(S(\\frac{3}{4};\\frac{3}{4}) \\)'}</MathJax> и радиусом SA, где A(0;1);
+                проведем окружность с центром <MathJax inline>{' \\(S(\\frac{3}{4};\\frac{3}{4}) \\)'}</MathJax> и радиусом SA, где <MathJax inline> {' \\( A(0;1) \\) '}</MathJax>;
                 <MathJax inline>{' \\( x_1 = 0,5; x_2=1 \\) '}</MathJax> <br />
                 Ответ: 0,5; 1
                 <img src="/image005.png" alt="" />
