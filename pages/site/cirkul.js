@@ -135,7 +135,7 @@ export default function Circul() {
                 <img src="/image001.png" alt="" />
             </p>
             <p className="disc-text">
-                2)Решим уравнение <MathJax inline>{'\\(х^2 – 5х + 4 =  \\)'}</MathJax> <br />
+                2)Решим уравнение <MathJax inline>{'\\(х^2 – 5х + 4 = 0 \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
                 <MathJax inline>{'\\( x = -\\frac{b}{2a} =  -\\frac{5}{2} = 2,5 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = 2,5\\)'}</MathJax> <br />
                 проведем окружность с центром S(2,5;2,5) и радиусом SA, где A(0;1);
@@ -144,7 +144,7 @@ export default function Circul() {
                 <img src="/image002.png" alt="" />
             </p>
             <p className="disc-text">
-                3)Решим уравнение <MathJax inline>{'\\(х^2 + 4х + 4 =  \\)'}</MathJax> <br />
+                3)Решим уравнение <MathJax inline>{'\\(х^2 + 4х + 4 = 0 \\)'}</MathJax> <br />
                 построим точки <MathJax inline>{'\\(S (-\\frac{b}{2a}; \\frac{a+c}{2a}) \\)'}</MathJax> — центр окружности и А(0;1); <br />
                 <MathJax inline>{'\\( x = -\\frac{b}{2a} =  \\frac{-4}{2} = -2 \\\\ y = \\frac{a+c}{2a} = \\frac{1+4}{2} = 2,5\\)'}</MathJax> <br />
                 проведем окружность с центром S(-2;2,5) и радиусом SA, где A(0;1);
