@@ -25,6 +25,7 @@ export default function Home() {
   };
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [email_teach, setEmail_teach] = useState('')
   const [message, setMessage] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const size = useWindowSize()

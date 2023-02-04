@@ -91,8 +91,8 @@ const config = {
   }
   var textfor = ''
   const textSubmit = (text, correct, e) => {
-    textfor = text.replace(/\,/g, '.')
-    textfor = textfor.trim()
+textfor = text.replace(/ /g,'').replace(/\,/g, '.')
+    textfor = textfor.split(' ').join('')
     if (textfor == correct) {
         handleAnswerOptionClick(true)
     }
