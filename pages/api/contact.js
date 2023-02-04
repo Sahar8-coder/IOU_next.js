@@ -1,7 +1,5 @@
 import nodemailer from 'nodemailer'
 export async function getServerSideProps({ req, res }) {
-    console.log(req)
-    console.log(res)
     require('dotenv').config()
 
     let transporter = nodemailer.createTransport({

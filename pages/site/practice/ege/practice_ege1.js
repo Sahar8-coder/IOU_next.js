@@ -104,14 +104,13 @@ textfor = text.replace(/ /g,'').replace(/\,/g, '.')
   const handleSubmit = (e) => {
     e.preventDefault()
     console.log('Sending')
-
     let data = {
         name,
         email,
         message,
         email_teach
     }
-    
+    console.log(JSON.stringify(data))
     fetch('/api/contact', {
       method: 'POST',
       headers: {
