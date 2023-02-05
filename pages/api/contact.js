@@ -1,9 +1,9 @@
 import nodemailer from 'nodemailer'
-export default async function handler(req, res) {
+export default async (req, res) => {
 //export async function getServerSideProps({ req, res }) {
     require('dotenv').config()
 
-    let transporter = nodemailer.createTransport({
+    const transporter = nodemailer.createTransport({
       host: "smtp.mail.ru",
       port: 465,
       secure: true, // true for 465, false for other ports
@@ -11,10 +11,14 @@ export default async function handler(req, res) {
         user: 'k1rilovz@yandex.ru',
         pass: 'qhfxkhjcdlvgdwhs',
       },*/
-      auth: {
+      /*auth: {
         user: 'quadratic.eq@mail.ru',
         pass: 'RvAbja5FBLcin58phgAs',
-      },
+      },*/
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASSWORD,
+      }
     });
     //console.log(transporter)
     const mailData = {
