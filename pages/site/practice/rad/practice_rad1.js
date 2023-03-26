@@ -32,50 +32,50 @@ const config = {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 − 18x − 30 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false},
-            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false},
-            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false},
-            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: false}
+            {answerText: '\\(9 - \\sqrt{111}; 9 + \\sqrt{111}\\)', isCorrect: true},
+            {answerText: '\\(9 - \\sqrt{122}; 9 + \\sqrt{122}\\)', isCorrect: false},
+            {answerText: '\\(12 - \\sqrt{122}; 12 + \\sqrt{122}\\)', isCorrect: false},
+            {answerText: '\\(12 - \\sqrt{111}; 12 + \\sqrt{111}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(9x^2 − 6x − 11 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{2 - 3\\sqrt6}{3}; \\frac{2 + 3\\sqrt6}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; \\frac{1 + 2\\sqrt3}{3}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{1 - 3\\sqrt6}{3}; \\frac{1 + 3\\sqrt6}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{2 - 2\\sqrt2}{3}; \\frac{2 + 2\\sqrt2}{3}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(−\\frac{1}{4}x − \\frac{15}{52} − \\frac{1}{26}x^2 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false},
-            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false},
-            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false},
-            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: false}
+            {answerText: '\\(-3; -\\frac{5}{3}\\)', isCorrect: false},
+            {answerText: '\\(-5; -\\frac{3}{3}\\)', isCorrect: false},
+            {answerText: '\\(-3; -\\frac{5}{2}\\)', isCorrect: false},
+            {answerText: '\\(-5; -\\frac{3}{2}\\)', isCorrect: true}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 - 10x\\sqrt{2} + 42 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false},
-            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false},
-            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false},
-            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: false}
+            {answerText: '\\(3\\sqrt2; 7\\sqrt2\\)', isCorrect: true},
+            {answerText: '\\(3\\sqrt3; 7\\sqrt3\\)', isCorrect: false},
+            {answerText: '\\(2\\sqrt2; 5\\sqrt2\\)', isCorrect: false},
+            {answerText: '\\(2\\sqrt3; 5\\sqrt3\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\((−7x + 3)(−14x − 8) = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{2}{7}; -\\frac{5}{7}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{7}; -\\frac{4}{7}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{2}{3}; -\\frac{5}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{3}; -\\frac{4}{3}\\)', isCorrect: false}
         ]
     }
   ]
@@ -213,6 +213,7 @@ textfor = text.replace(/ /g,'').replace(/\,/g, '.')
                         <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
+                                <span>Если ответов несколько, вводить через ;</span> <br />
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
                             <div className="question_text" jsfor="question_text">
@@ -237,6 +238,7 @@ textfor = text.replace(/ /g,'').replace(/\,/g, '.')
                         <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
+                                <span>Если ответов несколько, вводить через ;</span> <br />
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
                             <MathJax hideUntilTypeset={"first"}

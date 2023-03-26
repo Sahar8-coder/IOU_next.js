@@ -201,6 +201,7 @@ textfor = text.replace(/ /g,'').replace(/\,/g, '.')
                         <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
+                                <span>Если ответов несколько, вводить через ;</span> <br />
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
                             <div className="question_text" jsfor="question_text">
@@ -225,6 +226,7 @@ textfor = text.replace(/ /g,'').replace(/\,/g, '.')
                                                 <div className="quizz">
                         <div className="question_section">
                             <div className="question_count">
+                                <span>Если ответов несколько, вводить через ;</span> <br />
                                 <span>Вопрос {currentQuestion + 1}</span> /{questions.length}
                             </div>
                             <MathJax hideUntilTypeset={"first"}
