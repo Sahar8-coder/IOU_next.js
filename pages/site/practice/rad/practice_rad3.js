@@ -32,50 +32,50 @@ const config = {
         questionText: 'Решите уравнение и выберите верный ответ \\(−\\frac{1}{3}x − \\frac{2}{27} − \\frac{10}{27}x^2 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-\\frac{1}{2}; -\\frac{2}{5}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{1}{2}; -\\frac{2}{5}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{1}{2}; -\\frac{2}{5}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{1}{2}; -\\frac{2}{5}\\)', isCorrect: false}
+            {answerText: '\\(-\\frac{1}{3}; -\\frac{1}{5}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{1}{2}; -\\frac{2}{5}\\)', isCorrect: true},
+            {answerText: '\\(-\\frac{1}{3}; -\\frac{2}{5}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{1}{2}; -\\frac{1}{5}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 + 7x\\sqrt{7} + 42 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-6\\sqrt7; -\\sqrt7\\)', isCorrect: false},
-            {answerText: '\\(-6\\sqrt7; -\\sqrt7\\)', isCorrect: false},
-            {answerText: '\\(-6\\sqrt7; -\\sqrt7\\)', isCorrect: false},
-            {answerText: '\\(-6\\sqrt7; -\\sqrt7\\)', isCorrect: false}
+            {answerText: '\\(-3\\sqrt7; -\\sqrt7\\)', isCorrect: false},
+            {answerText: '\\(-6\\sqrt5; -\\sqrt5\\)', isCorrect: false},
+            {answerText: '\\(-6\\sqrt7; -\\sqrt7\\)', isCorrect: true},
+            {answerText: '\\(-3\\sqrt5; -\\sqrt5\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(4x^2 − 16x + 13 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{4 - \\sqrt3}{2}; \\frac{4 + \\sqrt3}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{4 - \\sqrt3}{2}; \\frac{4 + \\sqrt3}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{4 - \\sqrt3}{2}; \\frac{4 + \\sqrt3}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{4 - \\sqrt3}{2}; \\frac{4 + \\sqrt3}{2}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{4 - \\sqrt3}{2}; \\frac{4 + \\sqrt3}{2}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{2 - \\sqrt5}{2}; \\frac{2 + \\sqrt5}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{4 - \\sqrt5}{2}; \\frac{4 + \\sqrt5}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{2 - \\sqrt3}{2}; \\frac{2 + \\sqrt3}{2}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\((14x − 6)(2x + 5) = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{3}{7}; -\\frac{5}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{7}; -\\frac{5}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{7}; -\\frac{5}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{7}; -\\frac{5}{2}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{3}{5}; -\\frac{5}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{7}; -\\frac{5}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{5}; -\\frac{5}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{7}; -\\frac{5}{2}\\)', isCorrect: true}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 − 2x − 78 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(1 - \\sqrt{79}; 1 + \\sqrt{79}\\)', isCorrect: false},
-            {answerText: '\\(1 - \\sqrt{79}; 1 + \\sqrt{79}\\)', isCorrect: false},
-            {answerText: '\\(1 - \\sqrt{79}; 1 + \\sqrt{79}\\)', isCorrect: false},
-            {answerText: '\\(1 - \\sqrt{79}; 1 + \\sqrt{79}\\)', isCorrect: false}
+            {answerText: '\\(2 - \\sqrt{77}; 2 + \\sqrt{77}\\)', isCorrect: false},
+            {answerText: '\\(1 - \\sqrt{79}; 1 + \\sqrt{79}\\)', isCorrect: true},
+            {answerText: '\\(2 - \\sqrt{79}; 2 + \\sqrt{79}\\)', isCorrect: false},
+            {answerText: '\\(1 - \\sqrt{77}; 1 + \\sqrt{77}\\)', isCorrect: false}
         ]
     }
   ]
