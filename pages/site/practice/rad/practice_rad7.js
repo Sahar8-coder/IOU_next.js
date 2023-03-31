@@ -35,7 +35,7 @@ const config = {
             {answerText: '\\(\\sqrt6; -4\\sqrt6\\)', isCorrect: false},
             {answerText: '\\(\\sqrt6; -4\\sqrt6\\)', isCorrect: false},
             {answerText: '\\(\\sqrt6; -4\\sqrt6\\)', isCorrect: false},
-            {answerText: '\\(\\sqrt6; -4\\sqrt6\\)', isCorrect: false}
+            {answerText: '\\(\\sqrt6; -4\\sqrt6\\)', isCorrect: true}
         ]
     },
     {
@@ -43,7 +43,7 @@ const config = {
         isText: false,
         answerOptions: [
             {answerText: '\\(2 - \\sqrt{66}; 2 + \\sqrt{66}\\)', isCorrect: false},
-            {answerText: '\\(2 - \\sqrt{66}; 2 + \\sqrt{66}\\)', isCorrect: false},
+            {answerText: '\\(2 - \\sqrt{66}; 2 + \\sqrt{66}\\)', isCorrect: true},
             {answerText: '\\(2 - \\sqrt{66}; 2 + \\sqrt{66}\\)', isCorrect: false},
             {answerText: '\\(2 - \\sqrt{66}; 2 + \\sqrt{66}\\)', isCorrect: false}
         ]
@@ -54,7 +54,7 @@ const config = {
         answerOptions: [
             {answerText: '\\(\\frac{4 - \\sqrt{19}}{2}; \\frac{4 + \\sqrt{19}}{2}\\)', isCorrect: false},
             {answerText: '\\(\\frac{4 - \\sqrt{19}}{2}; \\frac{4 + \\sqrt{19}}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{4 - \\sqrt{19}}{2}; \\frac{4 + \\sqrt{19}}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{4 - \\sqrt{19}}{2}; \\frac{4 + \\sqrt{19}}{2}\\)', isCorrect: true},
             {answerText: '\\(\\frac{4 - \\sqrt{19}}{2}; \\frac{4 + \\sqrt{19}}{2}\\)', isCorrect: false}
         ]
     },
@@ -62,7 +62,7 @@ const config = {
         questionText: 'Решите уравнение и выберите верный ответ \\(\\frac{1}{4}x + \\frac{1}{22} + \\frac{3}{11}x^2 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-\\frac{1}{4}; -\\frac{2}{3}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{1}{4}; -\\frac{2}{3}\\)', isCorrect: true},
             {answerText: '\\(-\\frac{1}{4}; -\\frac{2}{3}\\)', isCorrect: false},
             {answerText: '\\(-\\frac{1}{4}; -\\frac{2}{3}\\)', isCorrect: false},
             {answerText: '\\(-\\frac{1}{4}; -\\frac{2}{3}\\)', isCorrect: false}
@@ -73,8 +73,8 @@ const config = {
         isText: false,
         answerOptions: [
             {answerText: '\\(-\\frac{13}{14}; \\frac{1}{7}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{13}{14}; \\frac{1}{7}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{13}{14}; \\frac{1}{7}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{13}{7}; \\frac{1}{14}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{13}{14}; \\frac{1}{7}\\)', isCorrect: true},
             {answerText: '\\(-\\frac{13}{14}; \\frac{1}{7}\\)', isCorrect: false}
         ]
     }
