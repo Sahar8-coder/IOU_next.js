@@ -32,50 +32,50 @@ const config = {
         questionText: 'Решите уравнение и выберите верный ответ \\(-\\frac{11}{9}x^2 + \\frac{2}{3} − \\frac{1}{3}x = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{3}{2}; \\frac{1}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{2}; \\frac{1}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{2}; \\frac{1}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3}{2}; \\frac{1}{3}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{3}{2}; \\frac{1}{3}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{3}{4}; \\frac{1}{5}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{2}; \\frac{1}{5}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3}{4}; \\frac{1}{3}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\((−x − 8)(12x − 1) = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-8; \\frac{1}{12}\\)', isCorrect: false},
-            {answerText: '\\(-8; \\frac{1}{12}\\)', isCorrect: false},
-            {answerText: '\\(-8; \\frac{1}{12}\\)', isCorrect: false},
-            {answerText: '\\(-8; \\frac{1}{12}\\)', isCorrect: false}
+            {answerText: '\\(-8; \\frac{1}{6}\\)', isCorrect: false},
+            {answerText: '\\(-3; \\frac{1}{12}\\)', isCorrect: false},
+            {answerText: '\\(-8; \\frac{1}{12}\\)', isCorrect: true},
+            {answerText: '\\(-3; \\frac{1}{6}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 − 4x − 93 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(2 - \\sqrt{97}; 2 + \\sqrt{97}\\)', isCorrect: false},
-            {answerText: '\\(2 - \\sqrt{97}; 2 + \\sqrt{97}\\)', isCorrect: false},
-            {answerText: '\\(2 - \\sqrt{97}; 2 + \\sqrt{97}\\)', isCorrect: false},
-            {answerText: '\\(2 - \\sqrt{97}; 2 + \\sqrt{97}\\)', isCorrect: false}
+            {answerText: '\\(2 - \\sqrt{97}; 2 + \\sqrt{97}\\)', isCorrect: true},
+            {answerText: '\\(3 - \\sqrt{26}; 3 + \\sqrt{26}\\)', isCorrect: false},
+            {answerText: '\\(2 - \\sqrt{26}; 2 + \\sqrt{26}\\)', isCorrect: false},
+            {answerText: '\\(3 - \\sqrt{97}; 3 + \\sqrt{97}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 + 4x\\sqrt{14} + 42 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-\\sqrt{14}; -3\\sqrt{14}\\)', isCorrect: false},
-            {answerText: '\\(-\\sqrt{14}; -3\\sqrt{14}\\)', isCorrect: false},
-            {answerText: '\\(-\\sqrt{14}; -3\\sqrt{14}\\)', isCorrect: false},
-            {answerText: '\\(-\\sqrt{14}; -3\\sqrt{14}\\)', isCorrect: false}
+            {answerText: '\\(-\\sqrt{15}; -2\\sqrt{15}\\)', isCorrect: false},
+            {answerText: '\\(-\\sqrt{14}; -2\\sqrt{14}\\)', isCorrect: false},
+            {answerText: '\\(-\\sqrt{15}; -3\\sqrt{15}\\)', isCorrect: false},
+            {answerText: '\\(-\\sqrt{14}; -3\\sqrt{14}\\)', isCorrect: true}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(4x^2 − 12x − 19 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{3 - 2\\sqrt7}{2}; \\frac{3 + 2\\sqrt7}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3 - 2\\sqrt7}{2}; \\frac{3 + 2\\sqrt7}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3 - 2\\sqrt7}{2}; \\frac{3 + 2\\sqrt7}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{3 - 2\\sqrt7}{2}; \\frac{3 + 2\\sqrt7}{2}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{2 - 3\\sqrt7}{3}; \\frac{2 + 3\\sqrt7}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3 - 2\\sqrt6}{2}; \\frac{3 + 2\\sqrt6}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{2 - 3\\sqrt7}{3}; \\frac{2 + 3\\sqrt7}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{3 - 2\\sqrt7}{2}; \\frac{3 + 2\\sqrt7}{2}\\)', isCorrect: true}
         ]
     }
   ]

@@ -32,50 +32,50 @@ const config = {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 − 14x − 63 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(7 - 4\\sqrt7; 7 + 4\\sqrt7\\)', isCorrect: false},
-            {answerText: '\\(7 - 4\\sqrt7; 7 + 4\\sqrt7\\)', isCorrect: false},
-            {answerText: '\\(7 - 4\\sqrt7; 7 + 4\\sqrt7\\)', isCorrect: false},
-            {answerText: '\\(7 - 4\\sqrt7; 7 + 4\\sqrt7\\)', isCorrect: false}
+            {answerText: '\\(7 - 4\\sqrt7; 7 + 4\\sqrt7\\)', isCorrect: true},
+            {answerText: '\\(5 - 3\\sqrt5; 5 + 3\\sqrt5\\)', isCorrect: false},
+            {answerText: '\\(7 - 3\\sqrt7; 7 + 3\\sqrt7\\)', isCorrect: false},
+            {answerText: '\\(5 - 4\\sqrt5; 5 + 4\\sqrt5\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(-\\frac{5}{42} - \\frac{4}{21}x^2 - \\frac{1}{3}x = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-\\frac{5}{4}; -\\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{5}{4}; -\\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{5}{4}; -\\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{5}{4}; -\\frac{1}{2}\\)', isCorrect: false}
+            {answerText: '\\(-\\frac{3}{4}; -\\frac{1}{2}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{3}{2}; -\\frac{1}{4}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{5}{4}; -\\frac{1}{2}\\)', isCorrect: true},
+            {answerText: '\\(-\\frac{5}{2}; -\\frac{1}{4}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\((x + 12)(−6x + 3) = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-12; \\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-12; \\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-12; \\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-12; \\frac{1}{2}\\)', isCorrect: false}
+            {answerText: '\\(-12; \\frac{1}{3}\\)', isCorrect: false},
+            {answerText: '\\(-13; \\frac{1}{2}\\)', isCorrect: false},
+            {answerText: '\\(-13; \\frac{1}{3}\\)', isCorrect: false},
+            {answerText: '\\(-12; \\frac{1}{2}\\)', isCorrect: true}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 + 2x\\sqrt{23} + 23 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-\\sqrt{23}\\)', isCorrect: false},
-            {answerText: '\\(-\\sqrt{23}\\)', isCorrect: false},
-            {answerText: '\\(-\\sqrt{23}\\)', isCorrect: false},
-            {answerText: '\\(-\\sqrt{23}\\)', isCorrect: false}
+            {answerText: '\\(-\\sqrt{24}\\)', isCorrect: false},
+            {answerText: '\\(-\\sqrt{25}\\)', isCorrect: false},
+            {answerText: '\\(-\\sqrt{23}\\)', isCorrect: true},
+            {answerText: '\\(-\\sqrt{24}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(9x^2 − 6x − 11 = 0\\).',
         isText: false,
         answerOptions: [
+            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; frac{1 + 2\\sqrt3}{3}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{3 - 2\\sqrt2}{3}; frac{3 + 2\\sqrt2}{2}\\)', isCorrect: false},
             {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{1 - 2\\sqrt3}{3}; frac{1 + 2\\sqrt3}{3}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{3 - 2\\sqrt2}{3}; frac{3 + 2\\sqrt2}{2}\\)', isCorrect: false}
         ]
     }
   ]

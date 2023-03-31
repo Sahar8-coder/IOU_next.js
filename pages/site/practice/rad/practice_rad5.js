@@ -32,50 +32,50 @@ const config = {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 - x\\sqrt{19} - 38 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(2\\sqrt{19}; -\\sqrt{19}\\)', isCorrect: false},
-            {answerText: '\\(2\\sqrt{19}; -\\sqrt{19}\\)', isCorrect: false},
-            {answerText: '\\(2\\sqrt{19}; -\\sqrt{19}\\)', isCorrect: false},
-            {answerText: '\\(2\\sqrt{19}; -\\sqrt{19}\\)', isCorrect: false}
+            {answerText: '\\(3\\sqrt{26}; -\\sqrt{26}\\)', isCorrect: false},
+            {answerText: '\\(2\\sqrt{19}; -\\sqrt{19}\\)', isCorrect: true},
+            {answerText: '\\(3\\sqrt{19}; -\\sqrt{19}\\)', isCorrect: false},
+            {answerText: '\\(2\\sqrt{26}; -\\sqrt{26}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(4x^2 − 16x + 11 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{4 - \\sqrt5}{2}; \\frac{4 + \\sqrt5}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{4 - \\sqrt5}{2}; \\frac{4 + \\sqrt5}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{4 - \\sqrt5}{2}; \\frac{4 + \\sqrt5}{2}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{4 - \\sqrt5}{2}; \\frac{4 + \\sqrt5}{2}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{4 - \\sqrt5}{3}; \\frac{4 + \\sqrt5}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{6 - \\sqrt5}{2}; \\frac{6 + \\sqrt5}{2}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{9 - \\sqrt5}{3}; \\frac{9 + \\sqrt5}{3}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{4 - \\sqrt5}{2}; \\frac{4 + \\sqrt5}{2}\\)', isCorrect: true}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\((11x − 13)(−14x + 10) = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(\\frac{13}{11}; \\frac{5}{7}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{13}{11}; \\frac{5}{7}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{13}{11}; \\frac{5}{7}\\)', isCorrect: false},
-            {answerText: '\\(\\frac{13}{11}; \\frac{5}{7}\\)', isCorrect: false}
+            {answerText: '\\(\\frac{13}{11}; \\frac{4}{9}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{11}{13}; \\frac{5}{7}\\)', isCorrect: false},
+            {answerText: '\\(\\frac{13}{11}; \\frac{5}{7}\\)', isCorrect: true},
+            {answerText: '\\(\\frac{11}{13}; \\frac{5}{9}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(-\\frac{5}{4}x^2 + \\frac{1}{4} + \\frac{1}{8}x = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(-\\frac{2}{5}; \\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{2}{5}; \\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{2}{5}; \\frac{1}{2}\\)', isCorrect: false},
-            {answerText: '\\(-\\frac{2}{5}; \\frac{1}{2}\\)', isCorrect: false}
+            {answerText: '\\(-\\frac{2}{5}; \\frac{1}{2}\\)', isCorrect: true},
+            {answerText: '\\(-\\frac{3}{5}; \\frac{1}{4}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{4}{5}; \\frac{1}{3}\\)', isCorrect: false},
+            {answerText: '\\(-\\frac{3}{5}; \\frac{1}{4}\\)', isCorrect: false}
         ]
     },
     {
         questionText: 'Решите уравнение и выберите верный ответ \\(x^2 − 14x − 62 = 0\\).',
         isText: false,
         answerOptions: [
-            {answerText: '\\(7 - \\sqrt{111}; 7 + \\sqrt{111}\\)', isCorrect: false},
-            {answerText: '\\(7 - \\sqrt{111}; 7 + \\sqrt{111}\\)', isCorrect: false},
-            {answerText: '\\(7 - \\sqrt{111}; 7 + \\sqrt{111}\\)', isCorrect: false},
-            {answerText: '\\(7 - \\sqrt{111}; 7 + \\sqrt{111}\\)', isCorrect: false}
+            {answerText: '\\(5 - \\sqrt{121}; 5 + \\sqrt{121}\\)', isCorrect: false},
+            {answerText: '\\(7 - \\sqrt{111}; 7 + \\sqrt{111}\\)', isCorrect: true},
+            {answerText: '\\(7 - \\sqrt{121}; 7 + \\sqrt{121}\\)', isCorrect: false},
+            {answerText: '\\(5 - \\sqrt{111}; 5 + \\sqrt{111}\\)', isCorrect: false}
         ]
     }
   ]
@@ -181,7 +181,7 @@ textfor = text.replace(/ /g,'').replace(/\,/g, '.')
             </nav>
         </header>
         <main className="main">
-            <div className="content_main_test">   
+            <div className="content_main_test">   true
             <h2 className="types-header"><Link href='/site/practice'>
                 <img src="/pencil.png" alt="" width={50}/>
             </Link>Квадратные уравнения, имеющие корни — радикалы 5</h2>
