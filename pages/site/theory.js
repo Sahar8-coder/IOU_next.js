@@ -96,7 +96,7 @@ export default function Theory() {
                 </p>
             <h3 className="theory-name">Виды квадратных уравнений</h3>
                 <p className="theory-p">
-                    <span className="blue-text">Приведенное квадратное уравнение</span> - уровнение, где старший коэффициент равен 1.<br/>
+                    <span className="blue-text">Приведенное квадратное уравнение</span> - уравнение, где старший коэффициент равен 1.<br/>
                     <span className="blue-text">Неприведенное квадратное уравнение</span> - старший коэффициент отличен от 1 
                 </p>
                 <div className="theory-important-div">
